@@ -15,11 +15,8 @@ Function __Noyau_Cpcdos_OSx__.Initialiser_BootScreen(Type_rsc as boolean, source
 	' nom			-> Nom du package de ressources
 	' PID_system 	-> Numero du processus systeme "hebergeur"
 	
-	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
-		DEBUG("[Initialiser_BootScreen] Demarrage du module boot screen ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	Else
 		DEBUG("[Initialiser_BootScreen] Starting boot screen module ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	End if
+	
 	
 	Dim bs_gui 			as string
 	Dim bs_scr_res 		as string
@@ -84,11 +81,8 @@ Function __Noyau_Cpcdos_OSx__.Initialiser_BootScreen(Type_rsc as boolean, source
 				if NOT resultat <> 0 Then
 					' OK tout est charge
 					
-					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
-						DEBUG("[Initialiser_BootScreen] Creation du thread boot screen anime PID:" & PID_system & "...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-					Else
 						DEBUG("[Initialiser_BootScreen] Creating animated boot screen thread PID:" & PID_system & "...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-					End if
+					
 					
 					Dim INSTANCE_STRUCT_THREAD as _STRUCT_THREAD_Cpcdos_OSx__
 					
@@ -124,11 +118,8 @@ Function __Noyau_Cpcdos_OSx__.Initialiser_BootScreen(Type_rsc as boolean, source
 			Function = 2
 		End if ' CEST_BON
 	ELSE
-		IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
-			DEBUG("[Initialiser_BootScreen] Les parametres n'autorisent pas le boot screen.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-		Else
 			DEBUG("[Initialiser_BootScreen] The settings do not allow the boot screen.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-		End if
+		
 	End if ' GUI = 1
 	
 End function
@@ -247,11 +238,8 @@ Public Function Animation cdecl Alias "Animation" (byval thread_struct as _STRUC
 	Function = CPCDOS_INSTANCE.__THREAD_DEFAUT
 	
 	
-	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
-		DEBUG("[BootScreen] Animation boot screen ... REGARDEZ-MOI COMME JE SUIS BEAU !", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	Else
 		DEBUG("[BootScreen] Boot screen animation ... LOOK AT ME LIKE I'M BEAUTIFUL !", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	End if
+	
 	
 	ScreenSet CPCDOS_INSTANCE._PAGE_VIDEO_WORK, CPCDOS_INSTANCE._PAGE_VIDEO_MAIN
 
@@ -350,11 +338,8 @@ Public Function Animation cdecl Alias "Animation" (byval thread_struct as _STRUC
 	wend
 
 	
-	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
-		DEBUG("[BootScreen] Animation de fermeture ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	Else
 		DEBUG("[BootScreen] Closing animation ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	End if
+	
 	
 	' **** Quitter le thread avec une animation de disparition ****
 	AlphaCalc = 255
@@ -388,11 +373,8 @@ Public Function Animation cdecl Alias "Animation" (byval thread_struct as _STRUC
 	SORTIR_SectionCritique()
 	' **************************************************************
 	
-	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
-		DEBUG("[BootScreen] OK, Fermeture du thread boot screen !", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	Else
 		DEBUG("[BootScreen] OK, Closing boot screen thread !", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-	End if
+	
 
 	return CPCDOS_INSTANCE.__THREAD_OK
 	

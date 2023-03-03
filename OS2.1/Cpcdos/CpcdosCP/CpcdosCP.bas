@@ -95,85 +95,85 @@
 #print * Init CMD_CpcdosCP
 Sub _SHELL_Cpcdos_OSx__._INIT_CpcdosCP_CMD()
 		DEBUG("[SHELL] Shell intialization...",  CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-	this.Liste_CMD_FR(1) = "REM/"				: this.Liste_CMD_EN(1) = "REM/"
-	this.Liste_CMD_FR(2) = "AIDE/"				: this.Liste_CMD_EN(2) = "HELP/"
-	this.Liste_CMD_FR(3) = "CLS/"				: this.Liste_CMD_EN(3) = "CLS/"
-	this.Liste_CMD_FR(4) = "TXT/"				: this.Liste_CMD_EN(4) = "TXT/"
-	this.Liste_CMD_FR(5) = "FIX/"				: this.Liste_CMD_EN(5) = "SET/"
-	this.Liste_CMD_FR(6) = "ALLER/"				: this.Liste_CMD_EN(6) = "GOTO/"
-	this.Liste_CMD_FR(7) = "CCP/"				: this.Liste_CMD_EN(7) = "CCP/"
-	this.Liste_CMD_FR(8) = "EXE/"				: this.Liste_CMD_EN(8) = "EXE/"
-	this.Liste_CMD_FR(9) = "SYS/"				: this.Liste_CMD_EN(9) = "SYS/"
-	this.Liste_CMD_FR(10) = "FERMER/"			: this.Liste_CMD_EN(10) = "CLOSE/"
-	this.Liste_CMD_FR(11) = "COULEURC/"			: this.Liste_CMD_EN(11) = "COLORF/"
-	this.Liste_CMD_FR(12) = "STOPK/"			: this.Liste_CMD_EN(12) = "STOPK/"
-	this.Liste_CMD_FR(13) = "SERVEUR/"			: this.Liste_CMD_EN(13) = "SERVER/"
-	this.Liste_CMD_FR(14) = "PING/"				: this.Liste_CMD_EN(14) = "PING/"
-	this.Liste_CMD_FR(15) = "TELECHARGER/"		: this.Liste_CMD_EN(15) = "DOWNLOAD/"
-	this.Liste_CMD_FR(16) = "DOS/"				: this.Liste_CMD_EN(16) = "DOS/"
-	this.Liste_CMD_FR(17) = "CMD/"				: this.Liste_CMD_EN(17) = "CMD/"
-	this.Liste_CMD_FR(18) = "LOGIN/"			: this.Liste_CMD_EN(18) = "LOGIN/"
-	this.Liste_CMD_FR(19) = "OUVRIR/"			: this.Liste_CMD_EN(19) = "OPEN/"
-	this.Liste_CMD_FR(20) = "TEXTEBLOC/"		: this.Liste_CMD_EN(20) = "TEXTBLOCK/" ' correction 14/07/2017 avec le 'LOC/'
-	this.Liste_CMD_FR(21) = "SI/"				: this.Liste_CMD_EN(21) = "IF/"
-	this.Liste_CMD_FR(22) = "FIN/"				: this.Liste_CMD_EN(22) = "END/"
-	this.Liste_CMD_FR(23) = "FONCTION/"			: this.Liste_CMD_EN(23) = "FUNCTION/"
-	this.Liste_CMD_FR(24) = "ECRIRE/"			: this.Liste_CMD_EN(24) = "WRITE/"
-	this.Liste_CMD_FR(25) = "DECLARER/"			: this.Liste_CMD_EN(25) = "DECLARE/"
-	this.Liste_CMD_FR(26) = "IUG/"				: this.Liste_CMD_EN(26) = "GUI/"
-	this.Liste_CMD_FR(27) = "STOP/"				: this.Liste_CMD_EN(27) = "STOP/"
-	this.Liste_CMD_FR(28) = "RETOUR/"			: this.Liste_CMD_EN(28) = "RETURN/"
-	this.Liste_CMD_FR(29) = "FENETRE/"			: this.Liste_CMD_EN(29) = "WINDOW/"
-	this.Liste_CMD_FR(30) = "CREER/"			: this.Liste_CMD_EN(30) = "CREATE/"
-	this.Liste_CMD_FR(31) = "IMAGEBOX/"			: this.Liste_CMD_EN(31) = "PICTUREBOX/"
-	this.Liste_CMD_FR(32) = "CLIENT/"			: this.Liste_CMD_EN(32) = "CLIENT/"
-	this.Liste_CMD_FR(33) = "COULEURF/"			: this.Liste_CMD_EN(33) = "COLORB/"
-	this.Liste_CMD_FR(34) = "BOUTON/"			: this.Liste_CMD_EN(34) = "BUTTON/"
-	this.Liste_CMD_FR(35) = "POS/"				: this.Liste_CMD_EN(35) = "LOC/"
-	this.Liste_CMD_FR(36) = "DEMARRER/"			: this.Liste_CMD_EN(36) = "START/"
-	this.Liste_CMD_FR(37) = "SUPPRIMER/"		: this.Liste_CMD_EN(37) = "DELETE/"
-	this.Liste_CMD_FR(38) = "COPIER/"			: this.Liste_CMD_EN(38) = "COPY/"
-	this.Liste_CMD_FR(39) = "DEPLACER/"			: this.Liste_CMD_EN(39) = "MOVE/"
-	this.Liste_CMD_FR(40) = "RENOMMER/"			: this.Liste_CMD_EN(40) = "RENAME/"
-	this.Liste_CMD_FR(41) = "TEXTEBOX/"			: this.Liste_CMD_EN(41) = "TEXTBOX/"
-	this.Liste_CMD_FR(42) = "DOSSIER/"			: this.Liste_CMD_EN(42) = "FOLDER/"
-	this.Liste_CMD_FR(43) = "REP/"				: this.Liste_CMD_EN(43) = "DIR/"
-	this.Liste_CMD_FR(44) = "BARREPROGRESSION/"	: this.Liste_CMD_EN(44) = "PROGRESSBAR/"
-	this.Liste_CMD_FR(45) = "MESSAGE/"			: this.Liste_CMD_EN(45) = "MSGBOX/"
-	this.Liste_CMD_FR(46) = "CHECKBOX/"			: this.Liste_CMD_EN(46) = "CHECKBOX/"
-	this.Liste_CMD_FR(47) = "ACTUALISER/"		: this.Liste_CMD_EN(47) = "REFRESH/"
-	this.Liste_CMD_FR(48) = "DECOMPRESSER/"		: this.Liste_CMD_EN(48) = "DECOMPRESS/"
-	this.Liste_CMD_FR(49) = "COMPRESSER/"		: this.Liste_CMD_EN(49) = "COMPRESS/"
-	this.Liste_CMD_FR(50) = "EXPLORER/"			: this.Liste_CMD_EN(50) = "EXPLORER/"
-	this.Liste_CMD_FR(51) = "LISTBOX/"			: this.Liste_CMD_EN(51) = "LISTBOX/"
-	' this.Liste_CMD_FR(52) = "fix/"			: this.Liste_CMD_EN(52) = "set/"
-	' this.Liste_CMD_FR(53) = "fix/"			: this.Liste_CMD_EN(53) = "set/"
-	' this.Liste_CMD_FR(54) = "fix/"			: this.Liste_CMD_EN(54) = "set/"
+	this.Liste_CMD_EN(1) = "REM/"
+	this.Liste_CMD_EN(2) = "HELP/"
+	this.Liste_CMD_EN(3) = "CLS/"
+	this.Liste_CMD_EN(4) = "TXT/"
+	this.Liste_CMD_EN(5) = "SET/"
+	this.Liste_CMD_EN(6) = "GOTO/"
+	this.Liste_CMD_EN(7) = "CCP/"
+	this.Liste_CMD_EN(8) = "EXE/"
+	this.Liste_CMD_EN(9) = "SYS/"
+	this.Liste_CMD_EN(10) = "CLOSE/"
+	this.Liste_CMD_EN(11) = "COLORF/"
+	this.Liste_CMD_EN(12) = "STOPK/"
+	this.Liste_CMD_EN(13) = "SERVER/"
+	this.Liste_CMD_EN(14) = "PING/"
+	this.Liste_CMD_EN(15) = "DOWNLOAD/"
+	this.Liste_CMD_EN(16) = "DOS/"
+	this.Liste_CMD_EN(17) = "CMD/"
+	this.Liste_CMD_EN(18) = "LOGIN/"
+	this.Liste_CMD_EN(19) = "OPEN/"
+	this.Liste_CMD_EN(20) = "TEXTBLOCK/" ' correction 14/07/2017 avec le 'LOC/'
+	this.Liste_CMD_EN(21) = "IF/"
+	this.Liste_CMD_EN(22) = "END/"
+	this.Liste_CMD_EN(23) = "FUNCTION/"
+	this.Liste_CMD_EN(24) = "WRITE/"
+	this.Liste_CMD_EN(25) = "DECLARE/"
+	this.Liste_CMD_EN(26) = "GUI/"
+	this.Liste_CMD_EN(27) = "STOP/"
+	this.Liste_CMD_EN(28) = "RETURN/"
+	this.Liste_CMD_EN(29) = "WINDOW/"
+	this.Liste_CMD_EN(30) = "CREATE/"
+	this.Liste_CMD_EN(31) = "PICTUREBOX/"
+	this.Liste_CMD_EN(32) = "CLIENT/"
+	this.Liste_CMD_EN(33) = "COLORB/"
+	this.Liste_CMD_EN(34) = "BUTTON/"
+	this.Liste_CMD_EN(35) = "LOC/"
+	this.Liste_CMD_EN(36) = "START/"
+	this.Liste_CMD_EN(37) = "DELETE/"
+	this.Liste_CMD_EN(38) = "COPY/"
+	this.Liste_CMD_EN(39) = "MOVE/"
+	this.Liste_CMD_EN(40) = "RENAME/"
+	this.Liste_CMD_EN(41) = "TEXTBOX/"
+	this.Liste_CMD_EN(42) = "FOLDER/"
+	this.Liste_CMD_EN(43) = "DIR/"
+	this.Liste_CMD_EN(44) = "PROGRESSBAR/"
+	this.Liste_CMD_EN(45) = "MSGBOX/"
+	this.Liste_CMD_EN(46) = "CHECKBOX/"
+	this.Liste_CMD_EN(47) = "REFRESH/"
+	this.Liste_CMD_EN(48) = "DECOMPRESS/"
+	this.Liste_CMD_EN(49) = "COMPRESS/"
+	this.Liste_CMD_EN(50) = "EXPLORER/"
+	this.Liste_CMD_EN(51) = "LISTBOX/"
+	' this.Liste_CMD_EN(52) = "set/"
+	' this.Liste_CMD_EN(53) = "set/"
+	' this.Liste_CMD_EN(54) = "set/"
 
 	' Proprietes de la GUI toujours a partir de 128. Ce qui laisse 127 Commande cpcdosc+
-	this.Liste_CMD_FR(128) = ".COULEURTITRE"	: this.Liste_CMD_EN(128) = ".TITLECOLOR"
-	this.Liste_CMD_FR(129) = ".NOM"				: this.Liste_CMD_EN(129) = ".NAME"
-	this.Liste_CMD_FR(130) = ".PID"				: this.Liste_CMD_EN(130) = ".PID"
-	this.Liste_CMD_FR(131) = ".PARAMETRES"		: this.Liste_CMD_EN(131) = ".PARAMETERS"
-	this.Liste_CMD_FR(132) = ".PX"				: this.Liste_CMD_EN(132) = ".PX"
-	this.Liste_CMD_FR(133) = ".PY"				: this.Liste_CMD_EN(133) = ".PY"
-	this.Liste_CMD_FR(134) = ".TX"				: this.Liste_CMD_EN(134) = ".SX"
-	this.Liste_CMD_FR(135) = ".TY"				: this.Liste_CMD_EN(135) = ".SY"
-	this.Liste_CMD_FR(136) = ".COULEURFENETRE"	: this.Liste_CMD_EN(136) = ".WINDOWCOLOR"
-	this.Liste_CMD_FR(137) = ".TITRE"			: this.Liste_CMD_EN(137) = ".TITLE"
-	this.Liste_CMD_FR(138) = ".COULEURFOND"		: this.Liste_CMD_EN(138) = ".BACKCOLOR"
-	this.Liste_CMD_FR(139) = ".ICONE"			: this.Liste_CMD_EN(139) = ".ICON"
-	this.Liste_CMD_FR(140) = ".IMGTITRE"		: this.Liste_CMD_EN(140) = ".TITLEIMG"
-	this.Liste_CMD_FR(141) = ".IMAGE"			: this.Liste_CMD_EN(141) = ".IMAGE"
-	this.Liste_CMD_FR(142) = ".OPACITE"			: this.Liste_CMD_EN(142) = ".OPACITY"
-	this.Liste_CMD_FR(143) = ".COULEURTEXTE"	: this.Liste_CMD_EN(143) = ".TEXTCOLOR"
-	this.Liste_CMD_FR(144) = ".EVENEMENT"		: this.Liste_CMD_EN(144) = ".EVENT"
-	this.Liste_CMD_FR(145) = ".TEXTE"			: this.Liste_CMD_EN(145) = ".TEXT"
-	this.Liste_CMD_FR(146) = ".HANDLE"			: this.Liste_CMD_EN(146) = ".HANDLE"
-	this.Liste_CMD_FR(147) = ".VALEUR"			: this.Liste_CMD_EN(147) = ".VALUE"
-	' this.Liste_CMD_FR(148) = ".COULEURFOND"	: this.Liste_CMD_EN(148) = ".BACKCOLOR"
-	' this.Liste_CMD_FR(149) = ".COULEURFOND"	: this.Liste_CMD_EN(149) = ".BACKCOLOR"
-	' this.Liste_CMD_FR(150) = ".COULEURFOND"	: this.Liste_CMD_EN(150) = ".BACKCOLOR"
+	this.Liste_CMD_EN(128) = ".TITLECOLOR"
+	this.Liste_CMD_EN(129) = ".NAME"
+	this.Liste_CMD_EN(130) = ".PID"
+	this.Liste_CMD_EN(131) = ".PARAMETERS"
+	this.Liste_CMD_EN(132) = ".PX"
+	this.Liste_CMD_EN(133) = ".PY"
+	this.Liste_CMD_EN(134) = ".SX"
+	this.Liste_CMD_EN(135) = ".SY"
+	this.Liste_CMD_EN(136) = ".WINDOWCOLOR"
+	this.Liste_CMD_EN(137) = ".TITLE"
+	this.Liste_CMD_EN(138) = ".BACKCOLOR"
+	this.Liste_CMD_EN(139) = ".ICON"
+	this.Liste_CMD_EN(140) = ".TITLEIMG"
+	this.Liste_CMD_EN(141) = ".IMAGE"
+	this.Liste_CMD_EN(142) = ".OPACITY"
+	this.Liste_CMD_EN(143) = ".TEXTCOLOR"
+	this.Liste_CMD_EN(144) = ".EVENT"
+	this.Liste_CMD_EN(145) = ".TEXT"
+	this.Liste_CMD_EN(146) = ".HANDLE"
+	this.Liste_CMD_EN(147) = ".VALUE"
+	' this.Liste_CMD_EN(148) = ".BACKCOLOR"
+	' this.Liste_CMD_EN(149) = ".BACKCOLOR"
+	' this.Liste_CMD_EN(150) = ".BACKCOLOR"
 
 
 	' For index as uinteger = 0 to this.MEMOIRE_CCP.CpcdosCP_Variable_MAXI
@@ -653,7 +653,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		
 			' DEV temporaire: Si commande vide alors on saute
 			'  directement aux commandes graphiques
-			IF this.Liste_CMD_FR(boucle) = "" AND boucle < 128 Then boucle = 128
+			IF this.Liste_CMD_EN(boucle) = "" AND boucle < 128 Then boucle = 128
 
 			' Chercher la syntaxe Anglophone
 			IF Instr(tst_Cap, this.Liste_CMD_EN(Boucle)) > 0 Then
@@ -680,7 +680,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			End if
 			
 			' Chercher la syntaxe Francophone
-			IF Instr(tst_Cap, this.Liste_CMD_FR(Boucle)) > 0 Then
+			IF Instr(tst_Cap, this.Liste_CMD_EN(Boucle)) > 0 Then
 				if Mid(this.Liste_CMD_EN(Boucle), 1, 1) = "." Then 
 					dim cap_tmp as string = Rtrim(Ltrim(tst_Cap, chr(10)), chr(13))
 
@@ -697,10 +697,10 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					End if
 				End if
 
-				Debug("/!\ French syntax is deprecated and will be removed in future major release ! You should use " & this.Liste_CMD_EN(Boucle) & " instead", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				TailleComm = LEN(this.Liste_CMD_FR(Boucle))
+				' Debug("/!\ French syntax is deprecated and will be removed in future major release ! You should use " & this.Liste_CMD_EN(Boucle) & " instead", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				TailleComm = LEN(this.Liste_CMD_EN(Boucle))
 				CommPosition = Position_CMD
-				OnCherche = Lcase(this.Liste_CMD_FR(Boucle))
+				OnCherche = Lcase(this.Liste_CMD_EN(Boucle))
 				Exit for
 			End if
 			
@@ -718,9 +718,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'aide permettant d'afficher l'aide d'une commande
 		' ===============================================================
-		CommLANG(1) = "aide/"
-		CommLANG(2) = "help/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "help/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -730,8 +729,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			Dim Mess_Debug 	as String
 			' Tester la syntaxe
@@ -784,9 +782,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commentaire
 		' ===============================================================
-		CommLANG(1) = "rem/"
-		CommLANG(2) = "rem/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "rem/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -796,14 +793,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " rem/                       Write a comment in code"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
@@ -841,9 +837,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'effacement de l'ecran
 		' ===============================================================
-		CommLANG(1) = "cls/"
-		CommLANG(2) = "cls/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "cls/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -853,14 +848,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " cls/                       Clear LC console screen"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -932,9 +926,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'effacement de l'ecran
 		' ===============================================================
-		CommLANG(1) = "supprimer/"
-		CommLANG(2) = "delete/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "delete/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -944,14 +937,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " delete/                    Delete a file"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -1034,9 +1026,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'effacement de l'ecran
 		' ===============================================================
-		CommLANG(1) = "copier/"
-		CommLANG(2) = "copy/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "copy/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1046,14 +1037,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " copy/                      Copy a file in a directory"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -1307,9 +1297,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de renommage
 		' ===============================================================
-		CommLANG(1) = "renommer/"
-		CommLANG(2) = "rename/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "rename/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1319,14 +1308,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " rename/                    Rename a file or a directory"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -1430,9 +1418,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de creation dossier
 		' ===============================================================
-		CommLANG(1) = "dossier/"
-		CommLANG(2) = "folder/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "folder/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1442,14 +1429,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " folder/                    Create a folder"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -1541,9 +1527,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de listage repertoire
 		' ===============================================================
-		CommLANG(1) = "rep/"
-		CommLANG(2) = "dir/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "dir/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1553,14 +1538,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " dir/                       List directory content"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -1924,9 +1908,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour afficher du texte a l'ecran
 		' ===============================================================
-		CommLANG(1) = "txt/"
-		CommLANG(2) = "txt/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "txt/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1936,15 +1919,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " txt/                       Write text"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -2037,9 +2019,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour fixer une variable CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "fix/"
-		CommLANG(2) = "set/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "set/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -2049,15 +2030,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " set/                       Create or modify a variable or array(s)"
 			
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
@@ -2864,9 +2844,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour demarrer un OS
 		' ===============================================================
-		CommLANG(1) = "demarrer/"
-		CommLANG(2) = "start/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "start/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -2876,14 +2855,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " start/                     Starting installed operating system(s)"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -3012,9 +2990,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour executer l'IUG
 		' ===============================================================
-		CommLANG(1) = "iug/"
-		CommLANG(2) = "gui/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "gui/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 
 		for boucle as integer = 1 to 2
@@ -3025,15 +3002,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " gui/                       Launch cpcdos graphic user interface"
 			
 		END IF
 		
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 
 			IF AfficherAide = 2 then
@@ -3285,9 +3261,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer une fenetre
 		' ===============================================================
-		CommLANG(1) = "fenetre/"
-		CommLANG(2) = "window/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "window/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3297,14 +3272,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " window/                    Create or manage new graphic"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -3478,9 +3452,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer une picturebox
 		' ===============================================================
-		CommLANG(1) = "imagebox/"
-		CommLANG(2) = "picturebox/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "picturebox/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3490,14 +3463,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " picturebox/                Create new picturebox instance"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -3583,9 +3555,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un bouton
 		' ===============================================================
-		CommLANG(1) = "bouton/"
-		CommLANG(2) = "button/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "button/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3595,14 +3566,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " button/                    Create new button instance."
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -3688,9 +3658,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un textebloc
 		' ===============================================================
-		CommLANG(1) = "textebloc/"
-		CommLANG(2) = "textblock/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "textblock/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3700,14 +3669,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " textblock/                 Create new textblock instance."
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		
 		
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
@@ -3797,9 +3765,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un textebox
 		' ===============================================================
-		CommLANG(1) = "textebox/"
-		CommLANG(2) = "textbox/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "textbox/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3809,14 +3776,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " textbox/                   Create new editable text box instance."
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		
 		
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
@@ -3967,9 +3933,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer une barre de progression
 		' ===============================================================
-		CommLANG(1) = "barreprogression/"
-		CommLANG(2) = "progressbar/"
-		CommLANG(3) = "\\#//"
+		
+		CommLang(2) = "progressbar/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3979,14 +3945,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " ProgressBar/               Create new progress bar instance"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -4072,9 +4038,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un checkbox
 		' ===============================================================
-		CommLANG(1) = "checkbox/"
-		CommLANG(2) = "checkbox/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "checkbox/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4084,14 +4049,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " checkbox/                  Create new check box instance"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -4178,9 +4142,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un explorateur de fichiers
 		' ===============================================================
-		CommLANG(1) = "explorer/"
-		CommLANG(2) = "explorer/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "explorer/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4190,14 +4153,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " explorer/                  Create new explorer instance."
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -4278,9 +4240,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un explorateur de fichiers
 		' ===============================================================
-		CommLANG(1) = "listbox/"
-		CommLANG(2) = "listbox/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "listbox/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4290,14 +4251,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " listbox/                  Create new listbox instance."
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -4426,9 +4386,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour rafraichir un objet ou une fenetre
 		' ===============================================================
-		CommLANG(1) = "actualiser/"
-		CommLANG(2) = "refresh/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "refresh/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4438,14 +4397,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " refresh/                   Refresh an GUI object, window or background"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5051,9 +5010,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de decompression
 		' ===============================================================
-		CommLANG(1) = "decompresser/"
-		CommLANG(2) = "decompress/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "decompress/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5063,14 +5021,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " decompress/                Decompress an ZIP file"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5177,9 +5134,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	
 	_scope_CMD
 	
-		CommLANG(1) = ".titre"
-		CommLANG(2) = ".title"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".title"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5189,14 +5145,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> Title              Put title on Window"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5260,9 +5215,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".nom"
-		CommLANG(2) = ".name"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".name"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5272,14 +5226,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> name               Process / Object name"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5343,9 +5296,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".texte"
-		CommLANG(2) = ".text"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".text"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5355,14 +5307,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> text               Graphic text object"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5427,9 +5378,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".pid"
-		CommLANG(2) = ".pid"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".pid"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5439,14 +5389,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> pid                Parent/host process number"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5515,9 +5464,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLANG(1) = ".handle"
-		CommLANG(2) = ".handle"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".handle"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5527,14 +5475,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> handle             Parent/host process number"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5603,9 +5550,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLANG(1) = ".valeur"
-		CommLANG(2) = ".value"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".value"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5615,14 +5561,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> Value              Expected object value"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5689,9 +5634,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".parametres"
-		CommLANG(2) = ".parameters"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".parameters"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5701,14 +5645,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> type               Graphic window type"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5789,9 +5732,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".couleurfenetre"
-		CommLANG(2) = ".windowcolor"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".windowcolor"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5801,14 +5743,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> windowcolor        Window color"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5877,9 +5818,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 
 		' =======================================================================
-		CommLANG(1) = ".couleurfond"
-		CommLANG(2) = ".backcolor"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".backcolor"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5889,13 +5829,12 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> windowcolor        Window container color"
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -5964,9 +5903,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".couleurtitre"
-		CommLANG(2) = ".titlecolor"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".titlecolor"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5976,14 +5914,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> windowcolor        Color of title of the windows"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6053,9 +5990,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLANG(1) = ".couleurtexte"
-		CommLANG(2) = ".textcolor"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".textcolor"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6065,13 +6001,12 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> textcolor          Color of title of the windows"
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6136,9 +6071,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".icone"
-		CommLANG(2) = ".icon"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".icon"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6148,14 +6082,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> icon               Window icon"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6223,9 +6156,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".imgtitre"
-		CommLANG(2) = ".titleimg"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".titleimg"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6235,14 +6167,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> titleimg           background image of title"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6309,9 +6240,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".image"
-		CommLANG(2) = ".image"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".image"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6321,14 +6251,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> image              Container image" 
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6396,9 +6325,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLANG(1) = ".opacite"
-		CommLANG(2) = ".opacity"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".opacity"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6408,14 +6336,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> opacity            Window/object opacity" 
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6482,9 +6409,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".px"
-		CommLANG(2) = ".px"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".px"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6494,14 +6420,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> px                 Horizontal position"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6567,9 +6492,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".py"
-		CommLANG(2) = ".py"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".py"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6579,14 +6503,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> py                 Vertical position"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6653,9 +6576,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = ".tx"
-		CommLANG(2) = ".sx"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".sx"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6665,14 +6587,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> sx                 Horizontal size"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6737,9 +6658,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLANG(1) = ".ty"
-		CommLANG(2) = ".sy"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".sy"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6749,14 +6669,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> sy                 Vertical size"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6822,9 +6741,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLANG(1) = ".evenement"
-		CommLANG(2) = ".event"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = ".event"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6834,14 +6752,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> event              File with events functions"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6909,9 +6826,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLANG(1) = "creer/"
-		CommLANG(2) = "create/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "create/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6921,14 +6837,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & "  GUI -> create/            Create initialised window or object"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -6990,9 +6905,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		REM ' ===============================================================
 		REM '  Commande conditionnelle
 		REM ' ===============================================================
-		CommLANG(1) = "si/"
-		CommLANG(2) = "if/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "if/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7002,15 +6916,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		REM 'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " if/                        Condition with two expressions"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -7479,9 +7392,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Fin d'une fonction
 		' ===============================================================
-		CommLANG(1) = "fin/"
-		CommLANG(2) = "end/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "end/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7491,14 +7403,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " end/                       Condition / function delimiter"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
@@ -7649,9 +7560,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Arreter la lecture d'un fichier CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "stop/"
-		CommLANG(2) = "stop/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "stop/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7661,14 +7571,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " stop/                      Ending .CPC file"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
@@ -7719,9 +7628,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de positionnement
 		' ===============================================================
-		CommLANG(1) = "pos/"
-		CommLANG(2) = "loc/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "loc/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7731,14 +7639,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " loc/                       Locate or get GUI or console cursor"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -7899,9 +7806,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		REM ' ===============================================================
 		REM '  Commande pour stopper brusquement l'OS et fermer le kernel (Non conseille)
 		REM ' ===============================================================
-		CommLANG(1) = "stopk/"
-		CommLANG(2) = "stopk/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "stopk/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7911,15 +7817,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		REM 'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " stopk/                     Stop kernel."
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -7960,7 +7865,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' CPCDOS_INSTANCE.SYSTEME_INSTANCE.set_Resolution(0)
 			CpcdosCP_SHELL("SYS/ /DEBUG = 1", _CLE_, NIVEAU_CCP, Param_1, Param_2)
 			CpcdosCP_SHELL("SYS/ /DEBUG /CPINTICORE = 1", _CLE_, NIVEAU_CCP, Param_1, Param_2)
-			CpcdosCP_SHELL("SYS/ /ECRAN 0", _CLE_, NIVEAU_CCP, Param_1, Param_2)
+			CpcdosCP_SHELL("SYS/ /SCREEB 0", _CLE_, NIVEAU_CCP, Param_1, Param_2)
 			doevents(1000)
 			
 				DEBUG("[CpcdosC+] Stopping cpcdos kernel...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
@@ -7991,9 +7896,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour atteindre un label code
 		' ===============================================================
-		CommLANG(1) = "aller/"
-		CommLANG(2) = "goto/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "goto/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8003,15 +7907,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " goto/                      Go to at specified label in code in execution"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -8075,9 +7978,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour declarer une fonction CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "retour/"
-		CommLANG(2) = "return/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "return/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8087,7 +7989,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 			
@@ -8095,8 +7997,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
@@ -8163,9 +8064,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour declarer une fonction CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "fonction/"
-		CommLANG(2) = "function/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "function/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8175,15 +8075,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " function/                  Declare CpcdosC+ function with a level"
 			
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
@@ -8239,9 +8138,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour executer une commande avec ou sans Parametres
 		' ===============================================================
-		CommLANG(1) = "cmd/"
-		CommLANG(2) = "cmd/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "cmd/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8251,15 +8149,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " cmd/                       Launch CpcdosC+ command with or without Parameters"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -8539,9 +8436,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour ouvrir directement/simplement un fichier
 		' ===============================================================
-		CommLANG(1) = "ouvrir/"
-		CommLANG(2) = "open/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "open/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8551,15 +8447,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " open/                      Read only file content"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -8786,9 +8681,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour ecrire directement/simplement un fichier
 		' ===============================================================
-		CommLANG(1) = "ecrire/"
-		CommLANG(2) = "write/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "write/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8798,15 +8692,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " write/                     Write in file"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -8962,9 +8855,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour pinger une machine
 		' ===============================================================
-		CommLANG(1) = "ping/"
-		CommLANG(2) = "ping/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "ping/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8974,15 +8866,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " ping/                      Test a network machine"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -9098,9 +8989,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour telecharger un fichier en http
 		' ===============================================================
-		CommLANG(1) = "telecharger/"
-		CommLANG(2) = "download/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "download/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -9110,15 +9000,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " download/                  Download HTTP file"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -9685,9 +9574,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour configurer le CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "ccp/"
-		CommLANG(2) = "ccp/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "ccp/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -9697,15 +9585,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " ccp/                       CpcdosC+ configuration"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -9985,9 +9872,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour executer un fichier CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "exe/"
-		CommLANG(2) = "exe/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "exe/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -9998,15 +9884,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			End if
 		Next boucle
 
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " exe/                       Launch a CpcdosC+ file"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
@@ -11241,17 +11126,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 ' Saut_Fincp:
 											 
 											' On verifie si on tombe bien sur la ligne de la syntaxe ou se situe la fonction
-											Dim POSCommFONCTION_FR as integer = Instr(Ucase(Buffer_lecture), this.Liste_CMD_FR(23) & " ") ' FONCTION/
+											' Dim POSCommFONCTION_FR as integer = Instr(Ucase(Buffer_lecture), this.Liste_CMD_FR(23) & " ") ' FONCTION/
 											Dim POSCommFONCTION_EN as integer = Instr(Ucase(Buffer_lecture), this.Liste_CMD_EN(23) & " ") ' FUNCTION/
 
-											IF POSCommFONCTION_FR > 0 OR POSCommFONCTION_EN > 0 Then
+											IF POSCommFONCTION_EN > 0 Then
 												IF Instr(Ucase(Buffer_lecture), CCP_Fonction_EXEC) > 0 Then
 													Dim NomFonctExec as String
 													Dim testCMD	as integer 
-													IF POSCommFONCTION_FR > 0 Then 
-														testCMD = CCP_Verifier_Syntaxe(Buffer_lecture, POSCommFONCTION_FR - 1)
-														NomFonctExec = UCASE(MID(Buffer_lecture, POSCommFONCTION_FR + LEN(this.Liste_CMD_FR(23)) + 1)) ' MODIF 22-02-2017 : Suppr POSCommFONCTION_FR + 4))
-													ElseIF POSCommFONCTION_EN > 0 Then 
+													IF POSCommFONCTION_EN > 0 Then 
 														testCMD = CCP_Verifier_Syntaxe(Buffer_lecture, POSCommFONCTION_EN - 1)
 														NomFonctExec = UCASE(MID(Buffer_lecture, POSCommFONCTION_EN + LEN(this.Liste_CMD_EN(23)) - 1)) ' MODIF 22-02-2017 : Suppr POSCommFONCTION_EN + 4))
 													End if
@@ -15578,9 +15460,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande affichage d'une boite de dialogue
 		' ===============================================================
-		CommLANG(1) = "message/"
-		CommLANG(2) = "msgbox/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "msgbox/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -15590,14 +15471,13 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " msgbox/                    Display an graphical message box"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -15880,9 +15760,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour creer / stopper un serveur TCP
 		' ===============================================================
-		CommLANG(1) = "serveur/"
-		CommLANG(2) = "server/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "server/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -15892,15 +15771,14 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 			CommandesAide = CommandesAide & CRLF & " Server/                    Start or stop a TCP server with your port number"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -16267,9 +16145,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour creer / stopper un client TCP/UDP
 		' ===============================================================
-		CommLANG(1) = "client/"
-		CommLANG(2) = "client/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "client/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -16279,15 +16156,14 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " Client/                    Start or stop a TCP/UDP client connection"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -16657,9 +16533,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour se loger, creer, parametrer les comptes
 		' ===============================================================
-		CommLANG(1) = "LOGIN/"
-		CommLANG(2) = "LOGIN/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "LOGIN/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -16669,7 +16544,7 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
@@ -16677,8 +16552,7 @@ _FIN_EXE_CCP_EXE:
 				CommandesAide = CommandesAide & CRLF & " Login/                     Open, create, modify an user account"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -16760,9 +16634,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande de fermeture d'un processus
 		' ===============================================================
-		CommLANG(1) = "fermer/"
-		CommLANG(2) = "close/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "close/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -16772,15 +16645,14 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		REM 'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " close/                     Kill a process, thread or an object"
 			
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -17646,9 +17518,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour configurer/afficher des Parametres du systeme
 		' ===============================================================
-		CommLANG(1) = "sys/"
-		CommLANG(2) = "sys/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "sys/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -17658,7 +17529,7 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
@@ -17666,8 +17537,7 @@ _FIN_EXE_CCP_EXE:
 			
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -17964,7 +17834,12 @@ _FIN_EXE_CCP_EXE:
 				CPCDOS_INSTANCE.SCI_INSTANCE.charger_Curseurs(Auth_OS+1024)
 				exit _scope_CMD, _scope
 			End if
-			
+				IF Instr(UCASE(Param), "/SB16") > 0 Then		
+					DEBUG("[CpcdosC+] THIS COMMAND LOAD SB16 DRIVER", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					
+					
+					exit _scope_CMD, _scope
+				End if			
 			IF Instr(UCASE(Param), "/DEBUG") > 0 Then			
 				Dim aDBG_DEBUG 				as Integer
 				Dim aDBG_DEBUG_SRVTCP 		as Integer
@@ -17999,6 +17874,7 @@ _FIN_EXE_CCP_EXE:
 					exit _scope_CMD, _scope
 				End if
 				
+
 
 '---------------------------------------------- Test_ecran_console --------------------------------------
 				IF Instr(UCASE(Param), "/COM") > 0 Then
@@ -18476,19 +18352,8 @@ _FIN_EXE_CCP_EXE:
 					exit _scope_CMD, _scope
 				End if				
 				
-				IF Instr(UCASE(Param), "/SB16 ") > 0 Then
-					Dim PosTestres as integer = Instr(UCASE(Param), "/SB16 ")
-					Dim CouleurPos as integer = InstrREV(UCASE(Param), "X")
-					Dim Couleur as string = MID(Param, CouleurPos + 1)
-					Dim Resolution as String = MID(Param, PosTestres + 6, (CouleurPos) - (PosTestres + 6))
-					
-							DEBUG("[CpcdosC+] " & Message_erreur & "THIS COMMAND LOAD SB16 DRIVER", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					exit _scope_CMD, _scope
-				End if
 				
 				
-
-				IF Instr(UCASE(Param), "/ECRAN") > 0 Then Param = MID(Param, Instr(UCASE(Param), "/ECRAN") + 6)
 				IF Instr(UCASE(Param), "/SCREEN") > 0 Then Param = MID(Param, Instr(UCASE(Param), "/SCREEN") + 7)
 
 				
@@ -18609,7 +18474,7 @@ _FIN_EXE_CCP_EXE:
 				For Boucle as uinteger = 0 to NombreProcessus - 1
 						DEBUG("[SHELL] Closing " & Boucle & "/" & NombreProcessus, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 					
-					CpcdosCP_SHELL("FERMER/ /PID:" & NombreProcessus - Boucle, _CLE_, 5, Param_1, Param_2)
+					CpcdosCP_SHELL("CLOSE/ /PID:" & NombreProcessus - Boucle, _CLE_, 5, Param_1, Param_2)
 					
 				Next Boucle
 				
@@ -19115,7 +18980,7 @@ _FIN_EXE_CCP_EXE:
 				End if
 			End if
 			
-			IF Instr(UCASE(Param), "/ARRETER") > 0 OR Instr(UCASE(Param), "/SHUTDOWN") > 0 Then
+			IF Instr(UCASE(Param), "/SHUTDOWN") > 0 Then
 				
 					DEBUG("[CPCDOSC+] Asking for shutdown system ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
@@ -19124,13 +18989,13 @@ _FIN_EXE_CCP_EXE:
 				
 				CX_APM_MODE = CPCDOS_INSTANCE.SYSTEME_INSTANCE.InterfaceAPM.CX_Shutdown
 				CpcdosCP_SHELL("SYS/ /STOPK", _CLE_, 5, Param_1, Param_2)
-			ElseIF Instr(UCASE(Param), "/STANDBY") > 0 OR Instr(UCASE(Param), "/VEILLE") > 0 Then
+			ElseIF Instr(UCASE(Param), "/STANDBY") > 0 Then
 					DEBUG("[CPCDOSC+] Asking for standby mode the system ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				
 				
 				CPCDOS_INSTANCE.SYSTEME_INSTANCE.InterfaceAPM.signal_systeme(CPCDOS_INSTANCE.SYSTEME_INSTANCE.InterfaceAPM.CX_StandbyMode)
-			ElseIF Instr(UCASE(Param), "/REBOOT") > 0 OR Instr(UCASE(Param), "/RESTART") > 0 OR Instr(UCASE(Param), "/REDEMARRER") > 0 Then
+			ElseIF Instr(UCASE(Param), "/REBOOT") > 0 OR Instr(UCASE(Param), "/RESTART") > 0 Then
 					DEBUG("[CPCDOSC+] Asking for restarting the system ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				
@@ -19144,7 +19009,7 @@ _FIN_EXE_CCP_EXE:
 
 			' Creer un nouveau processus
 			
-			IF Instr(UCASE(Param), "/PROCESS") > 0 OR Instr(UCASE(Param), "/PROCESSUS") > 0 Then
+			IF Instr(UCASE(Param), "/PROCESS") > 0 Then
 				Dim NomProcessus as String
 				Dim NumeroPID as integer
 				
@@ -19203,10 +19068,7 @@ _FIN_EXE_CCP_EXE:
 
 				else
 
-
-					IF Instr(UCASE(Param), "/PROCESSUS") > 0 Then
-						NomProcessus = Mid(Param, Instr(UCASE(Param), "/PROCESSUS") + 11)
-					ElseIF Instr(UCASE(Param), "/PROCESS") > 0 Then
+					IF Instr(UCASE(Param), "/PROCESS") > 0 Then
 						NomProcessus = Mid(Param, Instr(UCASE(Param), "/PROCESS") + 9)
 					End if
 					
@@ -19272,9 +19134,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour afficher du texte a l'ecran
 		' ===============================================================
-		CommLANG(1) = "couleurc/"
-		CommLANG(2) = "colorf/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "colorf/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19284,7 +19145,7 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
@@ -19292,8 +19153,7 @@ _FIN_EXE_CCP_EXE:
 			
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -19396,9 +19256,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour changer la couleur texte du fond
 		' ===============================================================
-		CommLANG(1) = "couleurf/"
-		CommLANG(2) = "colorb/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "colorb/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19408,15 +19267,14 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " colorb/                    Change background color"
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -19519,9 +19377,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour declarer une fonction CpcdosC+
 		' ===============================================================
-		CommLANG(1) = "declarer/"
-		CommLANG(2) = "declare/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "declare/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19531,15 +19388,14 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " declare/                   Declare CpcdosC+ function with a level"
 
 		END IF
 
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
@@ -19724,9 +19580,8 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour executer une application DOS
 		' ===============================================================
-		CommLANG(1) = "dos/"
-		CommLANG(2) = "dos/"
-		CommLANG(3) = "\\#//"
+		CommLang(2) = "dos/"
+		CommLang(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19736,14 +19591,13 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
+		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " dos/                       Launch a DOS file/Command"
 		END IF
-		IF CommLANG(1) = OnCherche Then CommTrouve = 1
-		IF CommLANG(2) = OnCherche Then CommTrouve = 2
+		IF CommLang(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
