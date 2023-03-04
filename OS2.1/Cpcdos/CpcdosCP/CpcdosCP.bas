@@ -17834,12 +17834,26 @@ _FIN_EXE_CCP_EXE:
 				CPCDOS_INSTANCE.SCI_INSTANCE.charger_Curseurs(Auth_OS+1024)
 				exit _scope_CMD, _scope
 			End if
+
 				IF Instr(UCASE(Param), "/SB16") > 0 Then		
-					DEBUG("[CpcdosC+] THIS COMMAND LOAD SB16 DRIVER", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					
+					IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=0") > 0 Then 
+						DEBUG("[CpcdosC+] SB16 deactivated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						 CPCDOS_INSTANCE._dsp_reset()
+						' temp asm function directly here
+					
+
+						' Lire le contenu depuis CPinti core
+						' Dim Buffer_CCP as integer = CPCDOS_INSTANCE.dsp_reset()
+					end if
+					IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=1") > 0 Then DEBUG("[CpcdosC+] SB16 activated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					
+						
 					
 					
 					exit _scope_CMD, _scope
 				End if			
+
 			IF Instr(UCASE(Param), "/DEBUG") > 0 Then			
 				Dim aDBG_DEBUG 				as Integer
 				Dim aDBG_DEBUG_SRVTCP 		as Integer

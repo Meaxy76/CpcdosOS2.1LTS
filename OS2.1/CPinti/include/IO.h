@@ -40,6 +40,13 @@ namespace cpinti
 		bool					Ecrire_fichier			(const char* Source, const char* Donnees, long FLAG);
 		bool					Supprimer_Ficher		(const char* Source, bool securise, long NombrePasses);
 		bool 					Copier_Fichier			(const char* Source, const char* Destination, long Priorite, const char* VAR_Progression, const char* VAR_Octets, const char* VAR_OctetsParSec);
+		//int dsp_reset	();
+	}
+
+	namespace sb16
+	{
+		int cpinti_dsp_reset	();
+		int dsp_reset	();
 	}
 
 }

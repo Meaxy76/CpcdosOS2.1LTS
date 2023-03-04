@@ -641,6 +641,8 @@ Type __Noyau_Cpcdos_OSx__
 		' *** Constructeur/Desctructeur ***
 		Declare Constructor()
 		Declare Destructor()
+
+	  Declare function _dsp_reset	()	as integer
 		
 End Type
 

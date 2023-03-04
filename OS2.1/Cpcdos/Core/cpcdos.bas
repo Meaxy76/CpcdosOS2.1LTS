@@ -1031,6 +1031,10 @@ Function __Noyau_Cpcdos_OSx__.Supprimer_Fichier(ByVal Source as String, ByVal se
 	' function = false
 End Function
 
+function __Noyau_Cpcdos_OSx__._dsp_reset() as integer
+	cpinti.sb16.dsp_reset()
+end function
+
 Function __Noyau_Cpcdos_OSx__.Copier_Fichier(ByVal Source as String, ByVal Destination as String, ByVal Priorite as integer, ByVal Var_Progression as String, ByVal Var_Octets as String, ByVal Var_OctetsParSec as String) as boolean
 	' Cette fonction permet de copier un fichier source a une destination
 	

@@ -24,6 +24,7 @@
 // Call for outportb
 #include <pc.h>
 
+#include "cpinti.h"
 #include "io.h"
 #include "debug.h" 
 #include "core.h"
@@ -44,7 +45,8 @@ namespace cpinti
 
         #define DIRECT_DAC 0x10
         #define ENABLE_SPEAKER 0xD1
-        void dsp_reset(){
+        int dsp_reset(){
+            printf("SB16\n");
                 uint32_t buf[4];
                 *buf = 128;
                 outp(1, DSP_RESET);
@@ -58,6 +60,7 @@ namespace cpinti
 										 "gestionnaire_fichier", "Lire_Fichier_complet()",
 							Ligne_saute, Alerte_erreur, Date_avec, Ligne_r_normal);
                 }
+                return 0;
         }
 
     }
