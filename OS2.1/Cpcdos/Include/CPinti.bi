@@ -32,11 +32,6 @@ Extern "C++" lib "cpnti"
 			declare function cpinti_client				(AdresseDistant as CONST ZString ptr, port as uinteger, PID as uinteger, TypeClient as integer) as integer
 		end namespace
 
-		' == SOUND ==
-		namespace sb16
-			declare function dsp_reset	cdecl() as integer
-		end namespace
-
 		declare function cpinti_GEST_BUFF_c			(_ID as uinteger, _Source as integer, _DONNEES as ZString ptr) as integer
 		
 		' == FICHIERS ==

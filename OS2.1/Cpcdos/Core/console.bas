@@ -215,13 +215,19 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 
 
 							if CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(index_fenetre).PROP_TYPE.Fermable = true Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[SHELL] Fermeture fenetre (" & index_fenetre & ") '" & Nom_fenetre & "' handle:" & Handle_fenetre & " depuis ALT+F4", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
+								Else
 									DEBUG("[SHELL] Closing window (" & index_fenetre & ") '" & Nom_fenetre & "' handle:" & Handle_fenetre & " from ALT+F4 user key", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-								
+								End If
 
 								CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("close/ /handle " & Handle_fenetre, _CLE_, 3, 0, "")
 							Else
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[SHELL] Fermeture fenetre INTERDITE (" & index_fenetre & ") '" & Nom_fenetre & "' handle:" & Handle_fenetre & " depuis ALT+F4", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Avertissement, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
+								Else
 									DEBUG("[SHELL] FORBIDDEN closing window (" & index_fenetre & ") '" & Nom_fenetre & "' handle:" & Handle_fenetre & " from ALT+F4 user key", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Avertissement, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, "")
-								
+								End If
 							End if
 						End if
 
@@ -394,8 +400,11 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 					
 					' Les conditions
 					IF Retour_CCP = "SI:FAUX" OR Retour_CCP = "SI:SINON" THEN
+						if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("FAUX", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Avertissement, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)	
+						else
 							DEBUG("FALSE", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Validation, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-						
+						End if
 					End if
 					
 					' Les fonctions
@@ -414,8 +423,11 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 					
 					' L'interface graphique
 					IF Retour_CCP = "IUG:" THEN
+						if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("Cette version ne peut interpreter les proprietes graphiques. Pour le moment ;-)", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Avertissement, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)	
+						else
 							DEBUG("This version can't interpret graphic properties. For the moment ;-)", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Validation, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-						
+						End if
 					End if
 
 					
@@ -428,8 +440,11 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 				
 						IF NumeroOS_tmp > -1 Then
 
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[SHELL] Switch de '" & Ancien_OS & "' (OSID:" & NumeroOS & ") a '" & tmpNomOS & "' (OSID:" & NumeroOS_tmp & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Action, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
+							Else
 								DEBUG("[SHELL] Switching from " & Ancien_OS & " (OSID:" & NumeroOS & ") OSID:" & NumeroOS & " to '" & tmpNomOS & "' (OSID:" & NumeroOS_tmp & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Action, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-							
+							End if
 							
 							NumeroOS = NumeroOS_tmp
 							_OSID = NumeroOS_tmp
@@ -439,11 +454,17 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 							' Et definit le OS id sans le SCI
 							CPCDOS_INSTANCE.SCI_INSTANCE.set_OSid(NumeroOS)
 							
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[SHELL] Nouvelle CleID:" & _CLE_ & " [0x" & hex(_CLE_, 8) & "]", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Validation, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
+							Else
 								DEBUG("[SHELL] New KeyID:" & _CLE_ & " [0x" & hex(_CLE_, 8) & "]", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Validation, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-							
+							End if
 						Else
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Systeme d'exploitation '" & tmpNomOS & "' non present.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
+							Else
 								DEBUG("[CpcdosC+] Operating system '" & tmpNomOS & "' not found.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-							
+							End if
 						ENd if
 					End if
 					
@@ -474,7 +495,28 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 				' Recuperer la liste des commandes commencant par ce que l'utilisateur a tape
 				For Boucle as integer = 1 to CPCDOS_INSTANCE.SHELLCCP_INSTANCE._MAX_CMD_CCP
 
-
+					if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then ' Syntaxe francaise
+						if NOT CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_FR(Boucle) = "" Then
+							' Si les premiers caracteres correspond a une commande, on l'ajoute dans la liste!
+							if Ucase(MID(CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_FR(Boucle), 1, Taille_caracteres_user)) = Ucase(MID(this.Buffer_commande, 1, Taille_caracteres_user)) Then
+								Saut_crlf = Saut_crlf + 1
+								Nombre_CMD = Nombre_CMD + 1
+								
+								' Au bout de la 6eme commande, on revient a la ligne
+								if Saut_crlf >= 4 Then 
+									Liste_CMD = Liste_CMD & CRLF
+									Saut_crlf = 0
+								End if
+								
+								' Accumuler la liste des commandes
+								IF len(CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_FR(Boucle)) > 7 Then
+									Liste_CMD = Liste_CMD & CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_FR(Boucle) & TOUCHE_TAB
+								else
+									Liste_CMD = Liste_CMD & CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_FR(Boucle) & TOUCHE_TAB & TOUCHE_TAB
+								End if
+							End if
+						end if
+					Else ' Syntaxe Anglaise
 					
 						if NOT CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_EN(Boucle) = "" Then
 							' Si les premiers caracteres correspond a une commande, on l'ajoute dans la liste!
@@ -491,13 +533,14 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 								
 								
 								' Accumuler la liste des commandes
-								IF len(CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_EN(Boucle)) > 7 Then
+								IF len(CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_FR(Boucle)) > 7 Then
 									Liste_CMD = Liste_CMD & CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_EN(Boucle) & TOUCHE_TAB
 								else
 									Liste_CMD = Liste_CMD & CPCDOS_INSTANCE.SHELLCCP_INSTANCE.Liste_CMD_EN(Boucle) & TOUCHE_TAB & TOUCHE_TAB
 								End if
 							End if
 						End if
+					End if
 				Next Boucle
 				
 				' S'il y a que 1 commande trouvee, alors on la complete sur la ligne
@@ -513,10 +556,14 @@ Function _CONSOLE_Cpcdos_OSx__.MAIN_Console Alias "MAIN_Console"(byval thread_st
 					
 					locate PosY, 1
 					DEBUG(space(len(this.Buffer_commande)) & "     ", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CONS, "")	
-
+					
+					if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then ' Syntaxe francaise
+						' Afficher la liste sur l'ecran
+						DEBUG(" ** Syntaxes FR disponibles ** " & CRLF & Liste_CMD, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CONS, "")	
+					Else
 						' Afficher la liste sur l'ecran
 						DEBUG(" ** Avaiable EN syntax ** " & CRLF & Liste_CMD, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CONS, "")	
-
+					End if
 				End if
 				
 				' Remettre la cmd sur l'ecran
@@ -694,7 +741,7 @@ Sub _CONSOLE_Cpcdos_OSx__.Haut_Console()
 	ENTRER_SectionCritique()
 	
 	ScreenLock
-	Dim Titre 				as String = "** Cpcdos OS LTS" & _VERSION_MAJEUR & " " & _VERSION_MINEUR & " " & _VERSION_ETAT & "**"
+	Dim Titre 				as String = "** Cpcdos LTS OS" & _VERSION_MAJEUR & " " & _VERSION_MINEUR & " " & _VERSION_ETAT & "**"
 	' Dim BUILD_				as String = "(BUILD:" & _VERSION_BUILD & ")"
 	Dim HeureDate			as String = CPCDOS_INSTANCE.get_Heure(CPCDOS_INSTANCE.get_Time_format()) & " " & CPCDOS_INSTANCE.get_Date(CPCDOS_INSTANCE.get_Date_format())
 	
@@ -768,11 +815,19 @@ Sub _CONSOLE_Cpcdos_OSx__.Haut_Console()
 	Color Resu, Fond : Print MEM_Utilise & "";
 	Color Norm, Fond : Print "/";
 	Color MemT, Fond : Print MEM_Total;
+	if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+		Color Norm, Fond : Print " Mo (";
+	Else
 		Color Norm, Fond : Print " Mb (";
+	End if
 	Color Resu, Fond : Print MEM_UtilisePourcent;
 	Color Norm, Fond : Print "%) |";
 	Color Resu, Fond : Print NB_Processus;
+	if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 		Color Norm, Fond : Print " process";
+	Else
+		Color Norm, Fond : Print " process";
+	End if
 	Color Resu, Fond : Print NB_Threads;
 	Color Norm, Fond : Print " threads "
 	Locate 3, 1 : Print String(TailleX, "_")

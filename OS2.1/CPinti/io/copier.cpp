@@ -134,7 +134,7 @@ namespace cpinti
 							{
 								
 								valeur = ((double) NombreOctets / (double) TailleFichier) * 100;
-								sprintf(_Commande_CpcdosCP, "SET/ %s = /F:CPC.long(%f)", VAR_Progression, valeur);
+								sprintf(_Commande_CpcdosCP, "FIX/ %s = /F:CPC.long(%f)", VAR_Progression, valeur);
 								cpc_CCP_Exec_Commande(_Commande_CpcdosCP, 5);
 							}
 							
@@ -143,7 +143,7 @@ namespace cpinti
 							{
 
 								valeur = (double) NombreOctets;
-								sprintf(_Commande_CpcdosCP, "SET/ %s = /F:CPC.long(%f)", VAR_Octets, valeur);
+								sprintf(_Commande_CpcdosCP, "FIX/ %s = /F:CPC.long(%f)", VAR_Octets, valeur);
 								cpc_CCP_Exec_Commande(_Commande_CpcdosCP, 5);
 							}
 						
@@ -153,7 +153,7 @@ namespace cpinti
 								if((VAR_OctetsParSec != NULL) && (strlen(VAR_OctetsParSec) > 1))
 								{
 									
-									sprintf(_Commande_CpcdosCP, "SET/ %s = /F:CPC.long(%f)", VAR_OctetsParSec, vitesse);
+									sprintf(_Commande_CpcdosCP, "FIX/ %s = /F:CPC.long(%f)", VAR_OctetsParSec, vitesse);
 									cpc_CCP_Exec_Commande(_Commande_CpcdosCP, 5);
 									vitesse = 0;
 								}

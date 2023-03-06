@@ -30,14 +30,6 @@
 
 namespace cpinti
 {
-	namespace sb16{
-		
-		int cpinti_dsp_reset(){
-			dsp_reset();
-			return 0;
-		}
-		
-	}
 	namespace gestionnaire_fichier
 	{
 		bool cpinti_Fichier_Existe(const char* Source)
@@ -303,7 +295,6 @@ namespace cpinti
 			return Resultat_int;
 			
 		} /* COPIER FICHIER */
-
 	} // gestionnaire_fichier
 }
 

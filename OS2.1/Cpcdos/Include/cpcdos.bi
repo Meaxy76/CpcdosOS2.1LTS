@@ -230,9 +230,9 @@ REM Source protege par les droits d'auteur (Dossier No:J8781B5)
 #include once "CpcdosCP.bi"
 
 
-CONST _VJOUR as string 	= "19" 
-CONST _VMOIS as string 	= "02"
-CONST _VANNEE as string = "2022"
+CONST _VJOUR as string 	= "05" 
+CONST _VMOIS as string 	= "03"
+CONST _VANNEE as string = "2023"
 
 CONST _VERSION_DATEV 	as string = _VJOUR & "-" & _VMOIS & "-" & _VANNEE & "[FR/EN]"
 
@@ -641,8 +641,6 @@ Type __Noyau_Cpcdos_OSx__
 		' *** Constructeur/Desctructeur ***
 		Declare Constructor()
 		Declare Destructor()
-
-	  Declare function _dsp_reset	()	as integer
 		
 End Type
 

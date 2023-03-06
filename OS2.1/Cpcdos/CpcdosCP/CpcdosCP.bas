@@ -94,86 +94,90 @@
 
 #print * Init CMD_CpcdosCP
 Sub _SHELL_Cpcdos_OSx__._INIT_CpcdosCP_CMD()
+	if CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+		DEBUG("[SHELL] Initialisation du shell ...",  CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+	else
 		DEBUG("[SHELL] Shell intialization...",  CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-	this.Liste_CMD_EN(1) = "REM/"
-	this.Liste_CMD_EN(2) = "HELP/"
-	this.Liste_CMD_EN(3) = "CLS/"
-	this.Liste_CMD_EN(4) = "TXT/"
-	this.Liste_CMD_EN(5) = "SET/"
-	this.Liste_CMD_EN(6) = "GOTO/"
-	this.Liste_CMD_EN(7) = "CCP/"
-	this.Liste_CMD_EN(8) = "EXE/"
-	this.Liste_CMD_EN(9) = "SYS/"
-	this.Liste_CMD_EN(10) = "CLOSE/"
-	this.Liste_CMD_EN(11) = "COLORF/"
-	this.Liste_CMD_EN(12) = "STOPK/"
-	this.Liste_CMD_EN(13) = "SERVER/"
-	this.Liste_CMD_EN(14) = "PING/"
-	this.Liste_CMD_EN(15) = "DOWNLOAD/"
-	this.Liste_CMD_EN(16) = "DOS/"
-	this.Liste_CMD_EN(17) = "CMD/"
-	this.Liste_CMD_EN(18) = "LOGIN/"
-	this.Liste_CMD_EN(19) = "OPEN/"
-	this.Liste_CMD_EN(20) = "TEXTBLOCK/" ' correction 14/07/2017 avec le 'LOC/'
-	this.Liste_CMD_EN(21) = "IF/"
-	this.Liste_CMD_EN(22) = "END/"
-	this.Liste_CMD_EN(23) = "FUNCTION/"
-	this.Liste_CMD_EN(24) = "WRITE/"
-	this.Liste_CMD_EN(25) = "DECLARE/"
-	this.Liste_CMD_EN(26) = "GUI/"
-	this.Liste_CMD_EN(27) = "STOP/"
-	this.Liste_CMD_EN(28) = "RETURN/"
-	this.Liste_CMD_EN(29) = "WINDOW/"
-	this.Liste_CMD_EN(30) = "CREATE/"
-	this.Liste_CMD_EN(31) = "PICTUREBOX/"
-	this.Liste_CMD_EN(32) = "CLIENT/"
-	this.Liste_CMD_EN(33) = "COLORB/"
-	this.Liste_CMD_EN(34) = "BUTTON/"
-	this.Liste_CMD_EN(35) = "LOC/"
-	this.Liste_CMD_EN(36) = "START/"
-	this.Liste_CMD_EN(37) = "DELETE/"
-	this.Liste_CMD_EN(38) = "COPY/"
-	this.Liste_CMD_EN(39) = "MOVE/"
-	this.Liste_CMD_EN(40) = "RENAME/"
-	this.Liste_CMD_EN(41) = "TEXTBOX/"
-	this.Liste_CMD_EN(42) = "FOLDER/"
-	this.Liste_CMD_EN(43) = "DIR/"
-	this.Liste_CMD_EN(44) = "PROGRESSBAR/"
-	this.Liste_CMD_EN(45) = "MSGBOX/"
-	this.Liste_CMD_EN(46) = "CHECKBOX/"
-	this.Liste_CMD_EN(47) = "REFRESH/"
-	this.Liste_CMD_EN(48) = "DECOMPRESS/"
-	this.Liste_CMD_EN(49) = "COMPRESS/"
-	this.Liste_CMD_EN(50) = "EXPLORER/"
-	this.Liste_CMD_EN(51) = "LISTBOX/"
-	' this.Liste_CMD_EN(52) = "set/"
-	' this.Liste_CMD_EN(53) = "set/"
-	' this.Liste_CMD_EN(54) = "set/"
+	End if
+	this.Liste_CMD_FR(1) = "REM/"				: this.Liste_CMD_EN(1) = "REM/"
+	this.Liste_CMD_FR(2) = "AIDE/"				: this.Liste_CMD_EN(2) = "HELP/"
+	this.Liste_CMD_FR(3) = "CLS/"				: this.Liste_CMD_EN(3) = "CLS/"
+	this.Liste_CMD_FR(4) = "TXT/"				: this.Liste_CMD_EN(4) = "TXT/"
+	this.Liste_CMD_FR(5) = "FIX/"				: this.Liste_CMD_EN(5) = "SET/"
+	this.Liste_CMD_FR(6) = "ALLER/"				: this.Liste_CMD_EN(6) = "GOTO/"
+	this.Liste_CMD_FR(7) = "CCP/"				: this.Liste_CMD_EN(7) = "CCP/"
+	this.Liste_CMD_FR(8) = "EXE/"				: this.Liste_CMD_EN(8) = "EXE/"
+	this.Liste_CMD_FR(9) = "SYS/"				: this.Liste_CMD_EN(9) = "SYS/"
+	this.Liste_CMD_FR(10) = "FERMER/"			: this.Liste_CMD_EN(10) = "CLOSE/"
+	this.Liste_CMD_FR(11) = "COULEURC/"			: this.Liste_CMD_EN(11) = "COLORF/"
+	this.Liste_CMD_FR(12) = "STOPK/"			: this.Liste_CMD_EN(12) = "STOPK/"
+	this.Liste_CMD_FR(13) = "SERVEUR/"			: this.Liste_CMD_EN(13) = "SERVER/"
+	this.Liste_CMD_FR(14) = "PING/"				: this.Liste_CMD_EN(14) = "PING/"
+	this.Liste_CMD_FR(15) = "TELECHARGER/"		: this.Liste_CMD_EN(15) = "DOWNLOAD/"
+	this.Liste_CMD_FR(16) = "DOS/"				: this.Liste_CMD_EN(16) = "DOS/"
+	this.Liste_CMD_FR(17) = "CMD/"				: this.Liste_CMD_EN(17) = "CMD/"
+	this.Liste_CMD_FR(18) = "LOGIN/"			: this.Liste_CMD_EN(18) = "LOGIN/"
+	this.Liste_CMD_FR(19) = "OUVRIR/"			: this.Liste_CMD_EN(19) = "OPEN/"
+	this.Liste_CMD_FR(20) = "TEXTEBLOC/"		: this.Liste_CMD_EN(20) = "TEXTBLOCK/" ' correction 14/07/2017 avec le 'LOC/'
+	this.Liste_CMD_FR(21) = "SI/"				: this.Liste_CMD_EN(21) = "IF/"
+	this.Liste_CMD_FR(22) = "FIN/"				: this.Liste_CMD_EN(22) = "END/"
+	this.Liste_CMD_FR(23) = "FONCTION/"			: this.Liste_CMD_EN(23) = "FUNCTION/"
+	this.Liste_CMD_FR(24) = "ECRIRE/"			: this.Liste_CMD_EN(24) = "WRITE/"
+	this.Liste_CMD_FR(25) = "DECLARER/"			: this.Liste_CMD_EN(25) = "DECLARE/"
+	this.Liste_CMD_FR(26) = "IUG/"				: this.Liste_CMD_EN(26) = "GUI/"
+	this.Liste_CMD_FR(27) = "STOP/"				: this.Liste_CMD_EN(27) = "STOP/"
+	this.Liste_CMD_FR(28) = "RETOUR/"			: this.Liste_CMD_EN(28) = "RETURN/"
+	this.Liste_CMD_FR(29) = "FENETRE/"			: this.Liste_CMD_EN(29) = "WINDOW/"
+	this.Liste_CMD_FR(30) = "CREER/"			: this.Liste_CMD_EN(30) = "CREATE/"
+	this.Liste_CMD_FR(31) = "IMAGEBOX/"			: this.Liste_CMD_EN(31) = "PICTUREBOX/"
+	this.Liste_CMD_FR(32) = "CLIENT/"			: this.Liste_CMD_EN(32) = "CLIENT/"
+	this.Liste_CMD_FR(33) = "COULEURF/"			: this.Liste_CMD_EN(33) = "COLORB/"
+	this.Liste_CMD_FR(34) = "BOUTON/"			: this.Liste_CMD_EN(34) = "BUTTON/"
+	this.Liste_CMD_FR(35) = "POS/"				: this.Liste_CMD_EN(35) = "LOC/"
+	this.Liste_CMD_FR(36) = "DEMARRER/"			: this.Liste_CMD_EN(36) = "START/"
+	this.Liste_CMD_FR(37) = "SUPPRIMER/"		: this.Liste_CMD_EN(37) = "DELETE/"
+	this.Liste_CMD_FR(38) = "COPIER/"			: this.Liste_CMD_EN(38) = "COPY/"
+	this.Liste_CMD_FR(39) = "DEPLACER/"			: this.Liste_CMD_EN(39) = "MOVE/"
+	this.Liste_CMD_FR(40) = "RENOMMER/"			: this.Liste_CMD_EN(40) = "RENAME/"
+	this.Liste_CMD_FR(41) = "TEXTEBOX/"			: this.Liste_CMD_EN(41) = "TEXTBOX/"
+	this.Liste_CMD_FR(42) = "DOSSIER/"			: this.Liste_CMD_EN(42) = "FOLDER/"
+	this.Liste_CMD_FR(43) = "REP/"				: this.Liste_CMD_EN(43) = "DIR/"
+	this.Liste_CMD_FR(44) = "BARREPROGRESSION/"	: this.Liste_CMD_EN(44) = "PROGRESSBAR/"
+	this.Liste_CMD_FR(45) = "MESSAGE/"			: this.Liste_CMD_EN(45) = "MSGBOX/"
+	this.Liste_CMD_FR(46) = "CHECKBOX/"			: this.Liste_CMD_EN(46) = "CHECKBOX/"
+	this.Liste_CMD_FR(47) = "ACTUALISER/"		: this.Liste_CMD_EN(47) = "REFRESH/"
+	this.Liste_CMD_FR(48) = "DECOMPRESSER/"		: this.Liste_CMD_EN(48) = "DECOMPRESS/"
+	this.Liste_CMD_FR(49) = "COMPRESSER/"		: this.Liste_CMD_EN(49) = "COMPRESS/"
+	this.Liste_CMD_FR(50) = "EXPLORER/"			: this.Liste_CMD_EN(50) = "EXPLORER/"
+	this.Liste_CMD_FR(51) = "LISTBOX/"			: this.Liste_CMD_EN(51) = "LISTBOX/"
+	' this.Liste_CMD_FR(52) = "fix/"			: this.Liste_CMD_EN(52) = "set/"
+	' this.Liste_CMD_FR(53) = "fix/"			: this.Liste_CMD_EN(53) = "set/"
+	' this.Liste_CMD_FR(54) = "fix/"			: this.Liste_CMD_EN(54) = "set/"
 
 	' Proprietes de la GUI toujours a partir de 128. Ce qui laisse 127 Commande cpcdosc+
-	this.Liste_CMD_EN(128) = ".TITLECOLOR"
-	this.Liste_CMD_EN(129) = ".NAME"
-	this.Liste_CMD_EN(130) = ".PID"
-	this.Liste_CMD_EN(131) = ".PARAMETERS"
-	this.Liste_CMD_EN(132) = ".PX"
-	this.Liste_CMD_EN(133) = ".PY"
-	this.Liste_CMD_EN(134) = ".SX"
-	this.Liste_CMD_EN(135) = ".SY"
-	this.Liste_CMD_EN(136) = ".WINDOWCOLOR"
-	this.Liste_CMD_EN(137) = ".TITLE"
-	this.Liste_CMD_EN(138) = ".BACKCOLOR"
-	this.Liste_CMD_EN(139) = ".ICON"
-	this.Liste_CMD_EN(140) = ".TITLEIMG"
-	this.Liste_CMD_EN(141) = ".IMAGE"
-	this.Liste_CMD_EN(142) = ".OPACITY"
-	this.Liste_CMD_EN(143) = ".TEXTCOLOR"
-	this.Liste_CMD_EN(144) = ".EVENT"
-	this.Liste_CMD_EN(145) = ".TEXT"
-	this.Liste_CMD_EN(146) = ".HANDLE"
-	this.Liste_CMD_EN(147) = ".VALUE"
-	' this.Liste_CMD_EN(148) = ".BACKCOLOR"
-	' this.Liste_CMD_EN(149) = ".BACKCOLOR"
-	' this.Liste_CMD_EN(150) = ".BACKCOLOR"
+	this.Liste_CMD_FR(128) = ".COULEURTITRE"	: this.Liste_CMD_EN(128) = ".TITLECOLOR"
+	this.Liste_CMD_FR(129) = ".NOM"				: this.Liste_CMD_EN(129) = ".NAME"
+	this.Liste_CMD_FR(130) = ".PID"				: this.Liste_CMD_EN(130) = ".PID"
+	this.Liste_CMD_FR(131) = ".PARAMETRES"		: this.Liste_CMD_EN(131) = ".PARAMETERS"
+	this.Liste_CMD_FR(132) = ".PX"				: this.Liste_CMD_EN(132) = ".PX"
+	this.Liste_CMD_FR(133) = ".PY"				: this.Liste_CMD_EN(133) = ".PY"
+	this.Liste_CMD_FR(134) = ".TX"				: this.Liste_CMD_EN(134) = ".SX"
+	this.Liste_CMD_FR(135) = ".TY"				: this.Liste_CMD_EN(135) = ".SY"
+	this.Liste_CMD_FR(136) = ".COULEURFENETRE"	: this.Liste_CMD_EN(136) = ".WINDOWCOLOR"
+	this.Liste_CMD_FR(137) = ".TITRE"			: this.Liste_CMD_EN(137) = ".TITLE"
+	this.Liste_CMD_FR(138) = ".COULEURFOND"		: this.Liste_CMD_EN(138) = ".BACKCOLOR"
+	this.Liste_CMD_FR(139) = ".ICONE"			: this.Liste_CMD_EN(139) = ".ICON"
+	this.Liste_CMD_FR(140) = ".IMGTITRE"		: this.Liste_CMD_EN(140) = ".TITLEIMG"
+	this.Liste_CMD_FR(141) = ".IMAGE"			: this.Liste_CMD_EN(141) = ".IMAGE"
+	this.Liste_CMD_FR(142) = ".OPACITE"			: this.Liste_CMD_EN(142) = ".OPACITY"
+	this.Liste_CMD_FR(143) = ".COULEURTEXTE"	: this.Liste_CMD_EN(143) = ".TEXTCOLOR"
+	this.Liste_CMD_FR(144) = ".EVENEMENT"		: this.Liste_CMD_EN(144) = ".EVENT"
+	this.Liste_CMD_FR(145) = ".TEXTE"			: this.Liste_CMD_EN(145) = ".TEXT"
+	this.Liste_CMD_FR(146) = ".HANDLE"			: this.Liste_CMD_EN(146) = ".HANDLE"
+	this.Liste_CMD_FR(147) = ".VALEUR"			: this.Liste_CMD_EN(147) = ".VALUE"
+	' this.Liste_CMD_FR(148) = ".COULEURFOND"	: this.Liste_CMD_EN(148) = ".BACKCOLOR"
+	' this.Liste_CMD_FR(149) = ".COULEURFOND"	: this.Liste_CMD_EN(149) = ".BACKCOLOR"
+	' this.Liste_CMD_FR(150) = ".COULEURFOND"	: this.Liste_CMD_EN(150) = ".BACKCOLOR"
 
 
 	' For index as uinteger = 0 to this.MEMOIRE_CCP.CpcdosCP_Variable_MAXI
@@ -316,24 +320,33 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		
 		IF INSTR(Commande, "﻿") > 0 Then ' UTF-8
 			Message_erreur = ERRAVT("AVT_079", 0)
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[CpcdosC+] " & Message_erreur & ". Des erreurs peuvent se produire.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+			Else
 				DEBUG("[CpcdosC+] " & Message_erreur & ". Error can be requested.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-
+			End if
 			
 			testCMD = 1
 			CommTrouve = 1
 			exit _scope
 		ElseIF INSTR(Commande, "��") > 0 Then ' UTF 16 Big Endian
 			Message_erreur = ERRAVT("AVT_079", 0)
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[CpcdosC+] " & Message_erreur & ". Des erreurs peuvent se produire.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+			Else
 				DEBUG("[CpcdosC+] " & Message_erreur & ". Error can be requested.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-			
+			End if
 			
 			testCMD = 1
 			CommTrouve = 1
 			exit _scope
 		ElseIF INSTR(Commande, "��") > 0 Then ' UTF 16 Little Endian
 			Message_erreur = ERRAVT("AVT_079", 0)
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[CpcdosC+] " & Message_erreur & ". Des erreurs peuvent se produire.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+			Else
 				DEBUG("[CpcdosC+] " & Message_erreur & ". Error can be requested.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-			
+			End if
 			
 			testCMD = 1
 			CommTrouve = 1
@@ -613,8 +626,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' Verifer si c'est pas un label
 		If InstrREV(Commande, ":") > Instr(Commande, ":") Then VerifierLabel = 1
 		IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[CpcdosC+] Tentative d'execution : " & Commande & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Commande) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+			Else
 				DEBUG("[CpcdosC+] Ready to executing : " & Commande & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Commande) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-			
+			End if
 		End if
 
 		' Verifier a nouveau que la commande fait au moins 3 caracteres
@@ -653,7 +669,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		
 			' DEV temporaire: Si commande vide alors on saute
 			'  directement aux commandes graphiques
-			IF this.Liste_CMD_EN(boucle) = "" AND boucle < 128 Then boucle = 128
+			IF this.Liste_CMD_FR(boucle) = "" AND boucle < 128 Then boucle = 128
 
 			' Chercher la syntaxe Anglophone
 			IF Instr(tst_Cap, this.Liste_CMD_EN(Boucle)) > 0 Then
@@ -680,7 +696,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			End if
 			
 			' Chercher la syntaxe Francophone
-			IF Instr(tst_Cap, this.Liste_CMD_EN(Boucle)) > 0 Then
+			IF Instr(tst_Cap, this.Liste_CMD_FR(Boucle)) > 0 Then
 				if Mid(this.Liste_CMD_EN(Boucle), 1, 1) = "." Then 
 					dim cap_tmp as string = Rtrim(Ltrim(tst_Cap, chr(10)), chr(13))
 
@@ -697,10 +713,10 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					End if
 				End if
 
-				' Debug("/!\ French syntax is deprecated and will be removed in future major release ! You should use " & this.Liste_CMD_EN(Boucle) & " instead", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				TailleComm = LEN(this.Liste_CMD_EN(Boucle))
+				'Debug("/!\ French syntax is deprecated and will be removed in future major release ! You should use " & this.Liste_CMD_EN(Boucle) & " instead", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				TailleComm = LEN(this.Liste_CMD_FR(Boucle))
 				CommPosition = Position_CMD
-				OnCherche = Lcase(this.Liste_CMD_EN(Boucle))
+				OnCherche = Lcase(this.Liste_CMD_FR(Boucle))
 				Exit for
 			End if
 			
@@ -709,8 +725,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' Rien n'a ete trouve, commande invalide!
 		IF OnCherche = "" then exit _scope
 
+		IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+			DEBUG("[SHELL CC+] > Execution de : " & Commande, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+		Else
 			DEBUG("[SHELL CC+] > Executing : " & Commande, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-		
+		End if
 		
 		
 	_scope_CMD
@@ -718,8 +737,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'aide permettant d'afficher l'aide d'une commande
 		' ===============================================================
-		CommLang(2) = "help/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "aide/"
+		CommLANG(2) = "help/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -729,7 +749,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			Dim Mess_Debug 	as String
 			' Tester la syntaxe
@@ -762,12 +783,21 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Commande = Ltrim(Ltrim(Rtrim(Rtrim(Rtrim(Rtrim(Param), chr(10)), chr(13)), chr(09))), CHR(09))
 				END IF
 			END IF
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				IF AfficherAide = 1 THEN
+					Mess_Debug = "** Liste des commandes disponibles **"
+				Else
+					Mess_Debug = "** Aide pour la commande " & Commande & " **"
+					OnCherche = Commande
+				END IF
+			ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 then
 				IF AfficherAide = 1 THEN
 					Mess_Debug = "** Available commands list **"
 				Else
 					Mess_Debug = "** Help for " & Commande & " command **"
 					OnCherche = Commande
 				END IF
+			END IF
 			DEBUG(Mess_Debug, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 		
 			' ====================================================================
@@ -782,8 +812,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commentaire
 		' ===============================================================
-		CommLang(2) = "rem/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "rem/"
+		CommLANG(2) = "rem/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -793,18 +824,36 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " rem/                       Ecrire un commentaire dans le code"
+			Else
 				CommandesAide = CommandesAide & CRLF & " rem/                       Write a comment in code"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'REMarque'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande n'a aucun effet, vous pouvez mettre autant de conneries"
+					Mess_Aide = Mess_Aide & CRLF & "   que vous-voulez!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   rem/ La ligne en dessou permet d'effacer l'ecran"
+					Mess_Aide = Mess_Aide & CRLF & "   ' Ceci fonctionne aussi"
+					Mess_Aide = Mess_Aide & CRLF & "   // Mais egalement ceci!"
+					Mess_Aide = Mess_Aide & CRLF & "   cls/"
+					Mess_Aide = Mess_Aide & CRLF & "   rem/ Bah voila c'est efface!"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'REMark'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -817,6 +866,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF & "   cls/"
 					Mess_Aide = Mess_Aide & CRLF & "   txt/ Screen was cleaned"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -837,8 +887,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'effacement de l'ecran
 		' ===============================================================
-		CommLang(2) = "cls/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "cls/"
+		CommLANG(2) = "cls/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -848,17 +899,34 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " cls/                       Effacer l'�cran console LC"
+			Else
 				CommandesAide = CommandesAide & CRLF & " cls/                       Clear LC console screen"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'CLear Screen'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'�ffacer l'�cran de la console LC"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Ce texte va disparaitre"
+					Mess_Aide = Mess_Aide & CRLF & "   cls/"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Le texte a disparu"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , couleurf/ , couleurp/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'CLear Screen'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -873,6 +941,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , couleurf/ , couleurp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -899,8 +968,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' ====================================================================
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Effacement de l'ecran", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Cleaning screen", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 			
 			
@@ -926,8 +998,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'effacement de l'ecran
 		' ===============================================================
-		CommLang(2) = "delete/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "supprimer/"
+		CommLANG(2) = "delete/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -937,17 +1010,35 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " supprimer/                 Supprimer un fichier"
+			Else
 				CommandesAide = CommandesAide & CRLF & " delete/                    Delete a file"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Supprimer'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de supprimer un fichier d'un support"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Supprimer/ MonDossier/MonFichier.log"
+					Mess_Aide = Mess_Aide & CRLF & "   Supprimer/ ../fichier.txt"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir que cpcdos supporte les deux formats '\' ou '/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : copier/ , deplacer/ , ouvrir/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Delete'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -961,6 +1052,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : copy/ , move/ , open/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
+
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -988,8 +1081,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Effacement du fichier '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Deleting file '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 			
 			' INFO DU 29/09 : Faire une suppression avec l'option securise (plus lent)
@@ -1003,14 +1099,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				DEBUG("0", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				Dim Message_erreur as String = ERRAVT("ERR_061", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				End if
 			Else
 				' OK
 				DEBUG("OK", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-			
-					DEBUG("[CpcdosC+] The file '" & Param & "' has been deleted!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fichier '" & Param & "' a ete supprime!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
+					DEBUG("[CpcdosC+] The file '" & Param & "' has been deleted!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				End if
 			End if
 			
 			' ====================================================================
@@ -1026,8 +1128,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande d'effacement de l'ecran
 		' ===============================================================
-		CommLang(2) = "copy/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "copier/"
+		CommLANG(2) = "copy/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1037,17 +1140,55 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " copier/                    Copier un fichier dans un dossier"
+			Else
 				CommandesAide = CommandesAide & CRLF & " copy/                      Copy a file in a directory"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Copier'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de copier un fichier source dans un dossier"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Parametres disponibles :"
+					Mess_Aide = Mess_Aide & CRLF & "    /Progression:NomDeVariable -> Stocke le pourcentage de la progression en cours"
+					Mess_Aide = Mess_Aide & CRLF & "    /Octets:NomDeVariable -> Stocke le nombre d'octets copie de la progression en cours"
+					Mess_Aide = Mess_Aide & CRLF & "    /OctetsParSec:NomDeVariable -> Stocke le nombre d'octets copie par secondes"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Copier/ MonDossier/MonFichier.log MonAutreDossier/MonFichier.log"
+					Mess_Aide = Mess_Aide & CRLF & "   Copier/ fichier.txt, MonDossier"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Vous pouvez recuperer le pourcentage de la progression depuis un autre thread"
+					Mess_Aide = Mess_Aide & CRLF & "   via une variable de niveau 5 :"					
+					Mess_Aide = Mess_Aide & CRLF & "    Copier/ Source.txt, Destination.txt /Progression:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF & "      --> Et durant la copie, la variable %MaVariable% contient la progression en % de la copie"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Meme chose pour le nombre d'octets copie :"
+					Mess_Aide = Mess_Aide & CRLF & "    Copier/ Source.txt, Destination.txt /Octets:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Le nombre d'octets par secondes :"
+					Mess_Aide = Mess_Aide & CRLF & "    Copier/ Source.txt, Destination.txt /OctetsParSec:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Ou les 2 ou 3 parametres en meme temps aussi !"
+					Mess_Aide = Mess_Aide & CRLF & "    Copier/ Source.txt, Destination.txt /Pogresson:Var1 /octets:Var2 /OctetsParSec:Var3"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir que cpcdos supporte les deux formats '\' ou '/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : supprimer/ , deplacer/ , ouvrir/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'copy'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -1080,6 +1221,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : delete/ , move/ , open/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -1127,8 +1269,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			Dim PosProgress as integer = Instr(Ucase(Param), " /PROGRESSION:")
 			
 			IF NOT INSTR(Param, ",") > 0 Then 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Pour cette version vous devez separer les arguments par une virgule ',' " & CRLF & "Exemple: COPIER/ FichierA, FichierB", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] For this version, you must separate arguments by a comma ','" & CRLF & "Examble: COPY/ FileA, FileB", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				exit _scope_CMD, _scope
 			End if
@@ -1143,8 +1288,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Param = Mid(Param, 1, PosProgress - 1) & " " & Mid(Param, Instr(PosProgress + 14, Param & " ", " ") + 1)
 
 				Else
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Veuillez placer l'argument '/PROGRESSION' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Please put '/PROGRESSION' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					
 					exit _scope_CMD, _scope
 				End if
@@ -1171,8 +1319,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Param = Mid(Param, 1, PosBytes - 1) & " " & Mid(Param, Instr(PosBytes + 8, Param & " ", " ") + 1)
 					
 				Else
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Veuillez placer l'argument '/OCTETS' ou '/BYTES' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Please put '/OCTETS' or '/BYTES' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					
 					exit _scope_CMD, _scope
 				End if
@@ -1199,8 +1350,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Param = Mid(Param, 1, PosBytesBySec - 1) & " " & Mid(Param, Instr(PosBytesBySec + 13, Param & " ", " ") + 1)
 					
 				Else
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Veuillez placer l'argument '/OctetsParSec' ou '/BytesBySec' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Please put '/OctetsParSec' or '/BytesBySec' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					
 					exit _scope_CMD, _scope
 				End if
@@ -1257,13 +1411,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			IF Not Var_Progression = "" Then
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Copie du fichier '" & Source & "' a '" & Destination & "' (Priorite:" & Priorite_copie & ") ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] File copy '" & Source & "' a '" & Destination & "' (Priority:" & Priorite_copie & ")  ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				END IF
 			Else
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Copie du fichier '" & Source & "' a '" & Destination & "' avec " & Var_Progression & " comme indicateur (Priorite:" & Priorite_copie & ") ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] File copy '" & Source & "' a '" & Destination & "' with " & Var_Progression & " like indicator (Priority:" & Priorite_copie & ") ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				END IF
 			End if
 
@@ -1274,14 +1434,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				DEBUG("0", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				Dim Message_erreur as String = ERRAVT("ERR_062", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				End if
 			Else
 				' OK
 				DEBUG("OK", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fichier '" & Param & "' a ete copie!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] The file '" & Param & "' has been copied!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			End if
 			
 			' ====================================================================
@@ -1297,8 +1463,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de renommage
 		' ===============================================================
-		CommLang(2) = "rename/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "renommer/"
+		CommLANG(2) = "rename/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1308,17 +1475,37 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " renommer/                  Renommer un fichier ou un dossier"
+			Else
 				CommandesAide = CommandesAide & CRLF & " rename/                    Rename a file or a directory"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Renommer'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de renommer un fichier source ou un dossier"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Renommer/ MonDossier/MonFichier.log, NouveauNom.txt"
+					Mess_Aide = Mess_Aide & CRLF & "   Renommer/ dossier/dossier2, MonDossier"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Non disponible pour les dossiers pour cette version"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir que cpcdos supporte les deux formats '\' ou '/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : supprimer/ , deplacer/ , ouvrir/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Rename'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -1334,6 +1521,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : delete/ , move/ , open/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -1372,8 +1560,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			
 			IF NOT INSTR(Param, ",") > 0 Then 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Pour cette version vous devez separer les arguments par une virgule ',' " & CRLF & "Exemple: COPIER/ FichierA, FichierB", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] For this version, you must separate arguments by a comma ','" & CRLF & "Examble: COPY/ FileA, FileB", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				exit _scope_CMD, _scope
 			End if
@@ -1383,8 +1574,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Renommage du fichier '" & Source & "' a '" & Destination & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] File renaming '" & Source & "' to '" & Destination & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 			
 
@@ -1395,14 +1589,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				DEBUG("0", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				Dim Message_erreur as String = ERRAVT("ERR_062", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				End if
 			Else
 				' OK
 				DEBUG("OK", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fichier '" & Param & "' a ete renomme!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] The file '" & Param & "' has been renamed!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			End if
 			
 			' ====================================================================
@@ -1418,8 +1618,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de creation dossier
 		' ===============================================================
-		CommLang(2) = "folder/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "dossier/"
+		CommLANG(2) = "folder/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1429,17 +1630,41 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " dossier/                   Creer un repertoire"
+			Else
 				CommandesAide = CommandesAide & CRLF & " folder/                    Create a folder"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'dossier'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer un repertoire de maniere complete"
+					Mess_Aide = Mess_Aide & CRLF & "    par exemple si vous voulez creer le dossier A, puis le dossier B"
+					Mess_Aide = Mess_Aide & CRLF & "    dans A puis le dossier C dans B, vous pouvez tout specifier en 1 ligne"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemples"
+					Mess_Aide = Mess_Aide & CRLF & "   Creer un simple repertoire dans le dossier relatif :"
+					Mess_Aide = Mess_Aide & CRLF & "    dossier/ MonRepertoire"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Creer le repertoire MonDossier1 puis MonDossier2 puis MonDossier3 :"
+					Mess_Aide = Mess_Aide & CRLF & "   Dossier/ MonDossier1/MonDossier2/MonDossier3"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir que cpcdos supporte les deux formats '\' ou '/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : supprimer/ , deplacer/ , ouvrir/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Rename'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -1458,7 +1683,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : delete/ , move/ , open/"
 					Mess_Aide = Mess_Aide & CRLF
-				
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -1493,8 +1718,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			Source = CPCDOS_INSTANCE.SYSTEME_INSTANCE.check_NomAutorise(Source, TRUE, TRUE, FALSE)
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation du repertoire '" & Source & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating directory '" & Source & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 
 			Resultat = CPCDOS_INSTANCE.SYSTEME_INSTANCE.creer_Repertoire(Source, "")
@@ -1504,14 +1732,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				DEBUG("0", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				Dim Message_erreur as String = ERRAVT("ERR_062", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				End if
 			Else
 				' OK
 				DEBUG("OK", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Le dossier '" & Param & "' a ete cree!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] The folder '" & Param & "' has been created!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			End if
 			
 			' ====================================================================
@@ -1527,8 +1761,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de listage repertoire
 		' ===============================================================
-		CommLang(2) = "dir/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "rep/"
+		CommLANG(2) = "dir/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1538,17 +1773,66 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " rep/                       Lister le contenu d'un repertoire"
+			Else
 				CommandesAide = CommandesAide & CRLF & " dir/                       List directory content"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'rep'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de lister le contenu d'un repertoire"
+					Mess_Aide = Mess_Aide & CRLF & "    Vous pouvez lister les dossier et fichiers presents"
+					Mess_Aide = Mess_Aide & CRLF & "     ainsi que leur attributs."
+					Mess_Aide = Mess_Aide & CRLF & "    Vous pouvez utiliser les filtres . et *"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Lister le repertoire courant :"
+					Mess_Aide = Mess_Aide & CRLF & "     rep/    ou    rep/ .     ou    rep/ .\" '"
+					Mess_Aide = Mess_Aide & CRLF & "   Lister le contenu d'un autre repertoire :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier1/MonDossier2"
+					Mess_Aide = Mess_Aide & CRLF & "   Lister les fichier avec l'extension .CPC :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier1/*.cpc"
+					Mess_Aide = Mess_Aide & CRLF & "   Lister les fichier qui contient 'f' :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier1/*f*.*"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Stocker la liste des fichiers/dossiers dans un tableau indexe :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier/ /L:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La Liste des Fichiers ET Dossiers sont stockes dans le tableau %MaVariable()%"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La commande retourne le nombre d'elements indexes est retourne"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Stocker la liste des Fichiers dans un tableau indexe :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier/ /F:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La Liste des Fichiers sont stockes dans le tableau %MaVariable()%"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La commande retourne le nombre d'elements indexes est retourne"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Stocker la liste des Dossiers dans un tableau indexe :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier/ /D:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La Liste des Dossiers sont stockes dans le tableau %MaVariable()%"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La commande retourne le nombre d'elements indexes est retourne"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Stocker la liste des attributs dans un tableau indexe :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonDossier/ /A:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La Liste des attributs sont stockes dans le tableau %MaVariable()%"
+					Mess_Aide = Mess_Aide & CRLF & "     --> La commande retourne le nombre d'elements indexes est retourne"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Si vous voulez des informations breves, utilisez /B :"
+					Mess_Aide = Mess_Aide & CRLF & "     Rep/ MonRepertoire /B     or    Rep/ /B MonRepertoire"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir que cpcdos supporte les deux formats '\' ou '/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : supprimer/ , deplacer/ , ouvrir/ , dossier/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'dir'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -1592,6 +1876,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : delete/ , move/ , open/ , folder/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -1713,21 +1998,30 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 					
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Recuperation du contenu du repertoire '" & Source & "' avec les filtres '" & SourceRecherche & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Getting '" & Source & "' directory content with '" & SourceRecherche & "' filters ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					END IF
 
 				Else
 					Source = "."
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Recuperation du contenu du repertoire CPCDOS avec les filtres '" & SourceRecherche & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Getting CPCDOS directory content with '" & SourceRecherche & "' filters ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					END IF
 				End if
 			Else
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Recuperation du contenu du repertoire '" & Source & "' avec les filtres '" & SourceRecherche & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Getting '" & Source & "' directory content with '" & SourceRecherche & "' filters ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				END IF
 			End if
 			
@@ -1740,8 +2034,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					DEBUG("0", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 					
 					Dim Message_erreur as String = ERRAVT("ERR_064", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 						DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					Else
+						DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					End if
 					exit _scope_CMD, _scope
 				Else
 					Dim TailleCH 		as integer
@@ -1756,19 +2053,29 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					' OK
 					
 					IF Affichage_Breve = False Then
+						If CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							Resultat_chaine += " Contenu du repertoire '" & Source & "' :" & CRLF
+						Else
 							Resultat_chaine += " Directory content '" & Source & "' :" & CRLF
-						
+						End if
 					End if
 					
 					
 					' Afficher la bonne taille (Octets, Kilos, Mega, Giga)
 					
-
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						octets = "o"
+						kilo = "ko"
+						mega = "mo"
+						giga = "go"
+						tera = "to"
+					Else
 						octets = "b"
 						kilo = "kb"
 						mega = "mb"
 						giga = "gb"
 						tera = "tb"
+					End if
 					
 					for b as integer = 1 to instance_FICHER_DOSSIER_.nb_Elements
 		
@@ -1883,9 +2190,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					End if
 					
 					IF Affichage_Breve = False Then
+						If CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							Resultat_chaine += " " & instance_FICHER_DOSSIER_.nb_Dossiers & " dossier(s)" & " " & instance_FICHER_DOSSIER_.nb_Fichiers & " fichier(s) " & _
+													" Total : " & instance_FICHER_DOSSIER_.nb_Elements & " element(s) " & TexteTaille_FINAL
+						Else
 							Resultat_chaine += " " & instance_FICHER_DOSSIER_.nb_Dossiers & " folder(s)" & " " & instance_FICHER_DOSSIER_.nb_Fichiers & " file(s) " & _
 													" Total : " & instance_FICHER_DOSSIER_.nb_Elements & " element(s) " & TexteTaille_FINAL
-						
+						End if
 					Else
 						Resultat_chaine += "-> D:" & instance_FICHER_DOSSIER_.nb_Dossiers & " F:" & instance_FICHER_DOSSIER_.nb_Fichiers & _
 													" T:" & instance_FICHER_DOSSIER_.nb_Elements & " S:" & TexteTaille_FINAL
@@ -1908,8 +2219,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour afficher du texte a l'ecran
 		' ===============================================================
-		CommLang(2) = "txt/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "txt/"
+		CommLANG(2) = "txt/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -1919,18 +2231,46 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " txt/                       Ecrire du texte"
+			Else
 				CommandesAide = CommandesAide & CRLF & " txt/                       Write text"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'TeXTe'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'afficher du texte sur la console LC"
+					Mess_Aide = Mess_Aide & CRLF & "   ou sur une sortie redirig�e " & CHR(34) & "@#Ma_Variable" & CHR(34) & " ou " & CHR(34) & "@$Mon_Fichier.abc" & CHR(34) & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Hello world!"
+					Mess_Aide = Mess_Aide & CRLF & "   @#Toto txt/ Hello tata!"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ %toto%"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Salut/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Humain /#R"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Sortie :"
+					Mess_Aide = Mess_Aide & CRLF & "   Hello world!"
+					Mess_Aide = Mess_Aide & CRLF & "   Salut Humain"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Remarque: Utilisez \#PAUSE a la fin de ligne pour defiler le texte"
+					Mess_Aide = Mess_Aide & CRLF & "            avec une touche. Et ECHAP pour tout afficher."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : fix/ , couleurf/ , couleurp/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'TeXT'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -1952,6 +2292,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : fix/ , couleurf/ , couleurp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -2019,8 +2360,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour fixer une variable CpcdosC+
 		' ===============================================================
-		CommLang(2) = "set/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "fix/"
+		CommLANG(2) = "set/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -2030,19 +2372,54 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " fix/                       Cree ou modifie une variable ou de(s) tableau(x)"
+			Else
 				CommandesAide = CommandesAide & CRLF & " set/                       Create or modify a variable or array(s)"
-			
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'FIXer'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer ou modifier une variable ou de(s) tableau(x)"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple :"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ Ma_Variable = Johann"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Salut %Ma_variable% !"
+					Mess_Aide = Mess_Aide & CRLF & "  Supprimer une variable/tableau:"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ /S Ma_variable"
+					Mess_Aide = Mess_Aide & CRLF & "  Poser une question a l'utilisateur:"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ /q Ma_Variable"
+					Mess_Aide = Mess_Aide & CRLF & "  Attendre la pression d'une touche (bloquant) :"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ /atouche Ma_Variable"
+					Mess_Aide = Mess_Aide & CRLF & "  Recuperer le contenu du buffer du clavier (non bloquant)"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ /touche Ma_Variable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple tableau :"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ Mon_Tableau[0] = Toto"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ Mon_Tableau[1] = Tata"
+					Mess_Aide = Mess_Aide & CRLF & "   fix/ Mon_Tableau[2] = titi"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Contenu du tableau 1:%Mon_Tableau[0]% 2:%Mon_Tableau[1]% 3:%Mon_Tableau[2]% "
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Sortie :"
+					Mess_Aide = Mess_Aide & CRLF & "   Contenu du tableau 1:Toto 2:Tata 3:titi"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir: Les nom de variables contenant " & CHR(34) & "_, ., -, $, /, \, (, ), [, ], ~, &, #, ^, @" & CHR(34) & " sont autorises"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , ccp/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to create a variable or array(s)"
 					Mess_Aide = Mess_Aide & CRLF
@@ -2071,6 +2448,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , ccp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -2365,8 +2743,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							
 							CpcdosCP_SHELL = CpcdosCP_SHELL("SET/ " & VariableCalc_STR & " = " & VariableCalc, _CLE_, Niveau_2, Param_1, Param_2)
 						Else
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+								DEBUG("[CpcdosC+] Impossible d'additionner. " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Unable to add " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						exit _scope_CMD, _scope
@@ -2381,8 +2762,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							
 							CpcdosCP_SHELL = CpcdosCP_SHELL("SET/ " & VariableCalc_STR & " = " & VariableCalc, _CLE_, Niveau_2, Param_1, Param_2)
 						Else
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+								DEBUG("[CpcdosC+] Impossible de soustraire. " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Unable to substract. " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 					End if
@@ -2542,9 +2926,13 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						ELSE
 							If Instr(Nom_Variable_a_FIXER, chr(BoucleChercherValideNomVariable)) > 0 Then
 								Message_erreur = ERRAVT("AVT_048", 0)
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+									DEBUG("[CpcdosC+] " & Message_erreur & ". Caractere invalide '" & chr(BoucleChercherValideNomVariable) &"'. Commande:" & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+									exit _scope_CMD, _scope
+								Else
 									DEBUG("[CpcdosC+] " & Message_erreur & ". Invalid character '" & chr(BoucleChercherValideNomVariable) &"' Command:" & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 									exit _scope_CMD, _scope
-								
+								End if
 							End if
 						End if
 					End if
@@ -2559,8 +2947,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					' Si la premi�re parenthese '[' est bien avant la deuxieme ']'
 					if PremiereParenthese >= DeuxiemeParenthese Then 
 						Message_erreur = ERRAVT("AVT_073", 0)
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[AVT_073]:" & Message_erreur & " votre nom de variable '" & Nom_Variable_a_FIXER & "'", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[AVT_073]:" & Message_erreur & " your variable name '" & Nom_Variable_a_FIXER & "'", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					End if
 				End if
@@ -2612,13 +3003,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						For Index_Boucle as integer = PremierNombre to DeuxiemeNombre
 							' Creer en boucle le tableau mais avec le contenu souhaite !
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & _CLE_ & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(_CLE_, 10) & CRLF & " - Taille:" & LEN(Donnees_Variables_de_FIX) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & _CLE_ & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Donnees_Variables_de_FIX) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 							index = Gest_variables_ENREG (Nom_Variable_a_FIXER & "[" & Index_Boucle & "]", Donnees_Variables_de_FIX, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID)
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable [OK] -> [0x" & hex(index, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable [OK] -> [0x" & hex(index, 8) & "]" , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 						Next Index_Boucle
 					
@@ -2627,31 +3024,46 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						For Index_Boucle as integer = DeuxiemeNombre to PremierNombre
 							' Creer en boucle le tableau mais avec le contenu souhaite !							
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & _CLE_ & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(_CLE_, 10) & CRLF & " - Taille:" & LEN(Donnees_Variables_de_FIX) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & _CLE_ & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Donnees_Variables_de_FIX) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 							index = Gest_variables_ENREG (Nom_Variable_a_FIXER & "[" & PremierNombre-(Index_Boucle-DeuxiemeNombre) & "]", Donnees_Variables_de_FIX, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID)
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable [OK] -> [0x" & hex(index, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable [OK] -> [0x" & hex(index, 8) & "]" , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 						Next Index_Boucle
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] L'index du tableau ne peut etre nul.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Index array can't be null." , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					End if
 					exit _scope_CMD, _scope
 				End if
 					
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Creation de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & _CLE_ & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(_CLE_, 10) & CRLF & " - Taille:" & LEN(Donnees_Variables_de_FIX) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Creating variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & _CLE_ & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Donnees_Variables_de_FIX) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				END IF
 				index = Gest_variables_ENREG (Nom_Variable_a_FIXER, Donnees_Variables_de_FIX, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID)
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Creation de la variable [OK] -> [0x" & hex(index, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Creating variable [OK] -> [0x" & hex(index, 8) & "]" , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				END IF
 				exit _scope_CMD, _scope
 			ELSEIF PosSupprimer > 0 Then
@@ -2701,8 +3113,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						For Index_Boucle as integer = PremierNombre to DeuxiemeNombre
 							' Creer en boucle le tableau mais avec le contenu souhaite !
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Suppression de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(Auth_PID, 28) & "] -> 0x" & hex(Auth_PID, 7) & CRLF & " - Buffer:" & LEN(Commande) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Deleting variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(Auth_PID, 28) & "] -> 0x" & hex(Auth_PID, 7) & CRLF & " - Buffer:" & LEN(Commande) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 							IF Gest_variables_Suppr(Nom_Variable_a_FIXER & "[" & Index_Boucle & "]", NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID) = 0 Then
 								Message_erreur = ERRAVT("AVT_008", 0)
@@ -2716,8 +3131,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						For Index_Boucle as integer = DeuxiemeNombre to PremierNombre
 							' Creer en boucle le tableau mais avec le contenu souhaite !							
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Kernel > Suppression de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(Auth_PID, 28) & "] -> 0x" & hex(Auth_PID, 7) & CRLF & " - Buffer:" & LEN(Commande) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Kernel > Deleting variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(Auth_PID, 28) & "] -> 0x" & hex(Auth_PID, 7) & CRLF & " - Buffer:" & LEN(Commande) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							End if
 							IF Gest_variables_Suppr(Nom_Variable_a_FIXER & "[" & PremierNombre-(Index_Boucle-DeuxiemeNombre) & "]", NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID) = 0 Then
 								Message_erreur = ERRAVT("AVT_008", 0)
@@ -2726,8 +3144,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							End if
 						Next Index_Boucle
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] L'index du tableau ne peut etre nul.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Index array can't be null." , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					End if
 					exit _scope_CMD, _scope
@@ -2746,8 +3167,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 				' Nom de variable recupere, maintenant on la supprime!
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Suppression de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(Auth_PID, 28) & "] -> 0x" & hex(Auth_PID, 7) & CRLF & " - Buffer:" & LEN(Commande) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Deleting variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(Auth_PID, 28) & "] -> 0x" & hex(Auth_PID, 7) & CRLF & " - Buffer:" & LEN(Commande) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				END IF
 				IF Gest_variables_Suppr(Nom_Variable_a_FIXER, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID) = 0 Then
 					Message_erreur = ERRAVT("AVT_008", 0)
@@ -2798,13 +3222,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						For Index_Boucle as integer = PremierNombre to DeuxiemeNombre
 							' Creer en boucle le tableau mais avec le contenu souhaite !
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(_CLE_, 10) & CRLF & " - Taille:" & LEN(Donnees_Variables_de_FIX) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Donnees_Variables_de_FIX) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 							index = Gest_variables_ENREG (Nom_Variable_a_FIXER & "[" & Index_Boucle & "]", Donnees_Variables_de_FIX, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID)
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable [OK] -> [0x" & hex(index, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable [OK] -> [0x" & hex(index, 8) & "]" , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 						Next Index_Boucle
 					
@@ -2813,18 +3243,27 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						For Index_Boucle as integer = DeuxiemeNombre to PremierNombre
 							' Creer en boucle le tableau mais avec le contenu souhaite !							
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(_CLE_, 10) & CRLF & " - Taille:" & LEN(Donnees_Variables_de_FIX) & " octets" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable " & Nom_Variable_a_FIXER & CRLF & " - CleID:" & Auth_PID & " [&B" & Bin(_CLE_, 36) & "] -> 0x" & hex(Auth_PID, 10) & CRLF & " - Size:" & LEN(Donnees_Variables_de_FIX) & " bytes" & CRLF & " - Niveau:" & NIVEAU_CCP & CRLF & " - idKernel:" & Auth_Kernel & CRLF & " - idOS:" & Auth_OS & CRLF & " - idUtilisateur:" & Auth_Utilisateur & CRLF & " - PID:" & Auth_PID & CRLF & " - TID:" & Auth_TID, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 							index = Gest_variables_ENREG (Nom_Variable_a_FIXER & "[" & PremierNombre-(Index_Boucle-DeuxiemeNombre) & "]", Donnees_Variables_de_FIX, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID)
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Creation de la variable [OK] -> [0x" & hex(index, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Creating variable [OK] -> [0x" & hex(index, 8) & "]" , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 						Next Index_Boucle
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] L'index du tableau ne peut etre nul.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Index array can't be null." , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					End if
 					exit _scope_CMD, _scope
@@ -2844,8 +3283,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour demarrer un OS
 		' ===============================================================
-		CommLang(2) = "start/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "demarrer/"
+		CommLANG(2) = "start/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -2855,17 +3295,39 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " demarrer/                  Demarrer le ou les systeme(s) d'exploitation installe(s)"
+			Else
 				CommandesAide = CommandesAide & CRLF & " start/                     Starting installed operating system(s)"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'DEMARRER'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'entamer la premiere etape de demarrage d'un OS."
+					Mess_Aide = Mess_Aide & CRLF & "   Les procedures de demarrage se different entre les OS."
+					Mess_Aide = Mess_Aide & CRLF & "   Le loader execute en premier est le fichier 'OS/OS.CPC'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Il est possible de preciser le nom de l'OS si il y a plus d'un installe."
+					Mess_Aide = Mess_Aide & CRLF & "   Si le nom est pas precise, Cpcdos demarrera le premier de la liste 'OS.LST'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Demarrer/"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Demarrer/ MonOS"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'START'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -2883,6 +3345,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -2910,8 +3373,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			' Tester la presence d'au moins 1 OS !
 			if CPCDOS_INSTANCE.get_NombreOSPresent <= 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Aucun systeme d'exploitation present.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Operating system not found.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			
 			else
 				' Il y a au moins 1 OS present, on demarre le premier
@@ -2936,8 +3402,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									
 				' Si l'OS indique est non present
 				if NumeroOS < 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Systeme d'exploitation '" & Param & "' non present.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Operating system '" & Param & "' not found.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 				
@@ -2963,15 +3432,21 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					
 					CPCDOS_INSTANCE.SCI_INSTANCE.set_OSid(NumeroOS)
 				
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Demarrage du systeme d'exploitation '" & NomOS & "' [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Starting operating system '" & NomOS & "' [OS:" & NumeroOS & " Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 	
 					CpcdosCP_SHELL = "SWITCH:OS_ID=" & NomOS
 					
 					CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("exe/ " & PathOS & "\OS.CPC", _CLE_, 5, 330, RetourVAR)
 					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Le systeme d'exploitation '" & NomOS & "' finit de demarrer ! [ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Operating system '" & NomOS & "' finished loading ! [Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 				End scope
 				
 			End if
@@ -2990,8 +3465,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour executer l'IUG
 		' ===============================================================
-		CommLang(2) = "gui/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "iug/"
+		CommLANG(2) = "gui/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 
 		for boucle as integer = 1 to 2
@@ -3002,19 +3478,56 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " iug/                       Executer l'interface graphique de Cpcdos"
+			Else
 				CommandesAide = CommandesAide & CRLF & " gui/                       Launch cpcdos graphic user interface"
-			
+			END IF
 		END IF
 		
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Interface Utilisateur Graphique'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'executer l'interface graphique de Cpcdos"
+					Mess_Aide = Mess_Aide & CRLF & "    et d'arreter l'animation du boot screen"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   iug/"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Afficher l'IUG d'un autre OS en execution. Exemple 'Toto'" 
+					Mess_Aide = Mess_Aide & CRLF & "   iug/ /OS:Toto"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Afficher l'IUG sans OS (Sans OS, celle du noyau)"
+					Mess_Aide = Mess_Aide & CRLF & "   iug/ /SANSOS"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Reduire la GUI (Ouvrir la console)"
+					Mess_Aide = Mess_Aide & CRLF & "   iug/ /LC      ou      /CONSOLE"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Ouvrir la console graphique"
+					Mess_Aide = Mess_Aide & CRLF & "   iug/ /LC+     or      /CONSOLE+"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Afficher la black liste des fonction d'evenements introuvables"
+					Mess_Aide = Mess_Aide & CRLF & "   iug/ /display-blacklist-events"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Remettre a zero la black liste des fonction d'evenements introuvables"
+					Mess_Aide = Mess_Aide & CRLF & "   iug/ /reset-blacklist-events"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Blitter le flux aussi pour les pictures box!"
+					Mess_Aide = Mess_Aide & CRLF & "    iug/ /MULTI-PICTUREBOX"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Graphic User Interface'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -3047,6 +3560,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -3079,16 +3593,22 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			if CPCDOS_INSTANCE.Thread_BootScreen > 0 Then
 				CPCDOS_INSTANCE.Fermer_Thread(CPCDOS_INSTANCE.SYSTEME_INSTANCE._MAIN_PROCESSUS, CPCDOS_INSTANCE.Thread_BootScreen, false)
 				CPCDOS_INSTANCE.Thread_BootScreen = 0
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fermeture du thread 'Thread_bootscreen' ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				Else
 					DEBUG("[CpcdosC+] Closing thread 'Thread_bootscreen' ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-				
+				End if
 			
 				' Attendre fermeture thread
 				doevents(500000)
 			End if
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Execution de l'interface graphique (OSid:" & NumeroOS & ") ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Launching graphic interface (OSid:" & NumeroOS & ") ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 
 			
@@ -3106,8 +3626,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 				NumeroOS = CPCDOS_INSTANCE._MAX_NOMBRE_OS
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Lancement de la GUI sans OS [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Starting without OS GUI [OS:" & NumeroOS & " Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				
 				_CLE_ = CPCDOS_INSTANCE.Generer_cle(Auth_Kernel, NumeroOS, Auth_Utilisateur, Auth_PID, Auth_TID)
@@ -3117,8 +3640,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' Line Commande / Ligne de Commandes
 			IF instr(ucase(Param), "/LC+") > 0 OR instr(ucase(Param), "/CONSOLE+") > 0 Then
 				Param = ""
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Ouverture d'une console GUI", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Opening GUI console", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("exe/ " & CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CCP_Lire_Variable("CPC_GUI.CONSOLE", 4, _CLE_), _CLE_, NIVEAU_CCP, Param_1, Param_2)
 				
@@ -3128,8 +3654,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF instr(ucase(Param), "/LC") > 0 OR instr(ucase(Param), "/CONSOLE") > 0 Then
 				Dim SCR_MODE as integer
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Passage en mode Lignes de Commandes...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Going to Console mode...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			
 				SCR_MODE = Val(CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CCP_Lire_Variable("SCR_MODE", 4, _CLE_))
 
@@ -3141,8 +3670,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			if instr(ucase(Param), "/DISPLAY-BLACKLIST-EVENTS") > 0 Then
 				' Reset la black list des evenements not found
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Liste des fonction evenements graphiques introuvables :", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] List of not found graphic event functions :", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				dim List_noire as string = CPCDOS_INSTANCE.SCI_INSTANCE.Event_Liste_Noire
 				dim fonction as string = ""
@@ -3153,8 +3685,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					if len(List_noire) < 5 Then exit for
 				next b
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fin de la liste", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] End of list", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				exit _scope_CMD, _scope
 			End if
@@ -3164,8 +3699,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 				CPCDOS_INSTANCE.SCI_INSTANCE.Event_Liste_Noire = ""
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Liste noire des evenements introuvables a ete videe", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Events black list has been emptied.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				exit _scope_CMD, _scope
 			End if
@@ -3187,14 +3725,21 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					
 						_CLE_ = CPCDOS_INSTANCE.Generer_cle(Auth_Kernel, NumeroOS, Auth_Utilisateur, Auth_PID, Auth_TID)
 
-							DEBUG("[CpcdosC+] Starting '" & NomOS & "' GUI [OS:" & NumeroOS & " Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Demarrage de la GUI de '" & NomOS & "' [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
+							DEBUG("[CpcdosC+] Starting '" & NomOS & "' GUI [OS:" & NumeroOS & " Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						End if
 						
 					End if
 				Else
 					Message_erreur = ERRAVT("ERR_049", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". Nom d'OS non specifie depuis l'argument '/OS'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". No OS name specified from '/OS' argument", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 			Else
@@ -3203,13 +3748,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 				IF CPCDOS_INSTANCE.SCI_INSTANCE.get_NombreOSenCours() > 1 Then
 					' S'il y a plusieurs OS, et que le nom n'a pas ete specifie, alors on prend la cle courant
+	
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] " & CPCDOS_INSTANCE.SCI_INSTANCE.get_NombreOSenCours() & " OS en cours, lancement de la GUI de l'OS courant [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] " & CPCDOS_INSTANCE.SCI_INSTANCE.get_NombreOSenCours() & " OS in execution, starting current OS GUI [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 				Else
 					_CLE_ = CPCDOS_INSTANCE.Generer_cle(Auth_Kernel, NumeroOS, Auth_Utilisateur, Auth_PID, Auth_TID)
 					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Aucun OS en cours, lancement de la GUI vide [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] No OS in execution, starting empty OS GUI [OS:" & NumeroOS & " Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 				End if
 			End if
 			
@@ -3219,31 +3771,46 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			if NumeroOS < 0 Then
 				Message_erreur = ERRAVT("ERR_049", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". Nom d'OS non existant depuis l'argument '/OS'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". No existing OS name specified from '/OS' argument", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			else
 			
 				if CPCDOS_INSTANCE.SCI_INSTANCE.IMGUI_mode = true Then
 					if CPCDOS_INSTANCE.SCI_INSTANCE.Initialiser_GUI__ImGUI(0, RetourVAR, _CLE_) = 1 then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Interface graphique ImGUI initialise!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] ImGUI graphic interface initialised!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					else
 
 						Message_erreur = ERRAVT("ERR_049", 0)
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". Erreur d'initialisation de ImGUI", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". Unable to initialise the ImGUI", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					End if
 				else
 
 					if CPCDOS_INSTANCE.SCI_INSTANCE.Initialiser_GUI(0, RetourVAR, _CLE_) = 1 then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Interface graphique initialise!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Graphic interface initialised!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 						
 						
 					else
 						Message_erreur = ERRAVT("ERR_049", 0)
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". Erreur d'initialisation de l'IUG", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] ERR_049: " & Message_erreur & ". Unable to initialise the GUI", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					end if
 				End if
 			End if ' Si numero OS < 0
@@ -3261,8 +3828,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer une fenetre
 		' ===============================================================
-		CommLang(2) = "window/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "fenetre/"
+		CommLANG(2) = "window/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3272,16 +3840,55 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " fenetre/                   Cree ou gere une nouvelle instance d'une fenetre graphique"
+			Else
 				CommandesAide = CommandesAide & CRLF & " window/                    Create or manage new graphic"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Fenetre'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer une fenetre graphique sur l'IUG"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Agrandir la fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   fenetre/ /sizeup Ma_Fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Retrecir la fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   fenetre/ /sizedown Ma_Fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Reduire la fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   fenetre/ /reduct Ma_Fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Fenetre/ Ma_Fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Titre			= " & CHR(34) & "Ma premiere fenetre" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "200" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "150" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres			= " & CHR(34) & "1" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFenetre	= " & CHR(34) & "200,150,250" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTitre 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "220,220,220" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Icone			= " & CHR(34) & "C:\dossier\icone.png" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.ImgTitre		= " & CHR(34) & "C:\dossier\BarreDeTitre.png" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		 Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Textebloc/ , Bouton/ , Imagebox/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Window'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -3315,6 +3922,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : Button/ , Picturebox/ , Textblock/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -3394,8 +4002,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 						if _cle_win_Auth_Kernel = Auth_Kernel AND _cle_win_Auth_OS = Auth_OS AND _cle_win_Auth_Utilisateur = Auth_Utilisateur Then 
 
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[SCI] Restauration de la fenetre (" & INDEX_FENETRE & ") " & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(INDEX_FENETRE).Identification_Objet.Nom, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, CPCDOS_INSTANCE.SCI_INSTANCE.RetourVAR)
+							else
 								DEBUG("[SCI] Window restauration (" & INDEX_FENETRE & ") " & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(INDEX_FENETRE).Identification_Objet.Nom, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, CPCDOS_INSTANCE.SCI_INSTANCE.RetourVAR)
-
+							End if
 
 							CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(INDEX_FENETRE).PROP_TYPE.Reduit = true
 							CPCDOS_INSTANCE.SCI_INSTANCE.ActualiserGUI(0, 0)
@@ -3417,8 +4028,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 						if _cle_win_Auth_Kernel = Auth_Kernel AND _cle_win_Auth_OS = Auth_OS AND _cle_win_Auth_Utilisateur = Auth_Utilisateur Then 
 					
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[SCI] Reduction de la fenetre (" & INDEX_FENETRE & ") " & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(INDEX_FENETRE).Identification_Objet.Nom, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, CPCDOS_INSTANCE.SCI_INSTANCE.RetourVAR)
+							else
 								DEBUG("[SCI] Window minimization (" & INDEX_FENETRE & ") " & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(INDEX_FENETRE).Identification_Objet.Nom, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, CPCDOS_INSTANCE.SCI_INSTANCE.RetourVAR)
-							
+							End if
 
 							CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(INDEX_FENETRE).PROP_TYPE.Reduit = false
 							CPCDOS_INSTANCE.SCI_INSTANCE.ActualiserGUI(0, 0)
@@ -3429,12 +4043,18 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			ElseIF INSTR(UCASE(NomFenetre), "/MODIF") > 0 Then
 				NomFenetre = MID(NomFenetre, INSTR(UCASE(NomFenetre), "/MODIF") + 7) & "~MODIF#"
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'une fenetre '" & NomFenetre & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Window edition mode '" & NomFenetre & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				CpcdosCP_SHELL = "IUG:FENETRE_NOM=" & NomFenetre
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'une fenetre '" & NomFenetre & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating window '" & NomFenetre & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				CpcdosCP_SHELL = "IUG:FENETRE_NOM=" & NomFenetre
 			End if
 			
@@ -3452,8 +4072,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer une picturebox
 		' ===============================================================
-		CommLang(2) = "picturebox/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "imagebox/"
+		CommLANG(2) = "picturebox/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3463,17 +4084,57 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " image/                     Cree une nouvelle instance d'une picturebox"
+			Else
 				CommandesAide = CommandesAide & CRLF & " picturebox/                Create new picturebox instance"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'ImageBox'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer une imagebox dans un No de handle d'une fenetre existante"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   A savoir qu'en general, le numero de handle (Numero d'objet) d'une fenetre est genere pendant"
+					Mess_Aide = Mess_Aide & CRLF & "    l'execution de la commande 'creer/'. Si vous utilisez le numero d'un PID d'une fenetre, votre"
+					Mess_Aide = Mess_Aide & CRLF & "    objet graphique sera heberge a l'interieur, et l'emplacement X et Y sera relatif au"
+					Mess_Aide = Mess_Aide & CRLF & "     conteneur de la fenetre."
+					Mess_Aide = Mess_Aide & CRLF & "   Si vous utilisez le PID d'un processus qui n'a pas de fenetre (Un processus non GUI) votre objet sera"
+					Mess_Aide = Mess_Aide & CRLF & "    quand meme cree, et fonctionnel, mais graphiquement parlant, il ne sera pas visible."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   ImageBox/ Mon_Picture_box"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "200" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "150" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres 				= " & CHR(34) & "1" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "220,220,220" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Image				= " & CHR(34) & "C:\dossier\chien.png" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ ImageBox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Parametre .Parametres :"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:0  = (Defaut) affichage normale"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:1  = Permet de definir la taille X, Y du picturebox selon la taille de l'image source"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:2  = Permet de re-dimentionner la taille d'une image selon les dimentions X, Y du picturebox"
+					Mess_Aide = Mess_Aide & CRLF
+					
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Fenetre/ , Bouton/ , Textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'PictureBox'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -3500,6 +4161,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : Window/ , Button/ , Textblock/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -3531,11 +4193,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF INSTR(UCASE(NomImageBox), "/MODIF") > 0 Then
 				NomImageBox = MID(NomImageBox, INSTR(UCASE(NomImageBox), "/MODIF") + 7) & "~MODIF#"
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'une picturebox '" & NomImageBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Picturebox edition mode '" & NomImageBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'une picturebox '" & NomImageBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating picturebox '" & NomImageBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 			
 			
@@ -3555,8 +4223,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un bouton
 		' ===============================================================
-		CommLang(2) = "button/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "bouton/"
+		CommLANG(2) = "button/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3566,13 +4235,14 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
 				CommandesAide = CommandesAide & CRLF & " button/                    Create new button instance."
 			
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		'IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
@@ -3604,6 +4274,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , window/ , textblock/"
 					Mess_Aide = Mess_Aide & CRLF
+				
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -3635,11 +4306,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF INSTR(UCASE(NomBouton), "/MODIF") > 0 Then
 				NomBouton = MID(NomBouton, INSTR(UCASE(NomBouton), "/MODIF") + 7) & "~MODIF#"
 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'un bouton '" & NomBouton & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Button edition mode '" & NomBouton & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'un bouton '" & NomBouton & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating button '" & NomBouton & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 		
 
@@ -3658,8 +4335,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un textebloc
 		' ===============================================================
-		CommLang(2) = "textblock/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "textebloc/"
+		CommLANG(2) = "textblock/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3669,19 +4347,55 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " textebloc/                 Creer une nouvelle instance d'un bloc de texte."
+			Else
 				CommandesAide = CommandesAide & CRLF & " textblock/                 Create new textblock instance."
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		
 		
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'TexteBloc'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer graphiquement un bloc de texte pour les applications"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec un pid de 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   TexteBloc/ Mon_Texte"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Texte				= " & CHR(34) & "Bonjour, voici mon texte%CPC.CRLF%Et hop un retour a la ligne!" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres			= " & CHR(34) & "IMGAUTO:1" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "0" & CHR(34) & "  --> Taille X geree par IMGAUTO:1"
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "0" & CHR(34) & "  --> Taille Y geree par IMGAUTO:1"
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "220,220,220" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ TexteBloc"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Parametre .Parametres :"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:0  = (Defaut) affichage normale, et coupe le texte si plus grand que TX et TY"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:1  = Permet de definir la taille X, Y du Textebloc selon la taille de l'image source"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:2  = Permet de re-dimentionner 'non-vectoriellement' la taille du texte selon les dimentions X, Y du textebloc"
+					Mess_Aide = Mess_Aide & CRLF & "  BORD:0	 = (Par defaut) affiche pas de bordure autour"
+					Mess_Aide = Mess_Aide & CRLF & "  BORD:1	 = Affiche une bordure noire"
+					Mess_Aide = Mess_Aide & CRLF & "  BORD:2	 = Affiche le textebloc avec un effet 3D"
+					Mess_Aide = Mess_Aide & CRLF
+					
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , bouton/ , fenetre/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Textblock'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -3711,6 +4425,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , bouton/ , window/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -3742,11 +4457,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF INSTR(UCASE(NomTextebloc), "/MODIF") > 0 Then
 				NomTextebloc = MID(NomTextebloc, INSTR(UCASE(NomTextebloc), "/MODIF") + 7) & "~MODIF#"
 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'un TexteBloc '" & NomTextebloc & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] TextBlock edition mode '" & NomTextebloc & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'un TexteBloc '" & NomTextebloc & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating TextBlock '" & NomTextebloc & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 			
 			CpcdosCP_SHELL = "IUG:TEXTEBLOC_NOM=" & NomTextebloc
@@ -3765,8 +4486,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un textebox
 		' ===============================================================
-		CommLang(2) = "textbox/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "textebox/"
+		CommLANG(2) = "textbox/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3776,19 +4498,60 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " textebox/                  Creer une nouvelle instance d'un bloc de texte editable."
+			Else
 				CommandesAide = CommandesAide & CRLF & " textbox/                   Create new editable text box instance."
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		
 		
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'TexteBloc'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer graphiquement un bloc de texte pour les applications"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec un handle de 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Obtenir le texte du textebox"
+					Mess_Aide = Mess_Aide & CRLF & "   Textbox/ /text My_Textbox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Focus le textbox"
+					Mess_Aide = Mess_Aide & CRLF & "   Textbox/ /focus My_Textbox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   TexteBox/ Mon_TexteBox"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Texte				= " & CHR(34) & "Je suis une zone de texte editable" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "0" & CHR(34) & "  --> Taille X geree par IMGAUTO:1"
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "0" & CHR(34) & "  --> Taille Y geree par IMGAUTO:1"
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "220,220,220" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ Textebox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Parametre .Parametres :"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:0  = (Defaut) affichage normale, et coupe le texte si plus grand que TX et TY"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:1  = Permet de definir la taille X, Y du Textebloc selon la taille de l'image source"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:2  = Permet de re-dimentionner 'non-vectoriellement' la taille du texte selon les dimentions X, Y du textebloc"
+					Mess_Aide = Mess_Aide & CRLF & "  BORD:0	 = Affiche pas de bordure autour"
+					Mess_Aide = Mess_Aide & CRLF & "  BORD:1	 = Affiche une bordure noire"
+					Mess_Aide = Mess_Aide & CRLF & "  BORD:2	 = (Par defaut) Affiche le textebloc avec un effet 3D"
+					Mess_Aide = Mess_Aide & CRLF
+					
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , bouton/ , fenetre/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Textblock'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -3824,6 +4587,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , bouton/ , window/ textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -3910,12 +4674,18 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			ElseIF INSTR(UCASE(NomTextebox), "/MODIF") > 0 Then
 				NomTextebox = MID(NomTextebox, INSTR(UCASE(NomTextebox), "/MODIF") + 7) & "~MODIF#"
 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'un TexteBox '" & NomTextebox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] TextBox edition mode '" & NomTextebox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				CpcdosCP_SHELL = "IUG:TEXTEBOX_NOM=" & NomTextebox
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'un TexteBox '" & NomTextebox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating TextBox '" & NomTextebox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				CpcdosCP_SHELL = "IUG:TEXTEBOX_NOM=" & NomTextebox
 			End if
 			
@@ -3933,9 +4703,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer une barre de progression
 		' ===============================================================
-		
-		CommLang(2) = "progressbar/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "barreprogression/"
+		CommLANG(2) = "progressbar/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -3945,18 +4715,57 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " BarreProgresson/           Cree une nouvelle instance d'une barre de progression"
+			Else
 				CommandesAide = CommandesAide & CRLF & " ProgressBar/               Create new progress bar instance"
-			
+			END IF
 		END IF
-		
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'BarreProgression'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer une barre de progression dans un No de handle d'une fenetre existante"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   A savoir qu'en general, le numero de handle (Numero d'objet) d'une fenetre est genere pendant"
+					Mess_Aide = Mess_Aide & CRLF & "    l'execution de la commande 'creer/'. Si vous utilisez le numero d'un handle d'une fenetre, votre"
+					Mess_Aide = Mess_Aide & CRLF & "    objet graphique sera heberge a l'interieur, et l'emplacement X et Y sera relatif au"
+					Mess_Aide = Mess_Aide & CRLF & "     conteneur de la fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   BarreProgression/ MaBarreDeProgression"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "400" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "30" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres			= " & CHR(34) & "IMGAUTO:2" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "220,220,220" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Image				= " & CHR(34) & "imagebar.png" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Valeur				= " & CHR(34) & "40" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Texte				= " & CHR(34) & "Progression a 40%" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ MaBarreDeProgression"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Parametre .Parametres :"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:0  = aucun etirement durant la progression (Il faut que l'image soit deja grande)"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:1  = Permet de definir la taille X, Y de la barre selon la taille de l'image source"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:2  = (Defaut) permet d'etirer l'image de la barre selon la progression"
+					Mess_Aide = Mess_Aide & CRLF
+					
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Fenetre/ , Bouton/ , Textebloc/ , textebox/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'ProgressBar'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -3985,6 +4794,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : Window/ , Button/ , Textblock/ , textbox/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -4016,11 +4826,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF INSTR(UCASE(NomProgressBar), "/MODIF") > 0 Then
 				NomProgressBar = MID(NomProgressBar, INSTR(UCASE(NomProgressBar), "/MODIF") + 7) & "~MODIF#"
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'une barre de progression '" & NomProgressBar & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Progress bar edition mode '" & NomProgressBar & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'une barre de progression '" & NomProgressBar & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating progress bar '" & NomProgressBar & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 
 			CpcdosCP_SHELL = "IUG:PROGRESSBAR_NOM=" & NomProgressBar
@@ -4038,8 +4854,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un checkbox
 		' ===============================================================
-		CommLang(2) = "checkbox/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "checkbox/"
+		CommLANG(2) = "checkbox/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4049,17 +4866,56 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " checkbox/                  Cree une nouvelle instance d'une boite cochable"
+			Else
 				CommandesAide = CommandesAide & CRLF & " checkbox/                  Create new check box instance"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'CheckBox'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer une boite cochable dans un No de handle d'une fenetre existante"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   A savoir qu'en general, le numero de handle (Numero d'objet) d'une fenetre est genere pendant"
+					Mess_Aide = Mess_Aide & CRLF & "    l'execution de la commande 'creer/'. Si vous utilisez le numero d'un handle d'une fenetre, votre"
+					Mess_Aide = Mess_Aide & CRLF & "    objet graphique sera heberge a l'interieur, et l'emplacement X et Y sera relatif au"
+					Mess_Aide = Mess_Aide & CRLF & "     conteneur de la fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   CheckBox/ MonCheckbox"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres 		= " & CHR(34) & "COL:0 IMGAUTO:1" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "0" & CHR(34) & "    gere via 'IMGAUTO:1'"
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "0" & CHR(34) & "    gere via 'IMGAUTO:1'"
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "220,220,220" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Valeur				= " & CHR(34) & "0" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Texte				= " & CHR(34) & "Cochez-moi !" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ CheckBox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Parametre .Parametres :"
+					Mess_Aide = Mess_Aide & CRLF & "  COL:0     = (Par defaut) Ne dessine pas la couleur de fond"
+					Mess_Aide = Mess_Aide & CRLF & "  COL:1     = Dessine pas la couleur de fond depuis la propriete '.CouleurFond'"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:0 = Dimentions gere par .TX et .TY"
+					Mess_Aide = Mess_Aide & CRLF & "  IMGAUTO:1 = (By default) Dimentions gere par la taille du texte '.Texte'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Fenetre/ , Bouton/ , Textebloc/ , textebox/ , BarreProgression/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'ProgressBar'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -4088,7 +4944,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : Window/ , Button/ , Textblock/ , textbox/ , ProgressBar/"
 					Mess_Aide = Mess_Aide & CRLF
-				
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -4120,11 +4976,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF INSTR(UCASE(NomCheckBox), "/MODIF") > 0 Then
 				NomCheckBox = MID(NomCheckBox, INSTR(UCASE(NomCheckBox), "/MODIF") + 7) & "~MODIF#"
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'un checkbox '" & NomCheckBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Checkbox edition mode '" & NomCheckBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'une checkbox '" & NomCheckBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating checkbox '" & NomCheckBox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 
 			CpcdosCP_SHELL = "IUG:CHECKBOX_NOM=" & NomCheckBox
@@ -4142,8 +5004,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un explorateur de fichiers
 		' ===============================================================
-		CommLang(2) = "explorer/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "explorer/"
+		CommLANG(2) = "explorer/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4153,17 +5016,45 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " explorer/                  Creer une nouvelle instance d'un explorateur"
+			Else
 				CommandesAide = CommandesAide & CRLF & " explorer/                  Create new explorer instance."
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Explorer'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer un explorateur de fichiers dans un No de handle d'une fenetre existante"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Explorer/ my_explorer"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Texte				= " & CHR(34) & "C:\dossier" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres			= " & CHR(34) & "" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "80" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "255,255,255" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Image				= " & CHR(34) & "C:\dossier\background.png" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ explorer"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Imagebox/ , fenetre/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Explorer'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -4186,6 +5077,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , window/ , textblock/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -4217,11 +5109,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF INSTR(UCASE(NomExplorer), "/MODIF") > 0 Then
 				NomExplorer = MID(NomExplorer, INSTR(UCASE(NomExplorer), "/MODIF") + 7) & "~MODIF#"
 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'un explorer '" & NomExplorer & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Explorer edition mode '" & NomExplorer & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'un explorer '" & NomExplorer & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating explorer '" & NomExplorer & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 		
 
@@ -4240,8 +5138,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour creer un explorateur de fichiers
 		' ===============================================================
-		CommLang(2) = "listbox/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "listbox/"
+		CommLANG(2) = "listbox/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4251,17 +5150,51 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " listbox/                  Creer une nouvelle instance d'une listbox"
+			Else
 				CommandesAide = CommandesAide & CRLF & " listbox/                  Create new listbox instance."
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Listbox'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer un listbox dans un No de handle d'une fenetre existante"
+					Mess_Aide = Mess_Aide & CRLF & "    exemple avec 12345"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Obtenir le nom de l'item selectionne"
+					Mess_Aide = Mess_Aide & CRLF & "   listbox/ /selected_name my_listbox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Obtenir l'index de l'item selectionne"
+					Mess_Aide = Mess_Aide & CRLF & "   listbox/ /selected_index my_listbox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   listbox/ my_listbox"
+					Mess_Aide = Mess_Aide & CRLF & "   		.handle				= " & CHR(34) & "12345" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Texte				= " & CHR(34) & "Item1;Item2" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Parametres			= " & CHR(34) & "" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PX 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.PY 				= " & CHR(34) & "10" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TX 				= " & CHR(34) & "100" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.TY 				= " & CHR(34) & "80" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurTexte	 	= " & CHR(34) & "000,000,000" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.CouleurFond		= " & CHR(34) & "255,255,255" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "   		.Image				= " & CHR(34) & "C:\dossier\background.png" & CHR(34)
+					Mess_Aide = Mess_Aide & CRLF & "        Creer/"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ listbox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Imagebox/ , fenetre/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Listbox'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -4291,6 +5224,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , window/ , textblock/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -4363,11 +5297,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			elseif INSTR(UCASE(NomListbox), "/MODIF") > 0 Then
 				NomListbox = MID(NomListbox, INSTR(UCASE(NomListbox), "/MODIF") + 7) & "~MODIF#"
 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Mode edition d'un listbox '" & NomListbox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Listbox edition mode '" & NomListbox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'un listbox '" & NomListbox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating listbox '" & NomListbox & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 		
 
@@ -4386,8 +5326,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour rafraichir un objet ou une fenetre
 		' ===============================================================
-		CommLang(2) = "refresh/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "actualiser/"
+		CommLANG(2) = "refresh/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -4397,18 +5338,63 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " actualiser/                Actualise un objet, une fenetre graphique ou l'arriere plan"
+			Else
 				CommandesAide = CommandesAide & CRLF & " refresh/                   Refresh an GUI object, window or background"
-			
+			END IF
 		END IF
-		
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'Actualiser'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'actualiser graphiquement un objet contenu dans une fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "    ou bien la fenetre elle meme avec tous ses objets, ou l'arriere plan de l'interface."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande est utile dans le cas d'une modification mineure sur un objet"
+					Mess_Aide = Mess_Aide & CRLF & "    ou l'arriere plan graphique. Ou bien pour combler d'eventuels problemes."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :" 
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser une fenetre via son nom de propriete"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ ma_fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   ou via son numero de handle"
+					Mess_Aide = Mess_Aide & CRLF & "'    actualiser/ /handle 01234"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser un objet graphique via son nom."
+					Mess_Aide = Mess_Aide & CRLF & "     /!\ Seulement si la commande se trouve dans le meme TID/PID"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ Mon_textebox"
+					Mess_Aide = Mess_Aide & CRLF & "   Sinon, il faut actualiser l'objet depuis son numero d'handle"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /handle 1234"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser TOUTES les fenetres"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   ou"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /fenetres"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser uniquement les fenetres NON FOCUS (En arriere plan)"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /fenetre /nonfocus "
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser uniquement la fenetre FOCUS (Au premier plan)"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /fenetre /focus"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser l'image de fond"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /image"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Actualiser absolument tout!"
+					Mess_Aide = Mess_Aide & CRLF & "     actualiser/ /tout"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : fermer/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Refresh'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -4450,6 +5436,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : close/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -4861,8 +5848,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 					' L'utilisateur n'a rien indique
 					Message_erreur = ERRAVT("AVT_078", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] AVT_078 : " & Message_erreur & ". Veuillez indiquer un nom ou un parametre.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] AVT_078 : " & Message_erreur & ". Please put name or parameter.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 			End if
@@ -4901,15 +5891,21 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 								' Actualiser TOUTES les fenetres
 								
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[CpcdosC+] Actualisation graphique de toutes les fenetres ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+									Else
 										DEBUG("[CpcdosC+] Refreshing all graphic window ...'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-									
+									End if
 								End if
 
 								CPCDOS_INSTANCE.SCI_INSTANCE.ActualiserGUI(0, Numero_INDEX)
 							Else
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[CpcdosC+] Actualisation graphique de la fenetre '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+									Else
 										DEBUG("[CpcdosC+] Refreshing window graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__FENETRE(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-									
+									End if
 								End if
 								
 								' Actualiser une fenetre
@@ -4919,8 +5915,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.Bouton Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique du bouton '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing button graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__BOUTON(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4928,8 +5927,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.PictureBox Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique de l'imagebox '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing picturebox graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PICTUREBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4937,8 +5939,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.TextBlock Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique du textbloc '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing textbloc graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBLOCK(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4946,8 +5951,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.TextBox Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique du textebox '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing textbox graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__TEXTBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4955,8 +5963,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.ProgressBar Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique de la barre de progression '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing progressbar graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__PROGRESSBAR(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4964,8 +5975,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.CheckBox Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique du checkbox '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing checkbox graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__CHECKBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4973,8 +5987,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.Explorer Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique du explorer '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing explorer graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__EXPLORER(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4982,8 +5999,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 					ElseIf TypeObjet = CPCDOS_INSTANCE.SCI_INSTANCE.GUI_TYPE.ListBox Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Actualisation graphique du listbox '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Refreshing listbox graphic '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Nom & "' [OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.OS_id & " PID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.PID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Proc_PARENT & "' TID:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.TID_PARENT & " '" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Thread_PARENT & " HANDLE:" & CPCDOS_INSTANCE.SCI_INSTANCE.INST_INIT_GUI.GUI__LISTBOX(Numero_INDEX).Identification_Objet.Handle & " INDEX:" & Numero_INDEX & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 						
 						' Actualiser l'objet avec son index et la fenetre dont le numero d'index est dans ses proprietes
@@ -4994,8 +6014,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			Else
 				' Si on n'a pas trouve quelque chose
 				Message_erreur = ERRAVT("AVT_077", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] AVT_077 : " & Message_erreur & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] AVT_077 : " & Message_erreur & ". ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			End if
 	
 			' ===================================================================
@@ -5010,8 +6033,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de decompression
 		' ===============================================================
-		CommLang(2) = "decompress/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "decompresser/"
+		CommLANG(2) = "decompress/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5021,17 +6045,36 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " decompresser/              Decompresser un fichierZIP"
+			Else
 				CommandesAide = CommandesAide & CRLF & " decompress/                Decompress an ZIP file"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'decompresser'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de decompresser un fichier ZIP, GZ .."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   decompresser/ MonFichier.zip  (Par defaut dans le dossier TEMP)"
+					Mess_Aide = Mess_Aide & CRLF & "   decompresser/ MonFichier.zip MonDossier"
+					Mess_Aide = Mess_Aide & CRLF & "   decompresser/ dossier/MonFichier.zip MonDossier/temp"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " A savoir que cpcdos supporte les deux formats '\' ou '/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : supprimer/ , deplacer/ , ouvrir/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'Decompress'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5046,6 +6089,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : delete/ , move/ , open/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5097,8 +6141,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Decompression du fichier '" & Source & "' a '" & Destination & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] File uncompressing '" & Source & "' to '" & Destination & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 			
 
@@ -5109,14 +6156,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				DEBUG("0", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
 				Dim Message_erreur as String = ERRAVT("ERR_062", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] " & Message_erreur & ". '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				End if
 			Else
 				' OK
 				DEBUG("OK", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fichier '" & Param & "' a ete decompresse!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] The file '" & Param & "' has been uncompressed!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-
+				End if
 			End if
 			
 			' ====================================================================
@@ -5134,8 +6187,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	
 	_scope_CMD
 	
-		CommLang(2) = ".title"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".titre"
+		CommLANG(2) = ".title"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5145,16 +6199,33 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> Titre              Donner un titre a une fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> Title              Put title on Window"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Titre'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique t-elle qu'une fenetre, permet de nommer la barre de titre de la fenetre"
+					Mess_Aide = Mess_Aide & CRLF & ""
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Title'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5166,6 +6237,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
+
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -5199,8 +6272,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_TITRE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5215,8 +6291,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".name"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".nom"
+		CommLANG(2) = ".name"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5226,17 +6303,34 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> nom                Nom du processus / objet"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> name               Process / Object name"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Nom'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de nommer le nom du processus si vous creez une fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "    ou bien le nom d'instance si c'est un objet"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Title'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5248,6 +6342,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
+
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -5281,8 +6377,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_NOM=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5296,8 +6395,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".text"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".texte"
+		CommLANG(2) = ".text"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5307,17 +6407,33 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> texte              Texte graphique de l'objet"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> text               Graphic text object"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Texte'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet d'inclure du texte dans une propriete le supportant."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/' 'imagebox'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Text'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5329,6 +6445,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5363,8 +6480,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_TEXTE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5378,8 +6498,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".pid"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".pid"
+		CommLANG(2) = ".pid"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5389,17 +6510,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> pid                Numero du processus parent/hote"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> pid                Parent/host process number"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.ProcessusIDentification'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de selectionner un processus parent. Ceci vous permet"
+					Mess_Aide = Mess_Aide & CRLF & "    d'heberger votre fenetre graphique."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre est NUL :"
+					Mess_Aide = Mess_Aide & CRLF & "   - Pour une fenetre, il prendra le numero de PID parent du thread executif"
+					Mess_Aide = Mess_Aide & CRLF & "   - Pour un objet, IDEM, mais seulement si le nuemro de handle correspond a la fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.ProcessIDentification'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5415,6 +6557,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5449,8 +6592,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_PID=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5464,8 +6610,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLang(2) = ".handle"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".handle"
+		CommLANG(2) = ".handle"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5475,17 +6622,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> handle             Numero du processus parent/hote"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> handle             Parent/host process number"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Handle'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de pr�ciser sous quel numero de handle l'objet devra"
+					Mess_Aide = Mess_Aide & CRLF & "    etre heberge. Fonctionne uniquement si le numero handle correspond a une fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre est NUL :"
+					Mess_Aide = Mess_Aide & CRLF & "   - Pour une fenetre, elle meme heberge sur le handle du bureau"
+					Mess_Aide = Mess_Aide & CRLF & "   - Pour un objet, une erreur se produira. Un objet doit etre heberge dans une fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Handle'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5501,6 +6669,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5535,8 +6704,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_HANDLE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5550,8 +6722,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLang(2) = ".value"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".valeur"
+		CommLANG(2) = ".value"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5561,17 +6734,35 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> Valeur             Valeur attendu d'un objet"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> Value              Expected object value"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Valeur'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de pr�ciser une valeur attendue"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre est NULL ou non indiquee, par defaut elle sera a '0'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'BarreProgression/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/ , fenetre/ , bouton/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Value'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5585,6 +6776,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/ , button/ , window/ "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5619,8 +6811,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:VALEUR=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5634,8 +6829,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".parameters"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".parametres"
+		CommLANG(2) = ".parameters"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5645,17 +6841,49 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> type               Type de fenetre graphique"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> type               Graphic window type"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Parametres'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet d'ajouter des parametres a la creation d'un objet ou fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voici les differents type de fenetres:"
+					Mess_Aide = Mess_Aide & CRLF & "   - TYPE:1 : Fenetre normale (PAR DEFAUT)"
+					Mess_Aide = Mess_Aide & CRLF & "   - TYPE:2 : Fenetre sans le conteneur visible "
+					Mess_Aide = Mess_Aide & CRLF & "   - TYPE:3 : Fenetre sans le bitmap de titre visible"
+					Mess_Aide = Mess_Aide & CRLF & "   - TYPE:4 : Fenetre sans le conteneur et le bitmap de titre visible"
+					Mess_Aide = Mess_Aide & CRLF & "   - TYPE:5 : Fenetre sans barre de titre"
+					Mess_Aide = Mess_Aide & CRLF & "   - TYPE:6 : Fenetre sans barre de titre et sans conteneur visible"
+					Mess_Aide = Mess_Aide & CRLF & "   - BORD:1    : Bordure autour de la fenetre. (PAR DEFAUT)"
+					Mess_Aide = Mess_Aide & CRLF & "   - BORD:0    : Sans bordure autour de la fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Pour un picturebox:"
+					Mess_Aide = Mess_Aide & CRLF & "   - IMGAUTO:0 : Affichage normale (PAR DEFAUT)"
+					Mess_Aide = Mess_Aide & CRLF & "   - IMGAUTO:1 : Affichage avec les dimentions du picturebox qui s'adaptent a l'image."
+					Mess_Aide = Mess_Aide & CRLF & "   - IMGAUTO:2 : Affichage avec les dimentions de l'image qui s'adaptend au picturebox."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Parameters'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5683,6 +6911,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5717,8 +6946,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_TYPE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5732,8 +6964,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".windowcolor"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".couleurfenetre"
+		CommLANG(2) = ".windowcolor"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5743,17 +6976,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> couleurfenetre     Couleur de la fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> windowcolor        Window color"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.CouleurFenetre'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la couleur de la fenetre de maniere general en RVB."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, la fenetre sera de couleur grise/blanche."
+					Mess_Aide = Mess_Aide & CRLF & "  Vous devez specifier un code de couleur du type RVB avec 3 chiffres pour chaque. Ex:"
+					Mess_Aide = Mess_Aide & CRLF & "    CouleurFenetre = " & CHR(34) & "120,050,000" & chr(34)
+					Mess_Aide = Mess_Aide & CRLF & "  Meme si la couleur est zero, vous devez specifier 3 chiffres '000'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.WindowColor'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5770,6 +7024,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5804,8 +7059,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_COULEURFENETRE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5818,8 +7076,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 
 		' =======================================================================
-		CommLang(2) = ".backcolor"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".couleurfond"
+		CommLANG(2) = ".backcolor"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5829,16 +7088,39 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> couleurfond        Couleur du conteneur de la fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> windowcolor        Window container color"
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.CouleurFond'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la couleur du fond du conteneur de la fenetre."
+					Mess_Aide = Mess_Aide & CRLF & "    Le conteneur c'est la ou vont se trouver vos objets graphiques"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, le fond sera de couleur grise."
+					Mess_Aide = Mess_Aide & CRLF & "  Vous devez specifier un code de couleur du type RVB avec 3 chiffres pour chaque. Ex:"
+					Mess_Aide = Mess_Aide & CRLF & "    CouleurFenetre = " & CHR(34) & "120,050,000" & chr(34)
+					Mess_Aide = Mess_Aide & CRLF & "  Meme si la couleur est zero, vous devez specifier 3 chiffres '000'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.WindowColor'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5855,6 +7137,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5889,8 +7172,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_COULEURFOND=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5903,8 +7189,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".titlecolor"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".couleurtitre"
+		CommLANG(2) = ".titlecolor"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -5914,17 +7201,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> couleurtitre       Couleur du titre de la fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> windowcolor        Color of title of the windows"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.CouleurTitre'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la couleur des caracteres du titre de la fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, le fond sera de couleur grise."
+					Mess_Aide = Mess_Aide & CRLF & "  Vous devez specifier un code de couleur du type RVB avec 3 chiffres pour chaque. Ex:"
+					Mess_Aide = Mess_Aide & CRLF & "    CouleurTitre = " & CHR(34) & "120,050,000" & chr(34)
+					Mess_Aide = Mess_Aide & CRLF & "  Meme si la couleur est zero, vous devez specifier 3 chiffres '000'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.TitleColor'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -5941,7 +7249,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
-				
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -5976,8 +7284,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_COULEURTITRE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -5990,8 +7301,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLang(2) = ".textcolor"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".couleurtexte"
+		CommLANG(2) = ".textcolor"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6001,16 +7313,36 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> couleurtexte       Couleur du titre de la fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> textcolor          Color of title of the windows"
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.CouleurTitre'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la couleur des caracteres du texte de l'objet"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, le fond sera de couleur grise."
+					Mess_Aide = Mess_Aide & CRLF & "  Vous devez specifier un code de couleur du type RVB avec 3 chiffres pour chaque. Ex:"
+					Mess_Aide = Mess_Aide & CRLF & "    CouleurTexte = " & CHR(34) & "120,050,000" & chr(34)
+					Mess_Aide = Mess_Aide & CRLF & "  Meme si la couleur est zero, vous devez specifier 3 chiffres '000'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.TitleColor'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6024,6 +7356,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
+
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -6057,8 +7391,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_COULEURTEXTE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6071,8 +7408,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".icon"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".icone"
+		CommLANG(2) = ".icon"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6082,17 +7420,40 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> icone              Icone de la fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> icon               Window icon"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.ICONE'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir une icone representative a la fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "   Format PNG, BMP et JPG accepte! Les dimentions recommandes est de 16x16"
+					Mess_Aide = Mess_Aide & CRLF & "   Si votre icone ne respecte pas ces dimentions, Cpcdos va l'ajuster automatiquement. "
+					Mess_Aide = Mess_Aide & CRLF & "    Oui.. chaque jours, 1 developpeurs sur 3 est touche par de la flemardise..  moi en particulier :P"
+					Mess_Aide = Mess_Aide & CRLF & "    et oui, une maladie la plus dangereuse au monde #StopFlemardise.com"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, ou que l'icone n'est pas disponible l'icone"
+					Mess_Aide = Mess_Aide & CRLF & "   par defaut sera ICO_DEF.PNG."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.ICON'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6108,6 +7469,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6142,8 +7504,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:ICONE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6156,8 +7521,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".titleimg"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".imgtitre"
+		CommLANG(2) = ".titleimg"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6167,17 +7533,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> imgtitre           Image de fond de la barre de titre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> titleimg           background image of title"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.IMGTITRE'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir votre image de la barre de titre de fond"
+					Mess_Aide = Mess_Aide & CRLF & "    de votre fenetre."
+					Mess_Aide = Mess_Aide & CRLF & "   Format PNG, BMP et JPG sont acceptes!"
+
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, la barre sera transparente."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.TITLEIMG'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6192,6 +7579,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6226,8 +7614,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:IMGTITRE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6240,8 +7631,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".image"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".image"
+		CommLANG(2) = ".image"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6251,17 +7643,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> image              Image du conteneur"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> image              Container image" 
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.IMAGE'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir votre image du conteneur de votre objet ou "
+					Mess_Aide = Mess_Aide & CRLF & "    de votre fenetre."
+					Mess_Aide = Mess_Aide & CRLF & "   Format PNG, BMP et JPG sont acceptes!"
+
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, le conteneur reste neutre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.IMAGE'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6276,6 +7689,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6310,8 +7724,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:IMAGE=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6325,8 +7742,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLang(2) = ".opacity"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".opacite"
+		CommLANG(2) = ".opacity"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6336,17 +7754,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> opacite            Opacite(Alpha) de l'objet/fenetre"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> opacity            Window/object opacity" 
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.OPACITE'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la transparence de votre fenetre ou objet"
+					Mess_Aide = Mess_Aide & CRLF & "    de votre fenetre."
+					Mess_Aide = Mess_Aide & CRLF & "     Valeurs 0:Transparent <--> 255:Opaque"
+
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, il sera par defaut a 255"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.OPACITY'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6361,6 +7800,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6395,8 +7835,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_ALPHA=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6409,8 +7852,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".px"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".px"
+		CommLANG(2) = ".px"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6420,17 +7864,36 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> px                 Position horizontale"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> px                 Horizontal position"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.PositionX'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la position horizontale de la fenetre sur la zone"
+					Mess_Aide = Mess_Aide & CRLF & "    horizontale de l'ecran, ou votre object sur la zone horizontale de la fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, la fenetre sera place de maniere recursif."
+					Mess_Aide = Mess_Aide & CRLF 
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.PositionX'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6445,6 +7908,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6478,8 +7942,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_PX=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6492,8 +7959,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".py"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".py"
+		CommLANG(2) = ".py"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6503,17 +7971,36 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> py                 Position verticale"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> py                 Vertical position"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.PositionY'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la position verticale de la fenetre sur la zone"
+					Mess_Aide = Mess_Aide & CRLF & "    verticale de l'ecran, ou votre object sur la zone verticale de la fenetre."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, la fenetre sera place de maniere recursif."
+					Mess_Aide = Mess_Aide & CRLF 
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.PositionX'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6528,6 +8015,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6562,8 +8050,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_PY=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6576,8 +8067,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = ".sx"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".tx"
+		CommLANG(2) = ".sx"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6587,17 +8079,35 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> tx                 Taille horizontale"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> sx                 Horizontal size"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.TailleX'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la taille horizontale de votre fenetre ou objet."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, la fenetre sera taillee a '100' pixels"
+					Mess_Aide = Mess_Aide & CRLF 
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.SizeX'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6611,6 +8121,8 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
+
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -6644,8 +8156,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_TX=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6658,8 +8173,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLang(2) = ".sy"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".ty"
+		CommLANG(2) = ".sy"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6669,17 +8185,35 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> ty                 Taille verticale"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> sy                 Vertical size"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.TailleY'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de choisir la taille verticale de votre fenetre ou objet."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce parametre n'est pas specifie, la fenetre taillee a '150' pixels"
+					Mess_Aide = Mess_Aide & CRLF 
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.SizeY'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6693,6 +8227,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6727,8 +8262,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_TY=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6741,8 +8279,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 		
 		' =======================================================================
-		CommLang(2) = ".event"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = ".evenement"
+		CommLANG(2) = ".event"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6752,17 +8291,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> evenement          Fichier contenant les fonctions d'evenements"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> event              File with events functions"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  '.Evenement'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement pendant l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de definir le fichier source contenant les fonctions evenementielles."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Un evenement est une interaction graphique ou automatique entre les objets"
+					Mess_Aide = Mess_Aide & CRLF & "   et l'utilisateur. Par exemple des que l'utilisateur clique sur un bouton,"
+					Mess_Aide = Mess_Aide & CRLF & "   nomme 'MonBouton' avec la propriete .EVENEMENT definit sur 'MonFichier.cpc', il cherchera la ligne"
+					Mess_Aide = Mess_Aide & CRLF & "   'FONCTION/ MonBouton.CLIC()' dans le fichier 'MonFichier.cpc'."
+					Mess_Aide = Mess_Aide & CRLF & "   si cette fonction n'est pas trouve, le programme continue son execution."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Si ce propriete n'est pas specifie, aucun evenement sera donc possible !"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  '.Event'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6778,6 +8338,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6812,8 +8373,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				CpcdosCP_SHELL = "IUG:PROP_EVENEMENT=" & Retour_quotes
 			else
 				Message_erreur = ERRAVT("AVT_065", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Else
+					DEBUG("[CpcdosC+] AVT_065 : " & Message_erreur & ". Commande:" & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End If
 			End if
 			
 			' ====================================================================
@@ -6826,8 +8390,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	_scope_CMD
 	
 		' =======================================================================
-		CommLang(2) = "create/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "creer/"
+		CommLANG(2) = "create/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6837,17 +8402,36 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & "  IUG -> creer/             Creer une fenetre ou un objet initialise"
+			Else
 				CommandesAide = CommandesAide & CRLF & "  GUI -> create/            Create initialised window or object"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'CREER/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande utilisable uniquement avant la fin de l'incription d'une propriete"
+					Mess_Aide = Mess_Aide & CRLF & "    graphique, permet de creer votre fenetre ou votre objet." 
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Ne peut etre utilise apres un 'FIN/', elle doit imperativement etre utilisee"
+					Mess_Aide = Mess_Aide & CRLF & "   pendant l'initialisation des proprietes."
+					Mess_Aide = Mess_Aide & CRLF 
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   -> Voir la commande 'fenetre/'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : picturebox/ , textebox/ , textebloc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'CREATE/'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6861,6 +8445,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : picturebox/ , textbox/ , textbloc/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -6905,8 +8490,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		REM ' ===============================================================
 		REM '  Commande conditionnelle
 		REM ' ===============================================================
-		CommLang(2) = "if/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "si/"
+		CommLANG(2) = "if/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -6916,18 +8502,72 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		REM 'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " si/                        Condition sur deux expresssions"
+			Else
 				CommandesAide = CommandesAide & CRLF & " if/                        Condition with two expressions"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'SI'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'executer du code sous une condition seulement"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Conditions disponible :"
+					Mess_Aide = Mess_Aide & CRLF & "   =  (Egale)                 N=  ou  !=  (Pas egale)"
+					Mess_Aide = Mess_Aide & CRLF & "   >  (Superieur)             N>  ou  !>  (Pas superieur)"
+					Mess_Aide = Mess_Aide & CRLF & "   <  (Inferieur)             N<  ou  !<  (Pas inferieur)"
+					Mess_Aide = Mess_Aide & CRLF & "   >= (Superieur ou egale)    N>= ou  !>= (Pas superieur ou egale)"
+					Mess_Aide = Mess_Aide & CRLF & "   <= (Inferieur ou egale)    N<= ou  !<= (Pas Inferieur ou egale)"
+					Mess_Aide = Mess_Aide & CRLF & "   ~= (Contient)			  N~= ou  !~= (Ne contient pas)"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple (Mono ligne):"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ " & CHR(34) & "%Valeur1%" & CHR(34) & " = " & CHR(34) & "5" & CHR(34) & " alors: txt/ Ok!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple (Multiligne):"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ " & CHR(34) & "5" & CHR(34) & " = " & CHR(34) & "%Valeur2%" & CHR(34) & " alors:"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ Ok!"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ C'est bon!"
+					Mess_Aide = Mess_Aide & CRLF & "   fin/ si"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple (Monoligne avec sinon):"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ " & CHR(34) & "%Valeur1%" & CHR(34) & " = " & CHR(34) & "5" & CHR(34) & " alors: txt/ Ok! sinon:txt/ Faux!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple (Multiligne):"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ " & CHR(34) & "5" & CHR(34) & " = " & CHR(34) & "%Valeur2%" & CHR(34) & " alors:"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ Ok!"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ C'est bon!"
+					Mess_Aide = Mess_Aide & CRLF & "   sinon:"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ Faux!"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ pas bien!"
+					Mess_Aide = Mess_Aide & CRLF & "   fin/ si"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple (Multiligne/mono):"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ " & CHR(34) & "%Valeur1%" & CHR(34) & " = " & CHR(34) & "5" & CHR(34) & " alors:"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ Ok!"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ C'est bon!"
+					Mess_Aide = Mess_Aide & CRLF & "   sinon: txt/ C'est bon!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple (Mono ligne/Multiligne):"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ " & CHR(34) & "%Valeur1%" & CHR(34) & " = " & CHR(34) & "5" & CHR(34) & " alors:txt/ Ok!"
+					Mess_Aide = Mess_Aide & CRLF & "   sinon:"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ C'est bon!"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ Okai"
+					Mess_Aide = Mess_Aide & CRLF & "   fin/ si"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'IF'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -6978,6 +8618,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -7215,8 +8856,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if		
 			elseif SI_PosPasEgaleInferieur > 0 Then
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF NOT Val(SI_Expression_1) <= val(SI_Expression_2) Then ' !<=
 					SI_ResultatCondition = 1
@@ -7225,8 +8869,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosPasEgaleSuperieur > 0 Then
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF NOT Val(SI_Expression_1) >= val(SI_Expression_2) Then ' !>=
 					SI_ResultatCondition = 1
@@ -7235,8 +8882,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosPasSuperieur > 0 Then
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF NOT Val(SI_Expression_1) > val(SI_Expression_2) Then ' !>
 					SI_ResultatCondition = 1
@@ -7245,8 +8895,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosPasInferieur > 0 Then
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF NOT Val(SI_Expression_1) < val(SI_Expression_2) Then ' !<
 					SI_ResultatCondition = 1
@@ -7255,8 +8908,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosSuperieur > 0 Then
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF Val(SI_Expression_1) > val(SI_Expression_2) Then ' >
 					SI_ResultatCondition = 1
@@ -7265,8 +8921,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosInferieur > 0 Then
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF Val(SI_Expression_1) < val(SI_Expression_2) Then ' <
 					SI_ResultatCondition = 1
@@ -7275,8 +8934,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosEgaleInferieur > 0 Then '
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF Val(SI_Expression_1) <= val(SI_Expression_2) Then ' <=
 					SI_ResultatCondition = 1
@@ -7285,8 +8947,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 			elseif SI_PosEgaleSuperieur > 0 Then ' >=
 				IF SI_NonVAL = 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Presence de caracteres non numeriques. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Presence of non-numeric characters. --> " & Commande, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				IF Val(SI_Expression_1) >= val(SI_Expression_2) Then ' >=
 					SI_ResultatCondition = 1
@@ -7392,8 +9057,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Fin d'une fonction
 		' ===============================================================
-		CommLang(2) = "end/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "fin/"
+		CommLANG(2) = "end/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7403,18 +9069,43 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " fin/                       Delimite les conditions / fonctions"
+			Else
 				CommandesAide = CommandesAide & CRLF & " end/                       Condition / function delimiter"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'FIN'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet simplement de delimiter la fin d'une fonction"
+					Mess_Aide = Mess_Aide & CRLF & "   ou d'une condition"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "   si/ 1 = 1 alors:"
+					Mess_Aide = Mess_Aide & CRLF & "      Txt/ Vrais"
+					Mess_Aide = Mess_Aide & CRLF & "   fin/ si"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Ma_Fonction()"
+					Mess_Aide = Mess_Aide & CRLF & "     txt/ Coucou!"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ fonction"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Fenetre/ Ma_fenetre"
+					Mess_Aide = Mess_Aide & CRLF & "     ... {voir la syntaxe fenetre/)"
+					Mess_Aide = Mess_Aide & CRLF & "   fin/ fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Voir aussi : Exe/ , SI/ , Fonction/"
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'FIN'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -7435,6 +9126,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & " See also : Exe/ , IF/ , Function/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -7560,8 +9252,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Arreter la lecture d'un fichier CpcdosC+
 		' ===============================================================
-		CommLang(2) = "stop/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "stop/"
+		CommLANG(2) = "stop/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7571,18 +9264,35 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " stop/                      Met fin a la lecture d'un fichier .CPC"
+			Else
 				CommandesAide = CommandesAide & CRLF & " stop/                      Ending .CPC file"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'STOP'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet simplement de mettre fin a la lecture d'un"
+					Mess_Aide = Mess_Aide & CRLF & "   fichier CpcdosC+."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ Cette ligne sera affichee"
+					Mess_Aide = Mess_Aide & CRLF & "   Stop/"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ Cette ligne ne sera jamais affichee"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Voir aussi : exe/ , stopk/"
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'STOP'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -7594,6 +9304,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF & "   txt/ This line will never be deplayed"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & " See also : exe/ , stopk/"
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -7628,8 +9339,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande de positionnement
 		' ===============================================================
-		CommLang(2) = "loc/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "pos/"
+		CommLANG(2) = "loc/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7639,17 +9351,44 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " pos/                       Positionne ou recupere le curseur console ou GUI"
+			Else
 				CommandesAide = CommandesAide & CRLF & " loc/                       Locate or get GUI or console cursor"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'POSitionner'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'afficher ou changer de place le curseur console en X / Y"
+					Mess_Aide = Mess_Aide & CRLF & "    ou votre curseur graphique quand elle est executee."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/ x:10"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Coucou"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/ y:5"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Coucou"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/ x:20 y:10"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Hello!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Afficher les valeurs :"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/ x"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/ y"
+					Mess_Aide = Mess_Aide & CRLF & "   pos/ x y"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , couleurf/ , couleurp/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'LOCate'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -7666,6 +9405,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , couleurf/ , couleurp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -7806,8 +9546,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		REM ' ===============================================================
 		REM '  Commande pour stopper brusquement l'OS et fermer le kernel (Non conseille)
 		REM ' ===============================================================
-		CommLang(2) = "stopk/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "stopk/"
+		CommLANG(2) = "stopk/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7817,18 +9558,30 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		REM 'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " stopk/                     Stoppe directement le kernel"
+			Else
 				CommandesAide = CommandesAide & CRLF & " stopk/                     Stop kernel."
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'stopKernel'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'arreter NET, le kernel ( en urgence )"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'CLear Screen'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -7836,6 +9589,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -7865,20 +9619,27 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' CPCDOS_INSTANCE.SYSTEME_INSTANCE.set_Resolution(0)
 			CpcdosCP_SHELL("SYS/ /DEBUG = 1", _CLE_, NIVEAU_CCP, Param_1, Param_2)
 			CpcdosCP_SHELL("SYS/ /DEBUG /CPINTICORE = 1", _CLE_, NIVEAU_CCP, Param_1, Param_2)
-			CpcdosCP_SHELL("SYS/ /SCREEB 0", _CLE_, NIVEAU_CCP, Param_1, Param_2)
+			CpcdosCP_SHELL("SYS/ /ECRAN 0", _CLE_, NIVEAU_CCP, Param_1, Param_2)
 			doevents(1000)
 			
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[CpcdosC+] Arret d'urgence du Kernel Cpcdos...!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+			Else
 				DEBUG("[CpcdosC+] Stopping cpcdos kernel...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-			
+			End if
 			doevents(500000)
-			
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[Cpcdos] Fermeture des descripteurs de fichiers...!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+			Else
 				DEBUG("[Cpcdos] Closing file descriptor...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-			
+			End if
 			Reset()
 			doevents(2000000)
-			
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 				DEBUG("[Cpcdos] OK, BYE!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-			
+			Else
+				DEBUG("[Cpcdos] OK, BYE!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+			End if
 			doevents(1000000)
 			end
 '-------------------------------------------------' CPCDOS_INSTANCE.CPintiCore_INSTANCE.Quitter_CPintiCore() -------------------------------------------------
@@ -7896,8 +9657,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour atteindre un label code
 		' ===============================================================
-		CommLang(2) = "goto/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "aller/"
+		CommLANG(2) = "goto/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7907,18 +9669,39 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " aller/                     Atteindre un label dans un code en execution"
+			Else
 				CommandesAide = CommandesAide & CRLF & " goto/                      Go to at specified label in code in execution"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'atteindre un label sp�cifi� dans le code"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple :"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Coucou"
+					Mess_Aide = Mess_Aide & CRLF & "   aller/ MonLabel"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Ca va ?"
+					Mess_Aide = Mess_Aide & CRLF & "  :MonLabel:"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Aurevoir"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Sortie :"
+					Mess_Aide = Mess_Aide & CRLF & "   Coucou"
+					Mess_Aide = Mess_Aide & CRLF & "   Aurevoir"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : exe/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to go to in a specified label in your code"
 					Mess_Aide = Mess_Aide & CRLF
@@ -7935,6 +9718,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : exe/ "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -7960,8 +9744,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' ===================================================================
 
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Saut vers :" & Param & ":", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Jump to :" & Param & ":", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End If
 			End if
 
 			CpcdosCP_SHELL = "ALLER/ " & Param ' on renvoie ca a la boucle while de la lecture
@@ -7978,8 +9765,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour declarer une fonction CpcdosC+
 		' ===============================================================
-		CommLang(2) = "return/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "retour/"
+		CommLANG(2) = "return/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -7989,20 +9777,47 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
-			
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " retour/                    Retourner une valeur depuis une fonction CpcdosC+"
+			Else
 				CommandesAide = CommandesAide & CRLF & " return/                    Return value from CpcdosC+ function"
-			
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'RETOUR'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de retourner une valeur non type"
+					Mess_Aide = Mess_Aide & CRLF & "    depuis une fonction CpcdosC+"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 1 :"
+					Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Un_exemple()"
+					Mess_Aide = Mess_Aide & CRLF & "      retour/ Toto!"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ fonction"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ /F:Un_Exemple()"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Affiche : Toto!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 2 :"
+					Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Un_exemple()"
+					Mess_Aide = Mess_Aide & CRLF & "      txt/ Je suis dans ma fonction!"
+					Mess_Aide = Mess_Aide & CRLF & "      retour/ Voila c'est finis!"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ fonction"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ /F:Un_Exemple()"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , ccp/, declarer/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to declare CpcdosC+ function"
 					Mess_Aide = Mess_Aide & CRLF
@@ -8026,6 +9841,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , ccp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -8064,8 +9880,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour declarer une fonction CpcdosC+
 		' ===============================================================
-		CommLang(2) = "function/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "fonction/"
+		CommLANG(2) = "function/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8075,19 +9892,38 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " fonction/                  Declare une fonction CpcdosC+ a un niveau choisis"
+			Else
 				CommandesAide = CommandesAide & CRLF & " function/                  Declare CpcdosC+ function with a level"
-			
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'FONCTION'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer une fonction"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple:"
+					Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Ma_Fonction()"
+					Mess_Aide = Mess_Aide & CRLF & "      Retourne/ Bonjour!"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ Ma_Fonction"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ /F:Ma_Fonction()"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Declarer/ , exe/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to create a function"
 					Mess_Aide = Mess_Aide & CRLF
@@ -8100,6 +9936,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : Declare/ , exe/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -8138,8 +9975,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour executer une commande avec ou sans Parametres
 		' ===============================================================
-		CommLang(2) = "cmd/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "cmd/"
+		CommLANG(2) = "cmd/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8149,18 +9987,65 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " cmd/                       Executer une commande CpcdosC+ avec ou sans Parametres"
+			Else
 				CommandesAide = CommandesAide & CRLF & " cmd/                       Launch CpcdosC+ command with or without Parameters"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'executer une commande CpcdosC+"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Elle est capable d'executer une commande dans un autre thread independant"
+					Mess_Aide = Mess_Aide & CRLF & "   ou un processus"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Parametres disponibles :"
+					Mess_Aide = Mess_Aide & CRLF & "   /thread       : Execute la commande dans un nouveau thread independant"
+					Mess_Aide = Mess_Aide & CRLF & "   /thread[MAX]  : Idem, mais avec une priorit�e MAXimale"
+					Mess_Aide = Mess_Aide & CRLF & "   /thread[ST+]  : Idem, mais avec une priorit�e superieur au STanDard"
+					Mess_Aide = Mess_Aide & CRLF & "   /thread[STD]  : Idem, mais avec une priorit�e STanDard (Meme effet que /thread)"
+					Mess_Aide = Mess_Aide & CRLF & "   /thread[MI+]  : Idem, mais avec une priorit�e superieur au MINimale"
+					Mess_Aide = Mess_Aide & CRLF & "   /thread[MIN]  : Idem, mais avec une priorit�e MINimale"
+					Mess_Aide = Mess_Aide & CRLF & "   /pid:123		 : Execute l'instruction dans le PID numero '123'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple :"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ txt/ coucou!"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ exe/ MonProgramme"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ ping/ www.google.fr"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Meme exemple un autre thread :"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /thread txt/ coucou!"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /thread exe/ MonProgramme"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /thread Ping/ www.google.fr"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Meme exemple mais avec une priorit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /thread[MIN] txt/ coucou!"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /thread[STD] exe/ MonProgramme"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /thread[MAX] Ping/ www.google.fr"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Executer le thread du serveur dans un autre processus"
+					Mess_Aide = Mess_Aide & CRLF & "   existant (Exemple avec 123)"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /pid:123 serveur/ /tcp:2316"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Executer l'armorceur de l'OS dans un autre processus"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /pid:123 DEMARRER/"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Executer un fichier executable dans un autre processus"
+					Mess_Aide = Mess_Aide & CRLF & "   cmd/ /pid:123 exe/ MonFichier.cpc"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : exe/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to launch a CpcdosC+ command"
 					Mess_Aide = Mess_Aide & CRLF & "   This is able to launch in another threads or process"
@@ -8200,6 +10085,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : exe/ "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -8249,8 +10135,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			IF NumeroPID_cmd > 0 Then
 				NomProcessus_cmd = CPCDOS_INSTANCE.get_Nom_Processus(NumeroPID_cmd)
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Definition du processus cible sur '" & NomPRocessus_cmd & "' PID:" & NumeroPID_cmd, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Definition host process on '" & NomPRocessus_cmd & "' PID:" & NumeroPID_cmd, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 			End if
 			
@@ -8304,30 +10193,41 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				Param = MID(Param, 1, Instr(Param, ") ->") - 1) & "->" & _CLE_
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Fonction detectee! Correction des arguments d'entres : " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Function detected! Entry arguments correction : " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				
 			End if
 			
 			IF Thread_MaxStdMin = 0 Then ' Execution normal, sur le meme thread
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] DEBUT Execution interactive de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] BEGIN Interactive command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				' Execution de la commande
 				CpcdosCP_SHELL(Param, _CLE_, NIVEAU_CCP, Param_1, Param_2)
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] FIN de l'execution interactive de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] END interactive command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				exit _scope_CMD, _scope
 			End if
 			IF Thread_MaxStdMin > 0 Then
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("Kernel > Creation d'un processus d'execution asynchrome CCP...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("Kernel > Creating asynchrome execution CCP process...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 
 				' Si > 0 Alors c'est qu'on doit creer un nouveau thread
@@ -8355,8 +10255,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					'' 25-01-2017 A FAIRE : Gerer les priorites
 					If Thread_MaxStdMin = 1 Then ' Execution dans un thread de priorite minimale
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] DEBUT Execution multi-thread de priorit�e minimale de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] BEGIN Minimal priority multi-thread command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						INSTANCE_STRUCT_THREAD.Priorite = _PRIORITE_THRD_TRES_FAIBLE
@@ -8366,8 +10269,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 					ElseIf Thread_MaxStdMin = 2 Then ' Execution dans un thread de priorite minimale+
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] DEBUT Execution multi-thread de priorit�e normale de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] BEGIN Normal priority multi-thread command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						INSTANCE_STRUCT_THREAD.Priorite = _PRIORITE_THRD_FAIBLE
@@ -8377,9 +10283,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 	
 					ElseIf Thread_MaxStdMin = 3 Then ' Execution dans un thread de priorite normale
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-							
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] DEBUT Execution multi-thread de priorit�e normale de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] BEGIN Normal priority multi-thread command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						INSTANCE_STRUCT_THREAD.Priorite = _PRIORITE_THRD_MOYENNE
@@ -8389,8 +10297,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					
 					ElseIf Thread_MaxStdMin = 4 Then ' Execution dans un thread de priorite normale
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] DEBUT Execution multi-thread de priorit�e normale de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] BEGIN Normal priority multi-thread command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						INSTANCE_STRUCT_THREAD.Priorite = _PRIORITE_THRD_MOYENNE
@@ -8400,8 +10311,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 					ElseIf Thread_MaxStdMin = 5 Then ' Execution dans un thread de priorite normale+
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] DEBUT Execution multi-thread de haute priorit�e de la commande " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] BEGIN Hight priority multi-thread command execution ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						INSTANCE_STRUCT_THREAD.Priorite = _PRIORITE_THRD_ASSEZ_HAUTE
@@ -8417,8 +10331,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						exit _scope_CMD, _scope
 					Else
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] ERREUR TID nulle, le thread '" & INSTANCE_STRUCT_THREAD.Nom & "' n'a pas pu etre cree", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] ERROR TID is null, thread '" & INSTANCE_STRUCT_THREAD.Nom & "' can't be created ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 					End if
 				END SCOPE
@@ -8436,8 +10353,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour ouvrir directement/simplement un fichier
 		' ===============================================================
-		CommLang(2) = "open/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "ouvrir/"
+		CommLANG(2) = "open/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8447,18 +10365,50 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " ouvrir/                    Lire simplement le contenu d'un fichier"
+			Else
 				CommandesAide = CommandesAide & CRLF & " open/                      Read only file content"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet simplement de lire le contenu d'un fichier et transferer le flux"
+					Mess_Aide = Mess_Aide & CRLF & "    de donnees a l'ecran ou dans une autre direction '@#, @$..'"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande est aussi pratique puisse que cpcdos ouvre, lit et ferme le fichier"
+					Mess_Aide = Mess_Aide & CRLF & "    automatiquement."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  1er exemple simple (Affichage sur la console) :"
+					Mess_Aide = Mess_Aide & CRLF & "   Ouvrir/ index.htm"
+					Mess_Aide = Mess_Aide & CRLF & "   Ouvrir/ Dossier\Texte.txt"
+					Mess_Aide = Mess_Aide & CRLF & "   Ouvrir/ C:\Temp\resultats.log"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  2eme exemple (R�cuperation du texte -> Variable)"
+					Mess_Aide = Mess_Aide & CRLF & "   @#MonTexte Ouvrir/ C:\Redaction.txt"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Voici le contenu du fichier : %MonTexte%"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  3eme exemple (R�cuperation du texte -> Autre fichier)"
+					Mess_Aide = Mess_Aide & CRLF & "   @$C:\Copie.txt Ouvrir/ C:\Redaction.txt"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Redaction.txt a ete copi�!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  4eme exemple (Lire la 4eme ligne) :"
+					Mess_Aide = Mess_Aide & CRLF & "   Ouvrir/ texte.txt/ligne:4"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  5eme exemple (Lire la ligne qui contient 'toto') :"
+					Mess_Aide = Mess_Aide & CRLF & "   Ouvrir/ texte.txt /texte:toto"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : ecrire/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allows simply to read a file content and get data and display"
 					Mess_Aide = Mess_Aide & CRLF & "    this to screen or in another direction '@#, @$ .. '"
@@ -8485,6 +10435,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : write/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -8546,8 +10497,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] OK, Ouverture de '" & Param & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] OK, opening of '" & Param & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				'doevents(_PAUSE_CRT) ' Pause CRT CPinticore
 
@@ -8642,8 +10596,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Taille " & Taille_Du_Fichier & " octets ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Size " & Taille_Du_Fichier & " bytes ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				
 				' Verifier si CPintiCore nous a communique une erreur
@@ -8655,9 +10612,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					DEBUG(Buffer_CCP, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Fin de lecture de " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] End reading " & Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End If
 					End if
 
 
@@ -8681,8 +10640,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour ecrire directement/simplement un fichier
 		' ===============================================================
-		CommLang(2) = "write/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "ecrire/"
+		CommLANG(2) = "write/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8692,18 +10652,54 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " ecrire/                    Ecrire simplement dans un fichier"
+			Else
 				CommandesAide = CommandesAide & CRLF & " write/                     Write in file"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet simplement d'ecrire dans un fichier"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Parametres diponibles:"
+					Mess_Aide = Mess_Aide & CRLF & "   /BIN : Ecrire en mode BINaire"
+					Mess_Aide = Mess_Aide & CRLF & "   /APP : Ecrire en mode APPending"
+					Mess_Aide = Mess_Aide & CRLF & "   /APPBIN ou /BINAPP :"
+					Mess_Aide = Mess_Aide & CRLF & "          Ecrire binaire en mode APPending"
+					Mess_Aide = Mess_Aide & CRLF & "   Sans parametres : Ecriture normale"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 1 :"
+					Mess_Aide = Mess_Aide & CRLF & "   Ecrire/ toto.txt = Hello le monde!"
+					Mess_Aide = Mess_Aide & CRLF & "   Ecrire/ /APP index.htm = Vous allez bien ?"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 2 (Ajoute 1 saut de ligne) :"
+					Mess_Aide = Mess_Aide & CRLF & "   Ecrire/ toto.txt = Bonjour %CPC.CRLF%Ca va ?"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 3 (A partir d'une variable) :"
+					Mess_Aide = Mess_Aide & CRLF & "   FIX/ Mon_Contenu = Voici le contenu du fichier."
+					Mess_Aide = Mess_Aide & CRLF & "   Ecrire/ toto.txt = %Mon_Contenu% Et c'est tout!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 4 (Copier le contenu d'un fichier dans un autre) :"
+					Mess_Aide = Mess_Aide & CRLF & "   @#Donnees Ouvrir/ Source.txt"
+					Mess_Aide = Mess_Aide & CRLF & "   Ecrire/ Destination.txt = %Donnees%"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Autres informations :"
+					Mess_Aide = Mess_Aide & CRLF & "  En mode binaire, le retour chariot CRLF n'est pas ecrit en fin de ligne"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : Ouvrir/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allows write in a file."
 					Mess_Aide = Mess_Aide & CRLF
@@ -8735,6 +10731,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : open/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -8760,8 +10757,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' ===================================================================
 
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+][CPinti] Creation d'une nouvelle instance de CPinti pour l'ecriture de " & Param & " ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+][CPinti] Creating new CPinti instance for writing " & Param & " ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End If
 			End if
 
 			
@@ -8822,8 +10822,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			
 			if Nom_Fichier = "" then 
 				' Avertissment 
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Entrez un nom de fichier correct.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Please enter correct name file", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End If
 				exit _scope_CMD, _scope
 			end if
 			
@@ -8831,15 +10834,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' Ecrire les donnees depuis CPinti Core
 			if CPCDOS_INSTANCE.Ecrire_fichier_complet(Nom_Fichier, Donnees, FLAG) >= 0 then
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Ecriture terminee", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Writting is finish", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 			else
 				' erreur
 				Message_erreur = ERRAVT("ERR_053", 0) ' Erreur lors de l'ecriture du fichier
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] ERR_053:" & Message_erreur & " Verifiez son chemin d'acces et sa disponibilitee.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] ERR_053:" & Message_erreur & " Please verify access path and his disponibilities.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End If
 			end if
 			
 			' ===================================================================
@@ -8855,8 +10863,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour pinger une machine
 		' ===============================================================
-		CommLang(2) = "ping/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "ping/"
+		CommLANG(2) = "ping/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -8866,18 +10875,33 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " ping/                      Tester une machine sur le reseau"
+			Else
 				CommandesAide = CommandesAide & CRLF & " ping/                      Test a network machine"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'envoyer une requete ICMP sur une machine connect�e"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Ping/ 192.168.1.1"
+					Mess_Aide = Mess_Aide & CRLF & "   Ping/ www.google.fr"
+					Mess_Aide = Mess_Aide & CRLF & "   Ping/ cpcdos.fr.nf"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : serveur/ , "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to test a network machine with ICMP request"
 					Mess_Aide = Mess_Aide & CRLF
@@ -8888,6 +10912,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : server/ "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -8925,34 +10950,52 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				End if
 
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Envoi d'une requete ICMP a " & AdresseIP & " ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Sending ICMP request to " & AdresseIP & " ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 
 				' Appeler la fonction pour envoyer la requete ping
 				TestPing = CPCDOS_INSTANCE.RESEAU_INSTANCE.Ping(AdresseIP, _CLE_)
 				
 				if TestPing >= 0 then ' La machine a repondu a la requete ICMP
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CPinti] Reseau Ping " & AdresseIP & " a repondu! (" & TestPing & " ms)", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CPinti] Network Ping: Reponse from " & AdresseIP & "! (" & TestPing & " ms)" , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+					End If					
 				elseif TestPing < -1 then
 					' Probleme reseau
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CPinti] Reseau Ping: (" & AdresseIP & ") Erreur reseau...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CPinti] Network Ping: (" & AdresseIP & ") Network error...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End If
 				else
 					' La machine n'a pas repondu..
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CPinti] Reseau Ping: " & AdresseIP & " n'a pas repondu...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CPinti] Network Ping: No reponse from " & AdresseIP & " ..." , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End If
 				end if
 			Else ' Aucun pilote reseau ou mode DOSBOX
 				IF CPCDOS_INSTANCE.DosBox = True Then
 					Message_erreur = ERRAVT("AVT_055", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CPinti] Reseau ping: (" & AdresseIP & ") " & Message_erreur & ". Impossible de pinger la machine", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CPinti] Network Ping: (" & AdresseIP & ") " & Message_erreur & ". Unable to ping machine", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 				ELSE
 					Message_erreur = ERRAVT("AVT_023", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CPinti] Reseau ping: (" & AdresseIP & ") " & Message_erreur & ". Impossible de pinger la machine", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CPinti] Network Ping: (" & AdresseIP & ") " & Message_erreur & ". Unable to ping machine", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 				END IF
 			end if
 
@@ -8989,8 +11032,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour telecharger un fichier en http
 		' ===============================================================
-		CommLang(2) = "download/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "telecharger/"
+		CommLANG(2) = "download/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -9000,18 +11044,64 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " telecharger/               Telecharge un fichier HTTP"
+			Else
 				CommandesAide = CommandesAide & CRLF & " download/                  Download HTTP file"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de t�l�charger un fichier sur un serveur HTTP"
+					Mess_Aide = Mess_Aide & CRLF & "   Par defaut, les fichiers telecharges se trouve dans le dossier TEMP\NET"
+					Mess_Aide = Mess_Aide & CRLF & "    Variable utilisee pour cette operation %CPC_TEMP.NET%"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ http://www.google.fr/"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ http://192.168.1.1/index.html"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ http://monsiteWeb/dossier/fichier.cpc"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ http://monsiteweb/images/photo.png"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Recevoir uniquement les information du serveur (HEAD command)"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ /SRVINFO http://MonSiteWeb.com/toto.html"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Recevoir les information du serveur + les donnees"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ /+SRVINFO http://MonSiteWeb.com/toto.html"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Vous pouvez recuperer le pourcentage de la progression depuis un autre thread"
+					Mess_Aide = Mess_Aide & CRLF & "   via une variable de niveau 5 :"					
+					Mess_Aide = Mess_Aide & CRLF & "    telecharger/ http://blabla.com /Progression:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF & "      --> Et durant le telechargement, la variable %MaVariable% contient la progression en % de la copie"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Meme chose pour le nombre d'octets copie :"
+					Mess_Aide = Mess_Aide & CRLF & "    telecharger/ http://blabla.com /Octets:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Le nombre d'octets par secondes :"
+					Mess_Aide = Mess_Aide & CRLF & "    telecharger/ http://blabla.com /OctetsParSec:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Ou les 2 ou 3 parametres en meme temps aussi !"
+					Mess_Aide = Mess_Aide & CRLF & "    telecharger/ http://blabla.com /Pogresson:Var1 /octets:Var2 /OctetsParSec:Var3"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Recuperer le numero de socket :"
+					Mess_Aide = Mess_Aide & CRLF & "    telecharger/ http://blabla.com /socket:MaVariable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Choisir le dossier de destination manuellement :"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ http://monsite.com/toto.html /Temp:c:\Dossier"
+					Mess_Aide = Mess_Aide & CRLF & "  Choisir le fichier de destination en plus du dossier :"
+					Mess_Aide = Mess_Aide & CRLF & "   Telecharger/ http://monsite.com/toto.html /Temp:c:\Dossier\Fichier.html"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : serveur/ , ping/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to download a HTTP file"
 					Mess_Aide = Mess_Aide & CRLF
@@ -9049,6 +11139,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : server/ , ping/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -9131,8 +11222,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						Param = Mid(Param, 1, PosProgress - 1) & " " & Mid(Param, Instr(PosProgress + 14, Param & " ", " ") + 1)
 
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Veuillez placer l'argument '/PROGRESSION' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Please put '/PROGRESSION' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						
 						exit _scope_CMD, _scope
 					End if
@@ -9154,8 +11248,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						Param = Mid(Param, 1, PosSocket - 1) & " " & Mid(Param, Instr(PosSocket + 9, Param & " ", " ") + 1)
 
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Veuillez placer l'argument '/SOCKET' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Please put '/SOCKET' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						
 						exit _scope_CMD, _scope
 					End if
@@ -9182,8 +11279,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						Param = Mid(Param, 1, PosBytes - 1) & " " & Mid(Param, Instr(PosBytes + 8, Param & " ", " ") + 1)
 						
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Veuillez placer l'argument '/OCTETS' ou '/BYTES' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Please put '/OCTETS' or '/BYTES' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						
 						exit _scope_CMD, _scope
 					End if
@@ -9210,8 +11310,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						Param = Mid(Param, 1, PosBytesBySec - 1) & " " & Mid(Param, Instr(PosBytesBySec + 13, Param & " ", " ") + 1)
 						
 					Else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Veuillez placer l'argument '/OctetsParSec' ou '/BytesBySec' apres le path de destination ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Please put '/OctetsParSec' or '/BytesBySec' argument after path destination", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						
 						exit _scope_CMD, _scope
 					End if
@@ -9219,8 +11322,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				
 				if len(Var_Progression) > 0 or len(Var_OctetsParSec) > 0 or len(Var_Octets) > 0 Then
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Telechargement avec : Progression '" & Var_Progression & "' Vitesse '" & Var_OctetsParSec & "' Recu '" & Var_Octets & "' comme indicateur ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Downloading with : Progression '" & Var_Progression & "' Speed '" & Var_OctetsParSec & "' Reveive '" & Var_Octets & "' like indicator ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					END IF
 				END IF
 				
@@ -9508,8 +11614,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				Else
 					' Vous devez specifier un nom de protocole
 					Message_erreur = ERRAVT("AVT_061", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] : " & Message_erreur & ". (http, ftp) Impossible de telecharger.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] : " & Message_erreur & ". (http, ftp) Unable download.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End If
 				
@@ -9528,8 +11637,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							' Telecharger le FICHIER + INFO
 							
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] : Telechargement du fichier + entete des informations serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] : Downloading file + server informations header .", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							End if
 							
 							
@@ -9538,8 +11650,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							' Telecharger le FICHIER uniquement
 							
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] : Telechargement du fichier uniquement .", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] : Downloading file only.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							End if
 							CPCDOS_INSTANCE.RESEAU_INSTANCE.get_http(Adresse_Serveur, 80, Adresse_URI, Redirection, FALSE, _CLE_, RetourVAR, Var_Progression, Var_OctetsParSec, Var_Octets, VAR_Socket)
 						End if
@@ -9547,8 +11662,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						' Telecharger l'entete seulement
 						
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] : Telechargement des informations serveur uniquement.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] : Downloading server informatons only.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End if
 						End if
 						
 						CPCDOS_INSTANCE.RESEAU_INSTANCE.head_http(Adresse_Serveur, 80, Adresse_URI, Redirection, _CLE_, RetourVAR)
@@ -9574,8 +11692,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour configurer le CpcdosC+
 		' ===============================================================
-		CommLang(2) = "ccp/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "ccp/"
+		CommLANG(2) = "ccp/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -9585,18 +11704,100 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " ccp/                       Configuration du CpcdosC+"
+			Else
 				CommandesAide = CommandesAide & CRLF & " ccp/                       CpcdosC+ configuration"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de modifier des Parametres du CpcdosC+"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /fix.niveau"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet de configurer le niveau de la variable (niveau de privacit�)"
+					Mess_Aide = Mess_Aide & CRLF & "       Priv� procedure&fonction --> ccp/ /fix.niveau = 1"
+					Mess_Aide = Mess_Aide & CRLF & "       Priv� Application        --> ccp/ /fix.niveau = 2"
+					Mess_Aide = Mess_Aide & CRLF & "       Publique Utilisateur     --> ccp/ /fix.niveau = 3"
+					Mess_Aide = Mess_Aide & CRLF & "       Publique OS              --> ccp/ /fix.niveau = 4"
+					Mess_Aide = Mess_Aide & CRLF & "       Publique Kernel          --> ccp/ /fix.niveau = 5"
+					Mess_Aide = Mess_Aide & CRLF & "      Et toutes les variables cr�es seront affect�s par le niveau indiqu�"
+					Mess_Aide = Mess_Aide & CRLF & "      Penser donc a r�tablir le niveau souhait� pour ne pas affecter le reste"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /lang"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet de d�finir la langue du systeme"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "      Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "       Retourne la langue en cours [FR] ou [EN]"
+					Mess_Aide = Mess_Aide & CRLF & "        ccp/ /lang"
+					Mess_Aide = Mess_Aide & CRLF & "       Definit la langue en Francais (French language)"
+					Mess_Aide = Mess_Aide & CRLF & "        ccp/ /lang = FR"
+					Mess_Aide = Mess_Aide & CRLF & "       Definit la langue en Anglais (English language)"
+					Mess_Aide = Mess_Aide & CRLF & "        ccp/ /lang = EN"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /change:Ma_Variable"
+					Mess_Aide = Mess_Aide & CRLF & "     Ceci permet de bloquer le thread en cours jusqu'a que 'Ma_Variable'"
+					Mess_Aide = Mess_Aide & CRLF & "      change de contenu"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /pause"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet de mettre en pause le thread en cours (le programme)"
+					Mess_Aide = Mess_Aide & CRLF & "      pendant un temps definit en millisecondes"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "     Exemples:"
+					Mess_Aide = Mess_Aide & CRLF & "      Faire une pause de 500ms"
+					Mess_Aide = Mess_Aide & CRLF & "       ccp/ /pause 500"
+					Mess_Aide = Mess_Aide & CRLF & "      Faire une pause de 1 secondes et 200 millisecondes"
+					Mess_Aide = Mess_Aide & CRLF & "       ccp/ /pause 1200"
+					Mess_Aide = Mess_Aide & CRLF & "      Faire une pause de 25 micro secondes"
+					Mess_Aide = Mess_Aide & CRLF & "       ccp/ /pause 0.025"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /optimisation"
+					Mess_Aide = Mess_Aide & CRLF & "       Permet d'activer ou non l'analyse des programmes avant execution"
+					Mess_Aide = Mess_Aide & CRLF & "        afin de permettre de trouver une eventuelle optimisation du code"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "     Exemples:"
+					Mess_Aide = Mess_Aide & CRLF & "      Activer l'optimisation"
+					Mess_Aide = Mess_Aide & CRLF & "       ccp/ /optimisation = 1"
+					Mess_Aide = Mess_Aide & CRLF & "      Activer l'optimisation avec temporisation du scheduleur"
+					Mess_Aide = Mess_Aide & CRLF & "       ccp/ /optimisation = 2"
+					Mess_Aide = Mess_Aide & CRLF & "      Desactiver l'optimisation"
+					Mess_Aide = Mess_Aide & CRLF & "       ccp/ /optimisation = 0"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /test"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet de tester le noyau et CPinti avec 3 niveaux differents"
+					Mess_Aide = Mess_Aide & CRLF & "      Simple test     : ccp/ /test   ou  ccp/ /test1"
+					Mess_Aide = Mess_Aide & CRLF & "      Test difficile  : ccp/ /test2"
+					Mess_Aide = Mess_Aide & CRLF & "      Test tres hard  : ccp/ /test3"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /DEBUT_SECTION_CRITIQUE"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet de bloquer toutes interruptions et tous les autres threads"
+					Mess_Aide = Mess_Aide & CRLF & "       afin de rendre PRIORITAIRE l'execution du code CpcdosC+."
+					Mess_Aide = Mess_Aide & CRLF & "       Ce qui a pour effet d'augmenter les performances d'execution, mais"
+					Mess_Aide = Mess_Aide & CRLF & "       en revanche, peut eventuellement 'figer' l'ecran et autres."
+					Mess_Aide = Mess_Aide & CRLF & "       jusqu'a la fin de la section critique. (Voir ci-dessous)"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /FIN_SECTION_CRITIQUE"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet de d�bloquer toutes les interruptions et les autres threads"
+					Mess_Aide = Mess_Aide & CRLF & "       afin de reprendre l'execution NORMALE du code CpcdosC+."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /DISCRETION = 1"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet d'executer les instruction sans influencer le sablier de la GUI"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    ccp/ /DISCRETION = 0"
+					Mess_Aide = Mess_Aide & CRLF & "      Permet d'influencer les instruction en enfluencant le sablier de la GUI"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : sys/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to configure CpcdosC+"
 					Mess_Aide = Mess_Aide & CRLF
@@ -9671,6 +11872,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : sys/ "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -9724,8 +11926,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 					CpcdosCP_SHELL = privaciteDefinition
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Definition du niveau de privacite a " & privaciteDefinition, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Private level defined at " & privaciteDefinition, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End If
 					End if
 					exit _scope_CMD, _scope
 				END IF
@@ -9756,8 +11961,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				positionPause = Instr(UCASE(Param), "/PAUSE") + 7
 				ValeurPause = val(MID(Param, positionPause)) * 10^3
 				if ValeurPause < 1 then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Nombre egale ou inferieur a 0 interdit!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Number equal or greater forbidden!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End If
 					exit _scope_CMD, _scope
 				End if
 				doevents(ValeurPause)
@@ -9826,8 +12034,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				' Permet de rendre l'ex�cution d'un morceau de code PRIORITAIRE sans autres interruptions
 				this.SECTION_CRITIQUE = TRUE
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Debut de la section critique. Toutes interruptions et threads sont desormais bloques durant l'execution du PID:" & Auth_PID & " TID:" & Auth_TID & " -> [0x" & Hex(Val(Auth_PID & Auth_TID)) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Begining critical section. All interrupts and thread are blocked during execution of PID:" & Auth_PID & " TID:" & Auth_TID & " -> [0x" & Hex(Val(Auth_PID & Auth_TID)) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End If
 				
 				exit _scope_CMD, _scope
 			End if
@@ -9836,8 +12047,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				' Permet de reprendre l'execution normale du code CpcdosC+
 				this.SECTION_CRITIQUE = FALSE
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Fin de la section critique pour PID:" & Auth_PID & " TID:" & Auth_TID & " -> [0x" & Hex(Val(Auth_PID & Auth_TID)) & "]. Toutes interruptions et threads fonctionnent normalement.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Ending critical section for PID:" & Auth_PID & " TID:" & Auth_TID & " -> [0x" & Hex(Val(Auth_PID & Auth_TID)) & "]. All interrupts and thread are in normal execution.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End If
 				
 				exit _scope_CMD, _scope
 			End if
@@ -9856,8 +12070,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				exit _scope_CMD, _scope
 			END IF
 
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+				DEBUG("[CpcdosC+] Veuillez entrer un parametre disponible. (Tapez AIDE/ CCP/). '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+			Else
 				DEBUG("[CpcdosC+] Please enter an avaiable parameter. (Type HELP/ CCP/). '" & Param & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-			
+			End If
 			
 			
 			' ===================================================================
@@ -9872,8 +12089,9 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 		' ===============================================================
 		'  Commande pour executer un fichier CpcdosC+
 		' ===============================================================
-		CommLang(2) = "exe/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "exe/"
+		CommLANG(2) = "exe/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -9884,19 +12102,46 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			End if
 		Next boucle
 
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " exe/                       Executer un fichier CpcdosC+"
+			Else
 				CommandesAide = CommandesAide & CRLF & " exe/                       Launch a CpcdosC+ file"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'executer un fichier de type CpcdosC+"
+					Mess_Aide = Mess_Aide & CRLF & "    ou un executable PE (Experimentale!!)"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  3 Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ Program.cpc"
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ os\prog\Program.cpc"
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ C:\dossier\Program.cpc"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Executer un executable windows PE :"
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ /pe Program.exe"
+					Mess_Aide = Mess_Aide & CRLF & "    ou"
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ /win32 Program.exe"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Executer un programme IR/LLVM (Format BC ou LL)"
+					Mess_Aide = Mess_Aide & CRLF & "   via du code g�n�r� par compilateur CLANG 3.8."
+					Mess_Aide = Mess_Aide & CRLF & "   (LLVM:Low-Level-Virtual-Machine / Machine virtuel de bas niveau)"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ /llvm Programme.ll"
+					Mess_Aide = Mess_Aide & CRLF & "   exe/ /llvm Programme.bc"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Voir aussi: "
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to execute a CpcdosC+ file"
 					Mess_Aide = Mess_Aide & CRLF & "    or PE executable (Experimental!!)"
@@ -9919,6 +12164,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Mess_Aide = Mess_Aide & CRLF & "   exe/ /llvm Programme.bc"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & " Voir aussi: "
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -9979,20 +12225,29 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					dim FUNCTION_ID__ 		as integer = CPCDOS_INSTANCE._FUNCTIONID__LLVM
 					
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("Kernel > Creation d'un thread asynchrome d'une machine virtuel LLVM, et tentative d'execution de " & LTRIM(Fichier_LLVM) & "...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("Kernel > Creating LLVM virtual machine asynchrome thread, attempted execution of " & LTRIM(Fichier_LLVM) & "...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End If
 					End if
 					
 					' A MODIFIER !! Sinon instance de la console bloque! 
 					
 					IF CPCDOS_INSTANCE.get_Nom_Thread(Auth_TID) = "THREAD_CONSOLE" Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("Execution depuis 'THREAD_CONSOLE' --> Creation d'un nouveau thread...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("Execution from 'THREAD_CONSOLE'  --> Creating new thread...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("Le PID du processus parent est egale a '0' --> Creation d'un nouveau thread...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("The parent PID process is equal at '0' --> Creating new thread...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 
 						scope
@@ -10021,8 +12276,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							CPCDOS_INSTANCE.Creer_thread(INSTANCE_STRUCT_THREAD)
 
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("Kernel > Le thread " & INSTANCE_STRUCT_THREAD.Nom & " a ete cree!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("Kernel > Thread " & INSTANCE_STRUCT_THREAD.Nom & " was created!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End If
 							End if
 						End scope
 					else
@@ -10030,8 +12288,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						FunctionID_RET = Exec_WRAPPER(FUNCTION_ID__, _CLE_, LTRIM(Fichier_LLVM), 0, NULL, NULL, NULL)
 						
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("Kernel > Creation d'un thread asynchrome d'une machine virtuel LLVM, et tentative d'execution de " & LTRIM(Fichier_LLVM) & "...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("Kernel > Creating LLVM virtual machine asynchrome thread, attempted execution of " & LTRIM(Fichier_LLVM) & "...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 					End if
 					exit _scope_CMD, _scope
@@ -10054,16 +12315,22 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					dim FUNCTION_ID__		as integer = CPCDOS_INSTANCE._FUNCTIONID__EXELOADER
 			
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("Kernel > Execution d'un fichier PE (PortableExecutable WIN32) '" & LTRIM(Fichier_PE) & "' PID:" & Auth_PID & " TID:" & Auth_TID & " ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("Kernel > Executing PortableExecutable file '" & LTRIM(Fichier_PE) & "' PID:" & Auth_PID & " TID:" & Auth_TID & " ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End If
 					End if
 					' A MODIFIER !! Sinon instance de la console bloque! 
 					' Execution du ExeLoader via le wrapper Cpcdos/CpintiCore
 					
 					IF CPCDOS_INSTANCE.get_Nom_Thread(Auth_TID) = "THREAD_CONSOLE" Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("Execution depuis 'THREAD_CONSOLE' --> Creation d'un nouveau thread...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("Execution from 'THREAD_CONSOLE'  --> Creating new thread...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						Scope
@@ -10091,16 +12358,22 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							CPCDOS_INSTANCE.Creer_thread(INSTANCE_STRUCT_THREAD)
 							
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("Kernel > Le thread " & INSTANCE_STRUCT_THREAD.Nom & " a ete cree!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("Kernel > Thread " & INSTANCE_STRUCT_THREAD.Nom & " was created!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End If
 							End if
 						End scope
 					Else
 						' Execution du LLVM via le wrapper Cpcdos/CpintiCore
 						FunctionID_RET = Exec_WRAPPER(FUNCTION_ID__, _CLE_, LTRIM(Fichier_PE), 0, NULL, NULL, NULL)
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("Kernel > Creation d'un thread asynchrome d'un executable Win32, et tentative d'execution de " & LTRIM(Fichier_PE) & "...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("Kernel > Creating Win32 executable asynchrome thread, attempted execution of " & LTRIM(Fichier_PE) & "...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if		
 					end if
 					exit _scope_CMD, _scope
@@ -10164,8 +12437,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				' Executer un fichier CpcdosC+ dans un autre thread avec celui cifi�
 				' de maniere "ascynchrome"
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("Kernel > Creation d'un processus d'execution asynchrome CCP...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("Kernel > Creating asynchrome execution CCP process...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 
 				scope
@@ -10199,8 +12475,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			End if
 
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Creation d'un processus d'execution CCP...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Creating execution CCP process...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End If
 			End if
 			Dim Si_Non_EXE_FONCT as integer = 0
 			' Ici on cherche un nouvel emplacement memoire pour creer une nouveau processus
@@ -10247,14 +12526,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 				IF Position_1erParenthese = Position_2emParenthese - 1 then
 					' S'il s'agit d'une fonction sans arguments
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Fonction sans arguments.",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Function without arguments.",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					End if
 				else
 
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Fonction avec argument(s).",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Function with argument(s).",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					End if
 					' Une fonction avec 1 ou plusieurs arguments
 					For Boucle_ARGS 		as integer = 1 to this.MEMOIRE_CCP._MAX_FONCTION_ARGS
@@ -10304,8 +12589,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 								CCP_Fonction_DATA(boucle_rempl) = Test_Remplace
 							Else
 								Message_erreur = ERRAVT("AVT_008", 0)
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] AVT_008:" & Message_erreur & " --> '" & CCP_Fonction_ARGS(boucle_rempl) & "' depuis l'appel de fonction " & CCP_Fonction_EXEC & ". (KRNL_ID:" & tmp_Auth_Kernel & " OS:" & tmp_Auth_OS & " USER:" & tmp_Auth_Utilisateur & " PID:" & tmp_Auth_PID & " TID:" & tmp_Auth_TID & ") CleID: &" & Cle_CALLER_stack & " [&B" & Bin(Cle_CALLER_stack, 36) & "] -> 0x" & hex(Cle_CALLER_stack, 10), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] AVT_008:" & Message_erreur & " --> '" & CCP_Fonction_ARGS(boucle_rempl) & "' from calling function " & CCP_Fonction_EXEC & ". (KRNL_ID:" & tmp_Auth_Kernel & " OS:" & tmp_Auth_OS & " USER:" & tmp_Auth_Utilisateur & " PID:" & tmp_Auth_PID & " TID:" & tmp_Auth_TID & ") CleID: &" & Cle_CALLER_stack & " [&B" & Bin(Cle_CALLER_stack, 36) & "] -> 0x" & hex(Cle_CALLER_stack, 10), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End If
 							End if
 						Else
 							CCP_Fonction_DATA(boucle_rempl) = CCP_Fonction_ARGS(boucle_rempl)
@@ -10337,8 +12625,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 				Si_Non_EXE_FONCT = 1
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Appel de la fonction '" & CCP_Fonction_EXEC & "()'...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Calling function '" & CCP_Fonction_EXEC & "()'...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if	
 
 						
@@ -10374,8 +12665,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 			' Tester si la nouvelle instance d'objet a reussi
 			IF 1 = 1 Then
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+][CPinti] OK, Test de l'existence de '" & Nom_Fichier & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+][CPinti] OK, Testing existence '" & Nom_Fichier & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End If
 				End if
 				
 				Nom_Fichier_DBG = Nom_Fichier
@@ -10388,8 +12682,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					Dim RetourCCP 			as String = ""
 					
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] OK, Ouverture de '" & Param & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] OK, opening of '" & Param & "' ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End If
 					End if
 					'doevents(_PAUSE_CRT) ' Pause CRT CPinticore
 					
@@ -10413,8 +12710,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 					' wend
 					
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Taille " & Taille_Du_Fichier & " octets ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Size " & Taille_Du_Fichier & " bytes ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End If
 					End if
 
 					' Verifier si CPintiCore nous a communique une erreur
@@ -10493,15 +12793,21 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						Niveau_2			= 2
 
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG(" - Cle id:" & _CLE_, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG(" - Key id:" & _CLE_, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						
 						IF NOT EXEC_FONCTION_FICHIER = "" THEN
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Pas de redefinition de la cle d'identification d'executable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] No redefinition key ID for executable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End If
 							End if
 							' Pas de changements si c'est une fonction car elle c'est deja fait 
 							Nouvelle_TID = Auth_TID
@@ -10516,8 +12822,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 							' On doit conserver l'ID
 							if SAME_ID = true Then
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[CpcdosC+] (SAME_ID) Pas de redefinition de la cle d'identification d'executable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+									Else
 										DEBUG("[CpcdosC+] (SAME_ID) No redefinition key ID for executable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-									
+									End If
 								End if
 								
 								Nouvelle_TID = Auth_TID
@@ -10526,8 +12835,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						
 								' Si c'est pas une fonction, si Same_ID, on regenere une nouvelle cle
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[CpcdosC+] Redefinition de la cle d'identification d'executable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+									Else
 										DEBUG("[CpcdosC+] Redefinition key ID for executable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-									
+									End If
 								End if
 				
 								Nouvelle_TID = int(Auth_TID + CPCDOS_INSTANCE.Generer_RND(50, 99))
@@ -10578,8 +12890,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 						
 						IF ModeAnalyse = 1 then
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Debut de l'analyse du programme pour d'eventuels optimisations...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Starting analysis program for possible optimizations...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End If
 							End if
 						End if
 
@@ -10873,13 +13188,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 																EmplacementLabel(Index_Label) = Position_FIN
 																NomLabel_Emplace(Index_Label) = Buffer_LABEL
 																IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																		DEBUG(" #Optimisation " & Index_Label & "/" & Taille_Du_Fichier & " pointage [0x" & Hex(EmplacementLabel(Index_Label), 8) & "]:" & EmplacementLabel(Index_Label), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																	Else
 																		DEBUG(" #Optimising " & Index_Label & "/" & Taille_Du_Fichier & " pointing [0x" & Hex(EmplacementLabel(Index_Label), 8) & "]:" & EmplacementLabel(Index_Label), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																	
+																	End If
 																End if
 															Else
 																IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																		DEBUG("Taille memoire par indexage maximale atteinte (" & index_label & "). Impossible d'optimiser plus", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																	Else
 																		DEBUG("Maximum indexing size limit (" & index_label & "). Can't optimize more", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																	
+																	End If
 																End if
 															End if
 															Buffer_LABEL = ""
@@ -10937,11 +13258,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									Numero_de_Ligne = 0
 									IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
 										if Index_Label > 0 Then
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[CpcdosC+] Fin de l'analyse. Optimisation gagne " & int(((Index_Label/Taille_Du_Fichier)*100)*(Taille_Du_Fichier/6)) & "%", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG("[CpcdosC+] End of analysis. Optimising gained " & int(((Index_Label/Taille_Du_Fichier)*100)*(Taille_Du_Fichier/6)) & "%", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End If
 										Else
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[CpcdosC+] Fin de l'analyse. Aucune optimisations.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG("[CpcdosC+] End of analysis. No optimizations.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End If
 										End if
 									End if
 								End if
@@ -10969,8 +13296,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									IF Deja_Affiche = false then
 										Deja_Affiche = true
 										IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG(" #Recherche en mode optimise", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG(" #Search in optimised mode", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End If
 										End if
 									End if
 									For BoucleChercherLabelNom as integer = 1 to CPCDOS_INSTANCE.SHELLCCP_INSTANCE.MEMOIRE_CCP._MAX_LABEL ' MEMOIRE_CCP.CpcdosCP_Variable_MAXI
@@ -10987,8 +13317,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									IF Deja_Affiche = false then
 										Deja_Affiche = true
 										IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG(" #Recherche en mode standard --> :" & LabelAChercher & ":", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG(" #Search in standard mode --> :" & LabelAChercher & ":", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End If
 										End if
 									End if
 									Numero_de_Ligne = Numero_de_Ligne + 1
@@ -11074,7 +13407,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 																	' Si il n'y a pas d'arguments, on cherche si c'est pas une fonction VAR
 																	Retour_Fonction_ = Recherche_Fonction_Var(this.MEMOIRE_CCP.TAB_FONCTION_CCP_NOM(Boucle_table), Nouvelle_Cle)
 																	' Verifier ce qu'il retourne
-
+																	IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																		IF Retour_Fonction_ = " #Fonction Cpcdos non disponible#" Then
+																			' Ce n'est pas une fonction interne
+																			' Chercher dans les fonctions du noyau Cpcdos
+																			Retour_Fonction_ = Recherche_Fonction_CPCDOS(this.MEMOIRE_CCP.TAB_FONCTION_CCP_NOM(Boucle_table), Arguments_CCP_FONCT_exec, 0, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Nouvelle_TID, RetourVAR)
+																			CpcdosCP_SHELL = "FONCTION-RETOUR:" & Retour_Fonction_
+																			Si_Non_EXE_FONCT = 0
+																			' Goto _FIN_EXE_CCP_EXE
+																			exit while
+																		End if
+																	Else
 																		IF Retour_Fonction_ = " #Cpcdos function not avaiable#" Then
 																			' Ce n'est pas une fonction interne
 																			' Chercher dans les fonctions du noyau Cpcdos
@@ -11084,6 +13427,7 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 																			' Goto _FIN_EXE_CCP_EXE
 																			exit while
 																		End if
+																	End if
 																Else
 																	' Chercher dans les fonctions du noyau Cpcdos
 																	Retour_Fonction_ = Recherche_Fonction_CPCDOS(this.MEMOIRE_CCP.TAB_FONCTION_CCP_NOM(Boucle_table), Arguments_CCP_FONCT_exec, 0, NIVEAU_CCP, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Auth_TID, RetourVAR)
@@ -11126,14 +13470,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 ' Saut_Fincp:
 											 
 											' On verifie si on tombe bien sur la ligne de la syntaxe ou se situe la fonction
-											' Dim POSCommFONCTION_FR as integer = Instr(Ucase(Buffer_lecture), this.Liste_CMD_FR(23) & " ") ' FONCTION/
+											Dim POSCommFONCTION_FR as integer = Instr(Ucase(Buffer_lecture), this.Liste_CMD_FR(23) & " ") ' FONCTION/
 											Dim POSCommFONCTION_EN as integer = Instr(Ucase(Buffer_lecture), this.Liste_CMD_EN(23) & " ") ' FUNCTION/
 
-											IF POSCommFONCTION_EN > 0 Then
+											IF POSCommFONCTION_FR > 0 OR POSCommFONCTION_EN > 0 Then
 												IF Instr(Ucase(Buffer_lecture), CCP_Fonction_EXEC) > 0 Then
 													Dim NomFonctExec as String
 													Dim testCMD	as integer 
-													IF POSCommFONCTION_EN > 0 Then 
+													IF POSCommFONCTION_FR > 0 Then 
+														testCMD = CCP_Verifier_Syntaxe(Buffer_lecture, POSCommFONCTION_FR - 1)
+														NomFonctExec = UCASE(MID(Buffer_lecture, POSCommFONCTION_FR + LEN(this.Liste_CMD_FR(23)) + 1)) ' MODIF 22-02-2017 : Suppr POSCommFONCTION_FR + 4))
+													ElseIF POSCommFONCTION_EN > 0 Then 
 														testCMD = CCP_Verifier_Syntaxe(Buffer_lecture, POSCommFONCTION_EN - 1)
 														NomFonctExec = UCASE(MID(Buffer_lecture, POSCommFONCTION_EN + LEN(this.Liste_CMD_EN(23)) - 1)) ' MODIF 22-02-2017 : Suppr POSCommFONCTION_EN + 4))
 													End if
@@ -11158,14 +13505,20 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 														IF Position_1erParenthese = Position_2emParenthese - 1 then
 															' S'il s'agit d'une fonction sans arguments
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] : Fonction sans arguments.",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] : Function without arguments.",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End if
 															End if
 														else
 														
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] : Fonction avec argument(s).",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] : Function with argument(s).",  Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End if
 															End if
 															
 															' Une fonction avec 1 ou plusieurs arguments
@@ -11377,8 +13730,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									' Si on lit une fonction de maniere externe
 									IF SI_CEST_FONCTION = 1 then exit _scope_SAUT_COMMANDE ' Goto Saut_Commande
 									IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+										IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+											DEBUG(" Lecture : " & Buffer_lecture, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+										Else
 											DEBUG(" Reading : " & Buffer_lecture, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-										
+										End If
 									End if
 									
 									
@@ -11432,8 +13788,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									End if
 
 									IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+										IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+											DEBUG(" Retour : " & RetourCCP, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+										Else
 											DEBUG(" Return : " & RetourCCP, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-										
+										End If
 									End if
 									
 									Niveau_2 = Temp_exe
@@ -11477,8 +13836,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 
 										IF NumeroOS_tmp > -1 Then
 
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[SHELL] Switch de '" & Ancien_OS & "' (OSID:" & NumeroOS & ") a '" & tmpNomOS & "' (OSID:" & NumeroOS_tmp & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Action, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
+											Else
 												DEBUG("[SHELL] Switching from " & Ancien_OS & " (OSID:" & NumeroOS & ") OSID:" & NumeroOS & " to '" & tmpNomOS & "' (OSID:" & NumeroOS_tmp & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Action, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-											
+											End if
 											
 											NumeroOS = NumeroOS_tmp
 											Nouvelle_Cle = CPCDOS_INSTANCE.Generer_cle(CPCDOS_INSTANCE.get_id_kernel(), NumeroOS, CPCDOS_INSTANCE.get_id_Utilisateur(), Auth_PID, 0)
@@ -11486,11 +13848,17 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 											' Et definit le OS id sans le SCI
 											CPCDOS_INSTANCE.SCI_INSTANCE.set_OSid(NumeroOS)
 											
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[SHELL] Nouvelle CleID:" & _CLE_ & " [0x" & hex(_CLE_, 8) & "]", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Validation, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
+											Else
 												DEBUG("[SHELL] New KeyID:" & _CLE_ & " [0x" & hex(_CLE_, 8) & "]", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Validation, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-											
+											End if
 										Else
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[CpcdosC+] Systeme d'exploitation '" & tmpNomOS & "' non present.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
+											Else
 												DEBUG("[CpcdosC+] Operating system '" & tmpNomOS & "' not found.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourCCP)
-											
+											End if
 										ENd if
 									End if
 									
@@ -11510,8 +13878,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									' On arrive a la fin de la section de la fonction
 									IF RetourCCP = "FONCTION:FIN" Then 
 										IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[CpcdosC+] Fin de fonction", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG("[CpcdosC+] End function", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End if
 										END IF
 										EXIT while
 									End if
@@ -11519,8 +13890,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									' Renvoyer le contenu de la fonction qui envoit un retour
 									IF Instr(RetourCCP, "FONCTION-RETOUR:") > 0 Then
 										IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[CpcdosC+] Retour de fonction", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG("[CpcdosC+] Return in function", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End if
 										END IF
 										CpcdosCP_SHELL = RetourCCP
 										EXIT while
@@ -11529,8 +13903,11 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 									' Arreter l'execution du code CC+
 									IF RetourCCP = "STOP:FIN" Then
 										IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+											IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+												DEBUG("[CpcdosC+] Fin de l'execution du fichier CpcdosC+.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+											Else
 												DEBUG("[CpcdosC+] Ending CpcdosC+ file execution.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-											
+											End if
 										END IF
 										EXIT while
 									End if
@@ -11617,13 +13994,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition de la fenetre(" & _INDEX_FENETRE_ & ") '" & IUG_CREATION_FENETRE & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Window(" & _INDEX_FENETRE_ & ") edition mode for '" & IUG_CREATION_FENETRE & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															
@@ -11937,13 +14320,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition du bouton(" & _INDEX_BOUTON_ & ") '" & IUG_CREATION_BOUTON & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Button(" & _INDEX_BOUTON_ & ") edition mode for '" & IUG_CREATION_BOUTON & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du picturebox ===> GUI__PROP_COULEURFOND
@@ -12144,13 +14533,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition du picturebox(" & _INDEX_PICTUREBOX_ & ") '" & IUG_CREATION_PICTUREBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Picturebox(" & _INDEX_PICTUREBOX_ & ") edition mode for '" & IUG_CREATION_PICTUREBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du picturebox ===> GUI__PROP_COULEURFOND
@@ -12352,13 +14747,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition du textebloc(" & _INDEX_TEXTBLOCK_ & ") '" & IUG_CREATION_TEXTEBLOCK & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Textblock(" & _INDEX_TEXTBLOCK_ & ") edition mode for '" & IUG_CREATION_TEXTEBLOCK & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du picturebox ===> GUI__PROP_COULEURFOND
@@ -12552,13 +14953,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition du textebox(" & _INDEX_TEXTBOX_ & ") '" & IUG_CREATION_TEXTEBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Textbox(" & _INDEX_TEXTBOX_ & ") edition mode for '" & IUG_CREATION_TEXTEBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du textebox ===> GUI__PROP_COULEURFOND
@@ -12760,13 +15167,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															
 												
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition de la barre de progression(" & _INDEX_PROGRESSBAR_ & ") '" & IUG_CREATION_PROGRESSBAR & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Progress Bar(" & _INDEX_PROGRESSBAR_ & ") edition mode for '" & IUG_CREATION_PROGRESSBAR & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du textebox ===> GUI__PROP_COULEURFOND
@@ -12988,13 +15401,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															
 												
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition d'un check box(" & _INDEX_CHECKBOX_ & ") '" & IUG_CREATION_CHECKBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Check box(" & _INDEX_CHECKBOX_ & ") edition mode for '" & IUG_CREATION_CHECKBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du textebox ===> GUI__PROP_COULEURFOND
@@ -13205,13 +15624,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition du explorer(" & _INDEX_EXPLORER_ & ") '" & IUG_CREATION_EXPLORER & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Explorer(" & _INDEX_EXPLORER_ & ") edition mode for '" & IUG_CREATION_EXPLORER & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du picturebox ===> GUI__PROP_COULEURFOND
@@ -13417,13 +15842,19 @@ Function _SHELL_Cpcdos_OSx__.CpcdosCP_SHELL(ByVal _COMMANDE_ as String, byval _C
 															Dim ADD_NUM_B as String
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] GUI --> Mode edition du listbox(" & IUG_CREATION_LISTBOX & ") '" & IUG_CREATION_LISTBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] GUI --> Listbox(" & IUG_CREATION_LISTBOX & ") edition mode for '" & IUG_CREATION_LISTBOX & "' UID:" & CPCDOS_INSTANCE.get_id_Utilisateur(_CLE_) & " PID:" & CPCDOS_INSTANCE.get_id_PID(_CLE_) & " TID:" & CPCDOS_INSTANCE.get_id_TID(_CLE_), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 															
 															IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+																IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+																	DEBUG("[CpcdosC+] Recuperation des proprietes grahpiques en memoire...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+																Else
 																	DEBUG("[CpcdosC+] Recovery graphical properties in memory...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-																
+																End If
 															End if
 
 															' Couleur du picturebox ===> GUI__PROP_COULEURFOND
@@ -15398,16 +17829,22 @@ _FIN_EXE_CCP_EXE:
 						' Fonction CpcdosC+ introuvable
 						IF Si_Non_EXE_FONCT = 1 Then
 							Message_erreur = ERRAVT("ERR_050", 0)
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] " & Message_erreur & ". Nom de la fonction : " & CCP_Fonction_EXEC & " avec " & CCP_Fonction_ARGS_N & " argument(s).", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] " & Message_erreur & ". Function name : " & CCP_Fonction_EXEC & " with " & CCP_Fonction_ARGS_N & " argument(s).", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End If
 							CpcdosCP_SHELL = "ERR_050"
 						End if
 						
 						ENTRER_SectionCritique()
 						
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Fin d'execution de " & Nom_Fichier, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] End executing " & Nom_Fichier, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						' Vider les variables utilises pour la creation de l'instance en memoire pour l'execution du code CpcdosC+
@@ -15418,8 +17855,11 @@ _FIN_EXE_CCP_EXE:
 						Gest_variables_Suppr ("_EXE_DATE_", 	2, Auth_Kernel, Auth_OS, Auth_Utilisateur, Auth_PID, Nouvelle_TID)
 						
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Nettoyage memoire [OK] (PID:" & Auth_PID & " TID:" & Nouvelle_TID & ")", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Memory cleaning [OK] (PID:" & Auth_PID & " TID:" & Nouvelle_TID & ")", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End If
 						End if
 						
 						SORTIR_SectionCritique()
@@ -15460,8 +17900,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande affichage d'une boite de dialogue
 		' ===============================================================
-		CommLang(2) = "msgbox/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "message/"
+		CommLANG(2) = "msgbox/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -15471,17 +17912,68 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " message/                   Affichage une boite de dialogue graphique"
+			Else
 				CommandesAide = CommandesAide & CRLF & " msgbox/                    Display an graphical message box"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'MeSsaGe'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'afficher une boite de dialogue graphique"
+					Mess_Aide = Mess_Aide & CRLF & "    pour l'utilisateur. Il en existe 5 types avec 4 modes differents"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Arguments :"
+					Mess_Aide = Mess_Aide & CRLF & "    /Titre:Titre du message"
+					Mess_Aide = Mess_Aide & CRLF & "    /Erreur:Numero d'erreur"
+					Mess_Aide = Mess_Aide & CRLF & "    /Type:Type de message (Oui,Non,Annuler...)"
+					Mess_Aide = Mess_Aide & CRLF & "    /EVENEMENT:Fichier evenement"
+					Mess_Aide = Mess_Aide & CRLF & "    /Nom:Nom de la fenetre"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Type d'erreur associe a une icone :"
+					Mess_Aide = Mess_Aide & CRLF & "    - 0 : (Par defaut) Simple message"
+					Mess_Aide = Mess_Aide & CRLF & "    - 1 : Information"
+					Mess_Aide = Mess_Aide & CRLF & "    - 2 : Question"
+					Mess_Aide = Mess_Aide & CRLF & "    - 3 : Avertissement"
+					Mess_Aide = Mess_Aide & CRLF & "    - 4 : Erreur"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Evenement (Par defaut):"
+					Mess_Aide = Mess_Aide & CRLF & "     OK_Button_MSGBOX.click()"
+					Mess_Aide = Mess_Aide & CRLF & "     YES_Button_MSGBOX.click()"
+					Mess_Aide = Mess_Aide & CRLF & "     NO_Button_MSGBOX.click()"
+					Mess_Aide = Mess_Aide & CRLF & "     CANCEL_Button_MSGBOX.click()"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Type message :"
+					Mess_Aide = Mess_Aide & CRLF & "    - 0 : (Par defaut) "
+					Mess_Aide = Mess_Aide & CRLF & "    - 1 : Boutons Oui et Non"
+					Mess_Aide = Mess_Aide & CRLF & "    - 2 : Boutons Oui, Non et Annuler"
+					Mess_Aide = Mess_Aide & CRLF & "    - 3 : Bouton OK + TexteBox"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Exemple 1 - Affiche un simple message" :
+					Mess_Aide = Mess_Aide & CRLF & "     Message/ Coucou je suis un msgbox !"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Exemple 2 - Affiche un message avec un titre + Avetissement"
+					Mess_Aide = Mess_Aide & CRLF & "     Message/ J'aime QUE les frites ! /TITRE:Hello /ERREUR:3"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Exemple 3 - Question + Oui/Non + Evenement"
+					Mess_Aide = Mess_Aide & CRLF & "     Message/ Arreter l'ordi ? /ERREUR:2 /TYPE:1 /EVENEMENT:Fichier.cpc"
+					Mess_Aide = Mess_Aide & CRLF & "    Des que l'utilisateur va cliquer sur uns des boutons, Cpcdos"
+					Mess_Aide = Mess_Aide & CRLF & "    va executer la fonction CLIC() correspondant"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'MSGBOX'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fuctionnality :"
@@ -15527,6 +18019,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -15760,8 +18253,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour creer / stopper un serveur TCP
 		' ===============================================================
-		CommLang(2) = "server/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "serveur/"
+		CommLANG(2) = "server/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -15771,18 +18265,49 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
-			CommandesAide = CommandesAide & CRLF & " Server/                    Start or stop a TCP server with your port number"
-			
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " Serveur/                   Demarre ou stoppe un serveur TCP avec un numero de port desir�"
+			Else
+				CommandesAide = CommandesAide & CRLF & " Server/                    Start or stop a TCP server with your port number"
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer ou stopper un serveur TCP/UDP"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Mode CCP=Interpretation en ligne de commandes CpcdosC+"
+					Mess_Aide = Mess_Aide & CRLF & "  Mode TEL=Interpretation en telnet depuis la console CpcdosC+"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemples creation d'un serveur:"
+					Mess_Aide = Mess_Aide & CRLF & "   - Demarrer un serveur sur le port 1234 (Mode GET par defaut):"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /TCP:1234"
+					Mess_Aide = Mess_Aide & CRLF & "   - Demarrer un serveur d'interpreteur CpcdosC+ avec le mode CCP"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /MODE:CCP /TCP:1234"
+					Mess_Aide = Mess_Aide & CRLF & "   - Demarrer un serveur Telnet avec le mode TELNET ou TEL"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /MODE:TEL /TCP:1234"
+					Mess_Aide = Mess_Aide & CRLF & "   - Demarrer un serveur de renvoi de requetes avec le mode ECHO"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /MODE:ECHO /TCP:1234"
+					Mess_Aide = Mess_Aide & CRLF & "   - Arreter un serveur via son numero de port (ex:1234):"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /Stop:1234"
+					Mess_Aide = Mess_Aide & CRLF & "   - Envoyer un message a un client via son numero de port (socket 8):"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /envoyer:1234 TCP#8=Salut toi!"
+					Mess_Aide = Mess_Aide & CRLF & "   - Envoyer un message a tous les clients:"
+					Mess_Aide = Mess_Aide & CRLF & "      Serveur/ /envoyer:1234 Salut tous le monde!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Remarque: Cette commande renvoie '1' si le serveur a bien ete cree"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : ping/ , telecharger/ , client/ "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to start or stop a TCP/UDP server"
 					Mess_Aide = Mess_Aide & CRLF & "   You can also start a TCP client connection"
@@ -15811,6 +18336,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : ping/ , download/ , client/ "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -15989,8 +18515,11 @@ _FIN_EXE_CCP_EXE:
 				
 			Else
 	SERVEUR_ParamDispo:
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Parametres disponibles : /TCP:[No Port], /UDP:[No Port] , /ENVOYER:[No Port] [TCP#[NoSocket]=] [UDP#[NoSocket]=]Donnees, /RECEVOIR:[No Port]  , /STOP:[No Port]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Avaiable Parameters : /TCP:[No Port], /UDP:[No Port] , /SEND:[No Port] [TCP#[NoSocket]=] [UDP#[NoSocket]=]Data, /RECEIVE:[No Port]  , /STOP:[No Port]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				exit _scope_CMD, _scope
 			End if
 			
@@ -16004,8 +18533,11 @@ _FIN_EXE_CCP_EXE:
 						' Serveur d'administrateur en UDP --> A eviter!
 						
 						Message_erreur = ERRAVT("AVT_067", 0) ' UDP en admin
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] " & Message_erreur & ". Le TCP sera utilise.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] " & Message_erreur & ". TCP will be used.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					end if
 					
 					if ModeDuServeurR = "CCP" Then
@@ -16021,8 +18553,11 @@ _FIN_EXE_CCP_EXE:
 					
 				else
 					' Si le mode specifie n'existe pas
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Modes disponibles : STD, CCP.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Avaiable modes : STD, CCP.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 			else
@@ -16073,58 +18608,98 @@ _FIN_EXE_CCP_EXE:
 			
 			IF Resultat = CPCDOS_INSTANCE._DOSBOX Then ' Mode DOSBOX
 				Message_erreur = ERRAVT("AVT_055", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_055:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[Network] AVT_055:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			ElseIf Resultat = CPCDOS_INSTANCE._SANS_Reseau Then ' Mode sans reseau ( Mode avion )
 				Message_erreur = ERRAVT("AVT_072", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_072:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[Network] AVT_072:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			ELSEIF Resultat = -2 Then ' Erreur config socket
 				Message_erreur = ERRAVT("ERR_054", 0)
-				DEBUG("[Network]ERR_054: " & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_054:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network]ERR_054: " & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -3 Then ' Driver manquant
 				Message_erreur = ERRAVT("AVT_023", 0)
-				DEBUG("[Network] AVT_023:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_023:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] AVT_023:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -4 Then ' Erreur binding
-				DEBUG("[Network] ERR_055" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				Message_erreur = ERRAVT("ERR_055", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_055:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_055" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -5 Then ' Erreur ecoute
 				Message_erreur = ERRAVT("ERR_056", 0)
-				DEBUG("[Network] ERR_056" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_056:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_056" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -6 Then ' Erreur Select()
 				Message_erreur = ERRAVT("ERR_057", 0)
-				DEBUG("[Network] ERR_057:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_057:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_057:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -7 Then ' Erreur ERRPIPE
 				Message_erreur = ERRAVT("ERR_058", 0)
-				DEBUG("[Network] ERR_058:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_058:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_058:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -8 Then ' Erreur DNS (pour client!)
 				Message_erreur = ERRAVT("AVT_071", 0)
-				DEBUG("[Network] AVT_071:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_071:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] AVT_071:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -9 Then ' Erreur Memoire
 				Message_erreur = ERRAVT("ERR_059", 0)
-				DEBUG("[Network] ERR_059:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_059:" & Message_erreur & ". Impossible de demarrer le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_059:" & Message_erreur & ". Unable to starting server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 				
 			' ----------------------------------------------------------------
 			
 			ElseIf Resultat = -10 Then ' Port introuvable
 				Dim Message_erreur as String = ERRAVT("AVT_068", 0)
-				DEBUG("[Network] AVT_068:" & Message_erreur & " (" & Port_du_Serveur & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_068:" & Message_erreur & " (" & Port_du_Serveur & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				Else
+					DEBUG("[Network] AVT_068:" & Message_erreur & " (" & Port_du_Serveur & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				End if
 			ElseIf Resultat = -11 Then ' Port deja existant
 				dim Message_erreur as String = ERRAVT("ERR_051", 0)
-				DEBUG("[Network] ERR_051:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_051:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_051:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ElseIf Resultat = -12 Then ' Impossible de creer d'AUTRES serveurs
 				dim Message_erreur as String = ERRAVT("AVT_070", 0)
-				DEBUG("[Network] AVT_070:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_070:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] AVT_070:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			else
 				IF Action = 0 Then
 					' Serveur cree!
@@ -16145,8 +18720,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour creer / stopper un client TCP/UDP
 		' ===============================================================
-		CommLang(2) = "client/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "client/"
+		CommLANG(2) = "client/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -16156,18 +18732,47 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " Client/                    Etablie/Stoppe une connexion client a un serveur TCP/UDP"
+			Else
 				CommandesAide = CommandesAide & CRLF & " Client/                    Start or stop a TCP/UDP client connection"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de creer ou stopper un client TCP ou UDP"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemples connexion a un serveur tant que client: (TCP par defaut)"
+					Mess_Aide = Mess_Aide & CRLF & "    - Demarrer une connexion (ex:192.168.1.7:1234):"
+					Mess_Aide = Mess_Aide & CRLF & "       Client/ 192.168.1.7:1234"
+					Mess_Aide = Mess_Aide & CRLF & "       (Cette commande renvoit un numero de TID --> A garder!!)"
+					Mess_Aide = Mess_Aide & CRLF & "    - Arreter la connexion (Exemple de TID 2803):"
+					Mess_Aide = Mess_Aide & CRLF & "       client/ /stop:2803"
+					Mess_Aide = Mess_Aide & CRLF & "    - Envoyer un message a un serveur (Exemple de TID 2803):"
+					Mess_Aide = Mess_Aide & CRLF & "       Client/ /Envoyer:2803 Bonjour serveur!"
+					Mess_Aide = Mess_Aide & CRLF & "    - Recevoir un message (Exemple de TID 2803):"
+					Mess_Aide = Mess_Aide & CRLF & "       Client/ /Recevoir:2803"
+					Mess_Aide = Mess_Aide & CRLF & "       ( Si le serveur a ferme la connexion, vous receverez '#DECO')"
+					Mess_Aide = Mess_Aide & CRLF & "    - Configurer fichier tempon pour creation d'un fichier binaire"
+					Mess_Aide = Mess_Aide & CRLF & "       client/ /envoyer:2803 #CFG_TMPFILE TEMP/NET/Fichier.ZIP"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Remarque: Vous pouvez stocker le numero de TID du client directement"
+					Mess_Aide = Mess_Aide & CRLF & "           dans une variable ex:"
+					Mess_Aide = Mess_Aide & CRLF & "            @#MyTIDNumber Client/ 192.168.1.7:1234"
+					Mess_Aide = Mess_Aide & CRLF & "            txt/ Votre numero de TID du client est %MyTIDNumber%"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : serveur/ , ping/ , telecharger/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to start or stop a TCP server in CPinti"
 					Mess_Aide = Mess_Aide & CRLF & "   You can also start a TCP client connection"
@@ -16190,6 +18795,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : Server/ , ping/ , download/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -16392,8 +18998,11 @@ _FIN_EXE_CCP_EXE:
 			
 
 			Else
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Parametres disponibles : /TCP:[Adresse IP:port], /UDP:[Adresse IP:port] , /ENVOYER:[No TID] Donnees, /RECEVOIR:[No TID], /STOP:[No TID] ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Avaiable Parameters : /TCP:[IP address:port], /UDP:[IP address:port] , /SEND:[No TID] Data, /RECEIVE:[No TID], /STOP:[No TID]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				exit _scope_CMD, _scope
 			End if
 
@@ -16460,63 +19069,105 @@ _FIN_EXE_CCP_EXE:
 			
 			IF Resultat = CPCDOS_INSTANCE._DOSBOX Then ' Mode DOSBOX
 				Message_erreur = ERRAVT("AVT_055", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_055:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[Network] AVT_055:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			ElseIF Resultat = CPCDOS_INSTANCE._SANS_Reseau Then ' Mode sans reseau ( Mode avion )
 				Message_erreur = ERRAVT("AVT_072", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_072:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[Network] AVT_072:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			ELSEIF Resultat = -2 Then ' Erreur config socket
 				Message_erreur = ERRAVT("ERR_054", 0)
-				DEBUG("[Network] ERR_054:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_054:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_054:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -3 Then ' Driver manquant
 				Message_erreur = ERRAVT("AVT_023", 0)
-				DEBUG("[Network] AVT_023:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_023:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] AVT_023:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -4 Then ' Erreur binding
 				Message_erreur = ERRAVT("ERR_055", 0)
-				DEBUG("[Network] ERR_055:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_055:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_055:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -5 Then ' Erreur ecoute
 				Message_erreur = ERRAVT("ERR_056", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_056:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[Network] ERR_056:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			ELSEIF Resultat = -6 Then ' Erreur Select()
 				Message_erreur = ERRAVT("ERR_057", 0)
-				DEBUG("[Network] ERR_057:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_057:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_057:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -7 Then ' Erreur ERRPIPE
 				Message_erreur = ERRAVT("ERR_058", 0)
-				DEBUG("[Network] ERR_058:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_058:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_058:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -8 Then ' Erreur DNS (pour client!)
 				Message_erreur = ERRAVT("AVT_071", 0)
-				DEBUG("[Network] AVT_071:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_071:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] AVT_071:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ELSEIF Resultat = -9 Then ' Erreur Memoire
 				Message_erreur = ERRAVT("ERR_059", 0)
-				DEBUG("[Network] ERR_059:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_059:" & Message_erreur & ". Impossible de demarrer le client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_059:" & Message_erreur & ". Unable to starting client.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 				
 			' ----------------------------------------------------------------
 			
 			ElseIf Resultat = -10 Then ' Port introuvable
 				Dim Message_erreur as String = ERRAVT("AVT_068", 0)
-				DEBUG("[Network] AVT_068:" & Message_erreur & " (" & Port_du_Serveur & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_068:" & Message_erreur & " (" & Port_du_Serveur & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				Else
+					DEBUG("[Network] AVT_068:" & Message_erreur & " (" & Port_du_Serveur & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				End if
 			ElseIf Resultat = -11 Then ' Port deja existant
 				dim Message_erreur as String = ERRAVT("ERR_051", 0)
-				DEBUG("[Network] ERR_051:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] ERR_051:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] ERR_051:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if
 			ElseIf Resultat = -12 Then ' Impossible de creer d'AUTRES serveurs
 				dim Message_erreur as String = ERRAVT("AVT_070", 0)
-				DEBUG("[Network] AVT_070" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_070:" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
+					DEBUG("[Network] AVT_070" & Message_erreur, CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				End if				
 			ElseIf Resultat = -13 Then ' TID introuvable
 				Dim Message_erreur as String = ERRAVT("AVT_069", 0)
-				DEBUG("[Network] AVT_069:" & Message_erreur & " (" & TID_CLIENT & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[Reseau] AVT_069:" & Message_erreur & " (" & TID_CLIENT & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				Else
+					DEBUG("[Network] AVT_069:" & Message_erreur & " (" & TID_CLIENT & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				End if
 			END IF
 			
 			' Fin de l'operation
@@ -16533,8 +19184,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour se loger, creer, parametrer les comptes
 		' ===============================================================
-		CommLang(2) = "LOGIN/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "LOGIN/"
+		CommLANG(2) = "LOGIN/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -16544,19 +19196,61 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
-		
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " Login/                     Ouvrir, creer, modifier un compte utilisateur"
+			Else
 				CommandesAide = CommandesAide & CRLF & " Login/                     Open, create, modify an user account"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de gerer les compte utilisateurs de Cpcdos"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   * Les droits administrateur vous permet d'acces total du systeme, des commande et des autres comptes"
+					Mess_Aide = Mess_Aide & CRLF & "   * Les droits standard vous permet l'acces assez etendu sur le systeme a l'exception de certains"
+					Mess_Aide = Mess_Aide & CRLF & "     parametres.."
+					Mess_Aide = Mess_Aide & CRLF & "   * Les droits limit�s ne permet que d'executer les application et parametres, impos�s par l'administrateur"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Si une action requiert les droits Administrateur, vous serez invit� a entrer le mot de passe Admin"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "   Se connecter tant que 'admin' (Sans mot de passe)"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ admin"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Se connecter tant que 'admin' (Avec mot de passe)"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ admin MonMotDePasse123"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Se deconnecter d'un compte ouvert"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ /fermer   ou   Login/ /deconnexion"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Verrouiller la session ouverte"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ /Verrouiller"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   (Previleges administrateur necessaire pour tout ce qui est en dessous)"
+					Mess_Aide = Mess_Aide & CRLF & "   Creer un compte utilisateur standard et sans mot de passe"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ /creer Florian    ou    Login/ /creer /std Florian"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Creer un compte utilisateur standard et avec mot de passe"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ /creer Florian MotDePasse123    ou    Login/ /creer /std Florian MotDePasse123"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Creer un compte utilisateur administrateur"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ /creer /admin Thomas"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Creer un compte utilisateur limit�"
+					Mess_Aide = Mess_Aide & CRLF & "    Login/ /creer /lim Thomas"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to manage user accounts"
 					Mess_Aide = Mess_Aide & CRLF
@@ -16597,6 +19291,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -16634,8 +19329,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande de fermeture d'un processus
 		' ===============================================================
-		CommLang(2) = "close/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "fermer/"
+		CommLANG(2) = "close/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -16645,18 +19341,42 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		REM 'Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " fermer/                    Fermer un processus thread ou un objet"
+			Else
 				CommandesAide = CommandesAide & CRLF & " close/                     Kill a process, thread or an object"
-			
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then ' Afficher l'aide de la commande
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de fermer un ou plusieurs processuss sp�cifi�s par son nom ou par son PID"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   Fermeture basique. Ferme tous les processus ayant le meme nom"
+					Mess_Aide = Mess_Aide & CRLF & "    Fermer/ MA_FENETRE"
+					Mess_Aide = Mess_Aide & CRLF & "    Fermer/ APP1"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Fermeture du processus par numero PID"
+					Mess_Aide = Mess_Aide & CRLF & "    Fermer/ /PID 1234"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Femeture par le handle�"
+					Mess_Aide = Mess_Aide & CRLF & "    Fermer/ /handle 1234"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Fermeture du processus/handle par CleID"
+					Mess_Aide = Mess_Aide & CRLF & "    FERMER/ /CleID 123456789"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : exe/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to kill one or many process specified by his name or by his PID"
 					Mess_Aide = Mess_Aide & CRLF
@@ -16676,6 +19396,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : exe/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
@@ -16914,8 +19635,11 @@ _FIN_EXE_CCP_EXE:
 				' Detecter la presence d'objets graphiques
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Recherche et suppression des objets graphiques (si present) ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Search and deleting graphic objects (If present) ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				End if
 				
 				scope
@@ -17069,11 +19793,17 @@ _FIN_EXE_CCP_EXE:
 					
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
 						If NombreObjetSuppreime > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Suppression de " & NombreObjetSuppreime & "  terminee", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Deleting " & NombreObjetSuppreime & " terminated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End if
 						Else
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Aucun objets graphiques associes", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] No graphic object associed", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End if
 						End if
 					End if
 				
@@ -17081,8 +19811,11 @@ _FIN_EXE_CCP_EXE:
 						' Si l'interface graphique est executee
 						IF CPCDOS_INSTANCE.SCI_INSTANCE.GUI_Mode = TRUE Then
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[CpcdosC+] Actualisation graphique", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[CpcdosC+] Graphic actualisation", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							End if
 							' Et actualiser l'interface graphique
 							CPCDOS_INSTANCE.SCI_INSTANCE.ActualiserGUI(0, 0)
@@ -17092,15 +19825,21 @@ _FIN_EXE_CCP_EXE:
 				End scope
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Demande d'arret du processus " & NomPID & " (PID:" & Numero_PID & ") et de ses threads associes ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Asking killing process " & NomPID & " (PID:" & Numero_PID & ") and his associed threads ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				End if
 				
 				CPCDOS_INSTANCE.Fermer_processus(Numero_PID)
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Arret du processus " & NomPID & " (PID:" & Numero_PID & ") Envoye !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Killing process " & NomPID & " (PID:" & Numero_PID & ") Sent!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				End if
 				
 				exit _scope_CMD, _scope
@@ -17111,17 +19850,22 @@ _FIN_EXE_CCP_EXE:
 				Dim NomTID as String = CPCDOS_INSTANCE.get_Nom_Thread(Numero_TID)
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-			
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Demande d'arret du thread '" & NomTiD & "' (PID:" & Auth_PID & " TID:" & Numero_TID & ") et de ses threads associes ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] Asking killing thread '" & NomTiD & "' (PID:" & Auth_PID & "TID:" & Numero_TID & ") and his associed threads) ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					End if
 				End if
 				' On ne pourra supprimer le thread UNIQUEMENT du processus
 				'  l'appelant ahah (Petite securite)
 				CPCDOS_INSTANCE.Fermer_thread(Auth_PID, Numero_TID, false)
 				
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-					DEBUG("[CpcdosC+] Asking killing thread " & NomTID & " (PID:" & Auth_PID & " TID:" & Numero_TID & ") and his associed threads) Sent!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Demande d'arret du thread " & NomTID & " (PID:" & Auth_PID & " TID:" & Numero_TID & ") et de ses threads associes Envoye !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
+						DEBUG("[CpcdosC+] Asking killing thread " & NomTID & " (PID:" & Auth_PID & " TID:" & Numero_TID & ") and his associed threads) Sent!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					End if
 				End if
 				
 				exit _scope_CMD, _scope
@@ -17469,8 +20213,11 @@ _FIN_EXE_CCP_EXE:
 				
 					' L'utilisateur n'a rien indique
 					Message_erreur = ERRAVT("AVT_078", 0)
-					DEBUG("[CpcdosC+] AVT_078 : " & Message_erreur & ". Please put name or parameter.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] AVT_078 : " & Message_erreur & ". Veuillez indiquer un nom ou un parametre.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
+						DEBUG("[CpcdosC+] AVT_078 : " & Message_erreur & ". Please put name or parameter.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					End if
 					exit _scope_CMD, _scope
 				End if
 			End if
@@ -17480,8 +20227,11 @@ _FIN_EXE_CCP_EXE:
 			
 			
 				IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-					DEBUG("[CpcdosC+] Deleting  ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CpcdosC+] Suppression ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					Else
+						DEBUG("[CpcdosC+] Deleting  ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+					End if
 				End if
 				
 				' Supprimer l'objet concerne
@@ -17490,8 +20240,11 @@ _FIN_EXE_CCP_EXE:
 				' Si l'interface graphique est executee
 				IF CPCDOS_INSTANCE.SCI_INSTANCE.GUI_Mode = TRUE Then
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-						DEBUG("[CpcdosC+] Graphic actualisation", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Actualisation graphique ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
+							DEBUG("[CpcdosC+] Graphic actualisation", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						End if
 					End if
 					' Et actualiser l'interface graphique
 					CPCDOS_INSTANCE.SCI_INSTANCE.ActualiserGUI(0, 0)
@@ -17500,8 +20253,11 @@ _FIN_EXE_CCP_EXE:
 			Else
 				' Si on n'a pas trouve quelque chose
 				Message_erreur = ERRAVT("AVT_077", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] AVT_077 : " & Message_erreur & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] AVT_077 : " & Message_erreur & ". ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			End if
 	'--------------------------- Fermer_Processus_par_PID(NumPID_2) --------------------------------------------
 			
@@ -17518,8 +20274,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour configurer/afficher des Parametres du systeme
 		' ===============================================================
-		CommLang(2) = "sys/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "sys/"
+		CommLANG(2) = "sys/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -17529,19 +20286,233 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " sys/                       Configurer/afficher les informations du systeme"
+			Else
 				CommandesAide = CommandesAide & CRLF & " sys/                       Configure/display system informations"
-			
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'SYSteme'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de configurer des Parametres, ou bien afficher"
+					Mess_Aide = Mess_Aide & CRLF & "   des informations du systeme."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Afficher la memoire libre restante / Utilis�e en octets, Ko, Mo, Go"
+					Mess_Aide = Mess_Aide & CRLF & "     Afficher la memoire restante en octets"
+					Mess_Aide = Mess_Aide & CRLF & "      sys/ /mem"
+					Mess_Aide = Mess_Aide & CRLF & "     Afficher la memoire Utilis�e en octets"
+					Mess_Aide = Mess_Aide & CRLF & "      sys/ /memu"
+					Mess_Aide = Mess_Aide & CRLF & "     Afficher la memoire restante en Mo"
+					Mess_Aide = Mess_Aide & CRLF & "      sys/ /mem mo"
+					Mess_Aide = Mess_Aide & CRLF & "     Afficher la memoire Utilis�e en Mo"
+					Mess_Aide = Mess_Aide & CRLF & "      sys/ /memu mo"
+					Mess_Aide = Mess_Aide & CRLF & "     ... aussi avec Go pour Giga Octets, To pour Tera Octets"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Charger la police d'ecriture"
+					Mess_Aide = Mess_Aide & CRLF & "     Sys/ /font /load_ttf"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /Font /load_char"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Activer/desactiver le gestionnaire de fonts"
+					Mess_Aide = Mess_Aide & CRLF & "     Sys/ /font /Enable"
+					Mess_Aide = Mess_Aide & CRLF & "     Sys/ /font /Disable"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "    Deboguer le noyau. (Affiche toutes les activites du noyau)"
+					Mess_Aide = Mess_Aide & CRLF & "      SYS/ /DEBUG {COMn} {/CPINTICORE} {/SERVEUR:TCP} = { 0, 1, 2, 3 }"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "      Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "       Affiche les activit�es detaill�es du noyau"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug = 1"
+					Mess_Aide = Mess_Aide & CRLF & "       Enregistre les activit�es detaill�es du noyau dans un fichier DEBUG.LOG"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug = 2"
+					Mess_Aide = Mess_Aide & CRLF & "       Affiche et enregistre les activit�es detaill�es du noyau dans un fichier DEBUG.LOG"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug = 3"
+					Mess_Aide = Mess_Aide & CRLF & "       Stoppe l'affichage des informatons detaill�es"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug = 0"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "       Affiche les activit�es detaill�es de CPinti core"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /CPintiCore = 1"
+					Mess_Aide = Mess_Aide & CRLF & "       Stoppe l'affichage des activit�es detaill�es de CPinti core"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /CPintiCore = 0"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "	   Affiche le menu d'informations systeme CPinti Core"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /menu = 1"
+					Mess_Aide = Mess_Aide & CRLF & "	   Desactive l'affichage du menu d'informations systeme CPinti Core"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /menu = 0"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "       Active le debogage par le port COM1 avec par defaut (9600,N,8,1)"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /COM1 = 1"
+					Mess_Aide = Mess_Aide & CRLF & "       IDEM mais de maniere plus precise 9600 baud, pas de parite, 8 bits de data, 1 bit de stop"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /COM1:9600,N,8,1"
+					Mess_Aide = Mess_Aide & CRLF & "       Desactive le debogage par le port COM1"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /COM1 = 0"
+					Mess_Aide = Mess_Aide & CRLF & "     --> Vous pouvez utiliser le COM1, COM2, COM3, COM4"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "       Affiche les informations concernant le Serveur TCP"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /Serveur:TCP = 1"
+					Mess_Aide = Mess_Aide & CRLF & "       Stoppe l'affichage des informations concernant le Serveur TCP"
+					Mess_Aide = Mess_Aide & CRLF & "        sys/ /debug /Serveur:TCP = 0"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Afficher la resolution CONSOLE ou GRAPHIQUE actuelle"
+					Mess_Aide = Mess_Aide & CRLF & "    SYS/ /ECRAN"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Changer la resolution d'ecran"
+					Mess_Aide = Mess_Aide & CRLF & "    Vous pouvez changer la resolution CONSOLE ou GRAPHIQUE"
+					Mess_Aide = Mess_Aide & CRLF & "    CONSOLE: SYS/ /ECRAN NumeroDuMode"
+					Mess_Aide = Mess_Aide & CRLF & "     NumeroDuMode:"
+					Mess_Aide = Mess_Aide & CRLF & "      - 1  : 320x200 (CGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 2  : 640x200 (CGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 7  : 320x200 (EGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 8  : 640x200 (EGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 9  : 640x350 (EGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 11 : 640x480 (VGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 12 : 640x480 (VGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 13 : 320x200 (MCGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 14 : 320x240 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 15 : 400x300 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 16 : 512x384 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 17 : 640x400 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 18 : 640x480 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 19 : 800x600 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 20 : 1024x768 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "      - 21 : 1280x1024 (SVGA)"
+					Mess_Aide = Mess_Aide & CRLF & "    GRAPHIC:"
+					Mess_Aide = Mess_Aide & CRLF & "      Exemple: SYS/ /ECRAN 800x600"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Afficher la liste des resolutions d'ecran compatible"
+					Mess_Aide = Mess_Aide & CRLF & "    Cette commande doit etre utilisee en precisant une resolution de couleurs 16, 24, 32 bits"
+					Mess_Aide = Mess_Aide & CRLF & "     Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "      Affiche la liste des resolutions disponibles pour 16 bits de couleurs"
+					Mess_Aide = Mess_Aide & CRLF & "       SYS/ /ECRAN /LISTE 16"
+					Mess_Aide = Mess_Aide & CRLF & "      Pour 24 bits"
+					Mess_Aide = Mess_Aide & CRLF & "       SYS/ /ECRAN /LISTE 24"
+					Mess_Aide = Mess_Aide & CRLF & "      Et pour 32 bits"
+					Mess_Aide = Mess_Aide & CRLF & "       SYS/ /ECRAN /LISTE 32"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "      Afficher pour le format Listbox"
+					Mess_Aide = Mess_Aide & CRLF & "       sys/ /ecran /listb 32"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Obtenir le pointeur de l'affichage video"
+					Mess_Aide = Mess_Aide & CRLF & "     Sys/ /ecran /ptr"
+					Mess_Aide = Mess_Aide & CRLF & "    ou en hexadecimale"
+					Mess_Aide = Mess_Aide & CRLF & "     Sys/ /ecran /hexaptr"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Afficher le gestionnaire de taches"
+					Mess_Aide = Mess_Aide & CRLF & "    sys/ /taskmgr"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Utiliser une fonction wrapper (Experimentale)"
+					Mess_Aide = Mess_Aide & CRLF & "    Ceci est reserve aux developpeurs du SDK Cpcdos"
+					Mess_Aide = Mess_Aide & CRLF & "    Vous devez donc vous munir de votre FunctionID!"
+					Mess_Aide = Mess_Aide & CRLF & "    Exemples :"
+					Mess_Aide = Mess_Aide & CRLF & "	  pour la FunctionID 1234 :"
+					Mess_Aide = Mess_Aide & CRLF & "      SYS/ /WRP 1234"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Recuperer le pointeur d'un tableau ARGB d'un bitmap depuis son handle"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /Bitmap /obtenir /ptrbyhandle"
+					Mess_Aide = Mess_Aide & CRLF & "   Recuperer le bitmap ID depuis son numero de handle"
+					Mess_Aide = Mess_Aide & CRLF & "    sys/ /Bitmap /obtenir /idbyhandle"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Mettre a jour la liste des OS presents via OS.LST"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /os /update"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Afficher la liste des OS presents via OS.LST"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /os /liste"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Afficher le nombre d'OS present"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /os /nb"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Switcher l'instant du shell courant sur un autre OS (OS id)"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /os NomDeVotreOS"
+					Mess_Aide = Mess_Aide & CRLF & "    Ce qui va permettre d'utiliser l'OS id d'un autre OS pour que les"
+					Mess_Aide = Mess_Aide & CRLF & "     interactions/variables/ev de niveau 3 soient traite par l'OS choisis"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Mettre a jour la liste des formats de fichiers"
+					Mess_Aide = Mess_Aide & CRLF & "    sys/ /fileformat-update"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Mettre a jour la liste des formats de fichiers personnalisee"
+					Mess_Aide = Mess_Aide & CRLF & "    sys/ /fileformat-update /votreDossier/VotreConfig.ini"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Charger la liste des icones GUI"
+					Mess_Aide = Mess_Aide & CRLF & "    sys/ /fileformat-gui-load" 
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Lister les variables en memoire depuis son numero de visibilite"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /listvar 5"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Charger/recharger les propri�t�s du curseur graphique"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /load-cursor-properties"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Charger/recharger les icones des curseurs graphiques"
+					Mess_Aide = Mess_Aide & CRLF & "     sys/ /load-cursor-gui"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Creer un nouveau processus"
+					Mess_Aide = Mess_Aide & CRLF & "   Ceci va vous permettre d'executer vos threads et votre code"
+					Mess_Aide = Mess_Aide & CRLF & "   dans un autre processus que vous venez de creer."
+					Mess_Aide = Mess_Aide & CRLF & "    sys/ /Processus NomDuProcessus"
+					Mess_Aide = Mess_Aide & CRLF & "     --> Cette commande renvoi le numero de PID du nouveau processus"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Verifier une nouvelle mise a jour du noyau :"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /update"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Telecharger une nouvelle version"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /update-get"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Installer la version precedemment telechargee"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /update-install"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Installer ET telecharger la derniere version"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /update-get-install"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Telecharger le release notes :"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /update-news"
+					Mess_Aide = Mess_Aide & CRLF & "  Defiler ligne par ligne avec la touche ESPACE et ECHAP"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /update-news \#pause"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Pour utiliser la branche 'Hot-release' ajouter 'HR' a la fin de la commande"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /update hr"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /update-get hr"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /update-get-install hr"
+					Mess_Aide = Mess_Aide & CRLF & "  !! Attention ces version sont en phase de developpement donc pas terminees."
+					Mess_Aide = Mess_Aide & CRLF & "  !! vous etes reponsable de votre machine."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & " Changer votre Cpcdos network ID (Vous pouvez mettre 'anonymous'):"
+					Mess_Aide = Mess_Aide & CRLF & "   sys/ /netid = MonPseudo"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Arreter le noyau :"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /STOPK"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Arreter le systeme :"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /ARRETER"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Redemarrer le systeme :"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /REDEMARRER"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Mettre en veille :"
+					Mess_Aide = Mess_Aide & CRLF & "   SYS/ /VEILLE"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : fix/ , ccp/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'SYStem'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -17735,6 +20706,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : fix/ , ccp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -17834,26 +20806,7 @@ _FIN_EXE_CCP_EXE:
 				CPCDOS_INSTANCE.SCI_INSTANCE.charger_Curseurs(Auth_OS+1024)
 				exit _scope_CMD, _scope
 			End if
-
-				IF Instr(UCASE(Param), "/SB16") > 0 Then		
-					
-					IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=0") > 0 Then 
-						DEBUG("[CpcdosC+] SB16 deactivated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						 CPCDOS_INSTANCE._dsp_reset()
-						' temp asm function directly here
-					
-
-						' Lire le contenu depuis CPinti core
-						' Dim Buffer_CCP as integer = CPCDOS_INSTANCE.dsp_reset()
-					end if
-					IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=1") > 0 Then DEBUG("[CpcdosC+] SB16 activated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
-						
-					
-					
-					exit _scope_CMD, _scope
-				End if			
-
+			
 			IF Instr(UCASE(Param), "/DEBUG") > 0 Then			
 				Dim aDBG_DEBUG 				as Integer
 				Dim aDBG_DEBUG_SRVTCP 		as Integer
@@ -17883,12 +20836,14 @@ _FIN_EXE_CCP_EXE:
 						exit _scope_CMD, _scope
 					END IF
 					Message_erreur = ERRAVT("ERR_007", 0)
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("CpcdosC+ : Erreur ERR_007 " & Message_erreur & ". Specifier un protocole.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("CpcdosC+ : Error ERR_007" & Message_erreur & ". Protocol name is missing.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 				
-
 
 '---------------------------------------------- Test_ecran_console --------------------------------------
 				IF Instr(UCASE(Param), "/COM") > 0 Then
@@ -17899,8 +20854,11 @@ _FIN_EXE_CCP_EXE:
 					' Initialiser la config des ports en memoire
 					IF Instr(UCASE(Param), "/INIT") > 0 Then 
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[SERIE/RS232] Initilisation de la configuration des ports COM... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[SERIE/RS232] Initialization COM port configuration... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End if
 						End if
 						
 						' Incrire en memoire la configuration
@@ -17919,9 +20877,11 @@ _FIN_EXE_CCP_EXE:
 						
 						
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-						
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 								DEBUG("[OK]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							Else
+								DEBUG("[OK]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							End if
 						End if
 					End if
 					
@@ -17959,9 +20919,11 @@ _FIN_EXE_CCP_EXE:
 						IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=0") > 0 Then
 						
 							IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-							
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[SERIE/RS232] Fermeture du port '" & NomPort & "' ..." , Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+								Else
 									DEBUG("[SERIE/RS232] Closing port '" & NomPort & "' ... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-								
+								End if
 							END IF
 							
 							' Verifier si le port est ouvert
@@ -17979,30 +20941,40 @@ _FIN_EXE_CCP_EXE:
 								Close #IndexCom
 								
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[OK] Port '" & NomPort & "' ferme !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+									Else
 										DEBUG("[OK] Port '" & NomPort & "' closed !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-									
+									End if
 								END IF
 							Else
 								' Avertissement, port deja ferme
 								Message_erreur = ERRAVT("AVT_075", 0)
-								
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[ERREUR] : " & Message_erreur & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								Else
 									DEBUG("[ERROR] : " & Message_erreur & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End if
 							End if
 						ElseIF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=1") > 0 OR Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=2") > 0 Then
 							' Ouvrir le port avec les parametres par defauts
 							
 							IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=1") > 0 Then
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-								
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[SERIE/RS232] Ouverture du port '" & NomPort & "' en mode lecture ... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+									Else
 										DEBUG("[SERIE/RS232] Opening port '" & NomPort & "' in reading mode... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-									
+									End if
 								END IF
 								CPCDOS_INSTANCE.SYSTEME_INSTANCE.COM_INSTANCE(IndexCom).Port_COM_ecriture = FALSE
 							Else
 								IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-									DEBUG("[SERIE/RS232] Opening port '" & NomPort & "' in reading and writing mode... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-									
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[SERIE/RS232] Ouverture du port '" & NomPort & "' in reading and writing mode... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+									Else
+										DEBUG("[SERIE/RS232] Opening port '" & NomPort & "' in reading and writing mode... ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.NoCRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+									End if
 								END IF
 								CPCDOS_INSTANCE.SYSTEME_INSTANCE.COM_INSTANCE(IndexCom).Port_COM_ecriture = TRUE
 							End if
@@ -18031,20 +21003,29 @@ _FIN_EXE_CCP_EXE:
 								' Ouverture impossible
 								if Resultat = 0 Then
 									IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
-										DEBUG("[OK]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-										
+										IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+											DEBUG("[OK]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+										Else
+											DEBUG("[OK]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+										End if
 									END IF
 								Else
 									Message_erreur = ERRAVT("AVT_076", 0)
+									IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+										DEBUG("[ERREUR] : " & Message_erreur & ". Numero d'erreur : " & Resultat & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+									Else
 										DEBUG("[ERROR] : " & Message_erreur & ". Error number  " & Resultat & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-									
+									End if
 									CPCDOS_INSTANCE.SYSTEME_INSTANCE.COM_INSTANCE(IndexCom).Port_COM_Connecte = FALSE
 								End if
 							Else
 								' Avertissment port deja ouvert
 								Message_erreur = ERRAVT("AVT_074", 0)
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[ERREUR] : " & Message_erreur & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								Else
 									DEBUG("[ERROR] : " & Message_erreur & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End if
 							End if
 						End if
 					End if ' COM1, COM2, COM3, COM4
@@ -18079,15 +21060,19 @@ _FIN_EXE_CCP_EXE:
 					End if
 					IF CPCDOS_INSTANCE.CONSOLE_INSTANCE.CPinti_DebugMode = 1 Then
 						CPCDOS_INSTANCE.SYSTEME_INSTANCE.set_CPINTI_DEBUG(1)
-						
+						If CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+							DEBUG(" --> Mode debogeur 'CPinti Core' active", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						else
 							DEBUG(" --> 'CPinti core' debogger mode enabled", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					Elseif CPCDOS_INSTANCE.CONSOLE_INSTANCE.CPinti_DebugMode = 0 then
 						' CPCDOS_INSTANCE.NOGUI = FALSE
 						CPCDOS_INSTANCE.SYSTEME_INSTANCE.set_CPINTI_DEBUG(0)
-						
+						If CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+							DEBUG(" --> Mode debogeur 'CPinti Core' desactive", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						else
 							DEBUG(" --> 'CPinti core' debogger mode disable", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					End if
 					exit _scope_CMD, _scope
 				END IF
@@ -18268,9 +21253,11 @@ _FIN_EXE_CCP_EXE:
 
 				ELSE
 					Message_erreur = ERRAVT("ERR_011", 0) ' erreur fatale
-					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+						DEBUG("[CpcdosC+] " & Message_erreur & " " & CHR(34) & Commande & CHR(34) & ". Impossible de lire la memoire RAM, veuillez redemarrer votre machine!!.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] " & Message_erreur & " " & CHR(34) & Commande & CHR(34) & ". Problem to access in RAM memory, you must restart your machine!!.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					END IF
 				END IF
 			END IF
 			
@@ -18286,9 +21273,11 @@ _FIN_EXE_CCP_EXE:
 				FunctionID_INT = val(FunctionID_STR)
 				IF FunctionID_INT < 1 then 
 					Message_erreur = ERRAVT("AVT_062", 0) ' Vous devez specifier un numero ID superieur a 0
-					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+						DEBUG("[CpcdosC+] " & Message_erreur & " " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CpcdosC+] " & Message_erreur & " " & CHR(34) & Commande & CHR(34) & ". ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					END IF
 					exit _scope_CMD, _scope
 				else
 					' Pas oublier le doevents!
@@ -18308,8 +21297,11 @@ _FIN_EXE_CCP_EXE:
 					
 					IF FunctionID_RET = -1 then
 						Message_erreur = ERRAVT("AVT_063", 0) ' FunctionID non disponible
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+							DEBUG("[CpcdosC+] " & Message_erreur & " " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] " & Message_erreur & " " & CHR(34) & Commande & CHR(34) & ". ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ERREUR, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						END IF
 						exit _scope_CMD, _scope
 					END IF
 				End if
@@ -18317,9 +21309,11 @@ _FIN_EXE_CCP_EXE:
 
 			' Executer le gestionnaire de taches 
 			IF Instr(UCASE(Param), "/TASKMGR") > 0 Then
-			
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+					DEBUG("[CpcdosC+] Execution du gestionnaire de taches.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				Else
 					DEBUG("[CpcdosC+] Launching task manager.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-				
+				END IF
 				CpcdosCP_SHELL("/F:display_taskmgr()", _CLE_, 3, Param_1, Param_2) 
 			End if
 			
@@ -18358,16 +21352,19 @@ _FIN_EXE_CCP_EXE:
 					' Couleur mal specifie
 					IF val(Couleur) > 32 OR val(Couleur) < 16 then 
 						Message_erreur = ERRAVT("AVT_058", 0)
-						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+							DEBUG("[CpcdosC+] " & Message_erreur & ". Exemple: SYS/ /ECRAN /TEST 1024x768x16. " & CHR(34) & Commande & CHR(34) & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] " & Message_erreur & ". Example: SYS/ /SCREEN /TEST 1024x768x16. " & CHR(34) & Commande & CHR(34) & ". ", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						END IF
 					End if
 					DEBUG(str(CPCDOS_INSTANCE.SYSTEME_INSTANCE.test_Resolution(Resolution, val(Couleur))), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 					exit _scope_CMD, _scope
-				End if				
+				End if
 				
 				
-				
+
+				IF Instr(UCASE(Param), "/ECRAN") > 0 Then Param = MID(Param, Instr(UCASE(Param), "/ECRAN") + 6)
 				IF Instr(UCASE(Param), "/SCREEN") > 0 Then Param = MID(Param, Instr(UCASE(Param), "/SCREEN") + 7)
 
 				
@@ -18412,9 +21409,11 @@ _FIN_EXE_CCP_EXE:
 			IF Instr(UCASE(Param), "/WITHOUTOS") > 0 OR Instr(UCASE(Param), "/SANSOS") > 0 Then
 				Dim NumeroOS as integer = CPCDOS_INSTANCE._MAX_NOMBRE_OS
 				
-
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Switch vers un without OS [OS:" & NumeroOS & " ID parent 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Switching to without OS [OS:" & NumeroOS & " Parent ID 0x" & HEX(_CLE_, 8) & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-
+				End if
 				
 				CpcdosCP_SHELL = "SWITCH:OS_ID=#WITHOUT-SANSOS#"
 				
@@ -18446,8 +21445,11 @@ _FIN_EXE_CCP_EXE:
 				if UtiliseParametre = False Then
 					IF Mid(Param, Instr(Ucase(Param), "/OS") + 4) <> "" Then
 						Dim tmpNomOS as String = Ucase(Ltrim(Rtrim(Mid(Param, Instr(Ucase(Param), "/OS") + 4))))
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Switch de l'OS id vers " & tmpNomOS & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] OS id switch to " & tmpNomOS & ".", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						CpcdosCP_SHELL = "SWITCH:OS_ID=" & tmpNomOS
 						UtiliseParametre = true
 					End IF 
@@ -18458,8 +21460,11 @@ _FIN_EXE_CCP_EXE:
 					Dim NomOSPresent as String = CPCDOS_INSTANCE.get_OSPresent(CPCDOS_INSTANCE.SCI_INSTANCE.get_OSid())
 					
 					IF NomOSPresent = "" OR NomOSPresent = "<null>" Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("Aucun OS charge", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("Nothing OS loaded", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					Else
 						DEBUG(NomOSPresent & " OSID:" & CPCDOS_INSTANCE.SCI_INSTANCE.get_OSid(), Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 					End if
@@ -18477,24 +21482,37 @@ _FIN_EXE_CCP_EXE:
 				doevents(10000)
 				
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CPCDOSC+] Arret du noyau en cours ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CPCDOSC+] Stopping kernel in progress...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				doevents(500000)
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CPCDOSC+] Fermeture de tous les processus (" & NombreProcessus & ") et thread(s) (" & NombreThread & ")", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CPCDOSC+] Closing all process (" & NombreProcessus & ") and thread(s) (" & NombreThread & ")", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				For Boucle as uinteger = 0 to NombreProcessus - 1
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[SHELL] Fermeture " & Boucle & "/" & NombreProcessus, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[SHELL] Closing " & Boucle & "/" & NombreProcessus, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
-					CpcdosCP_SHELL("CLOSE/ /PID:" & NombreProcessus - Boucle, _CLE_, 5, Param_1, Param_2)
+					End if
+					CpcdosCP_SHELL("FERMER/ /PID:" & NombreProcessus - Boucle, _CLE_, 5, Param_1, Param_2)
 					
 				Next Boucle
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CPCDOSC+] Tous les signaux d'arret ont ete envoyes a tous les processus & threads !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					DEBUG("[CPCDOSC+] Attente de la fin de fermeture (2 secondes)", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CPCDOSC+] All stopping signal has been sent to all process and thread !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 					DEBUG("[CPCDOSC+] Waiting ending closing (2 seconds)", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-
+				End if
 				
 				doevents(3000000) ' 3 Secondes d'attente
 			End if
@@ -18606,8 +21624,11 @@ _FIN_EXE_CCP_EXE:
 				
 				if len(Serveur_depot) < 2 then
 					Serveur_depot = "deposit.cpcdos.net"
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[CPCDOSC+] Variable %CPC_SYS.NET.UPDATE.SERVER% niveau 3 non definit. Utilisation du serveur par defaut.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					Else
 						DEBUG("[CPCDOSC+] Variable %CPC_SYS.NET.UPDATE.SERVER% level 3 not defined. Using defaut server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 				end if
 				
 				if Download_Releases_news = true then
@@ -18615,11 +21636,17 @@ _FIN_EXE_CCP_EXE:
 					CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 15", _CLE_, 2, 0, RetourVAR)
 					CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 1", _CLE_, 2, 0, RetourVAR)
 					if telecharger_HotRelease = true Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Telechargement de la release notes de la derniere version hot-release du noyau depuis le serveur '" & Serveur_depot & "'...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Checking last release note of hot-release kernel updates from '" & Serveur_depot & "' server ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Telechargement de la release notes de la derniere version du noyau depuis le serveur '" & Serveur_depot & "'...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Checking last release note of hot-release kernel updates from '" & Serveur_depot & "' server ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					End if
 					
 					CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 7", _CLE_, 2, 0, RetourVAR)
@@ -18647,8 +21674,11 @@ _FIN_EXE_CCP_EXE:
 					Texte_ReleaseNote = CPCDOS_INSTANCE.Lire_fichier_complet(TEMP_NET & "\" & Serveur_depot & "\update.php")
 					
 					if len(Texte_ReleaseNote) < 100 then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Erreur impossible d'obtenir les informations du serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Error, unable to check server info.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					end if
 					
@@ -18664,11 +21694,17 @@ _FIN_EXE_CCP_EXE:
 					CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 1", _CLE_, 2, 0, RetourVAR)
 					
 					if telecharger_HotRelease = true Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Recherche d'une mise a jour hot-release du noyau depuis le serveur '" & Serveur_depot & "'...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Checking hot-release kernel updates from '" & Serveur_depot & "' server ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					else
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Recherche d'une mise a jour publique du noyau depuis le serveur '" & Serveur_depot & "'...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Checking public kernel updates from '" & Serveur_depot & "' server ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 					End if
 					  
 					CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 7", _CLE_, 2, 0, RetourVAR)
@@ -18698,8 +21734,11 @@ _FIN_EXE_CCP_EXE:
 					URL_ZIP = Rtrim(Rtrim(Ltrim(Rtrim(Rtrim(Ltrim(URL_ZIP, CHR(09)), CR), LF)), CHR(09)))
 					
 					if len(URL_ZIP) < 6 then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Erreur impossible d'obtenir les informations du serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Error, unable to check server info.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					end if
 					
@@ -18712,31 +21751,49 @@ _FIN_EXE_CCP_EXE:
 						DEBUG("[UPDATE] Current SERVER version '" & NouvelleUpdate & "'", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 						
 						if Mid(NouvelleUpdate, 1, Instr(NouvelleUpdate, "_") - 1) > Mid(_VER_NET_BUILD, 1, Instr(_VER_NET_BUILD, "_") - 1) Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Une nouvelle mise a jour est disponible!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)	
+							Else
 								DEBUG("[UPDATE] New update is avaiable!", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 							
 							if telecharger_HotRelease = true Then
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] Avertissement, il s'agit d'une version 'hot-release', une version de test non terminee. Vous resterez responsable en cas de problemes.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)	
+								Else
 									DEBUG("[UPDATE] Warning, this is a 'hot-release' version, an unfinished test version. You will remain responsible in the event of a problem.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End if
 							End if
 							
 							Versions_Identiques = false
 						elseif Mid(NouvelleUpdate, 1, Instr(NouvelleUpdate, "_") - 1) = Mid(_VER_NET_BUILD, 1, Instr(_VER_NET_BUILD, "_") - 1) Then
 							Versions_Identiques = true
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Vous avez la derniere version du noyau.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)	
+							Else
 								DEBUG("[UPDATE] You have the last kernel version.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						elseif Mid(NouvelleUpdate, 1, Instr(NouvelleUpdate, "_") - 1) < Mid(_VER_NET_BUILD, 1, Instr(_VER_NET_BUILD, "_") - 1) Then
 							Versions_Identiques = true
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Vous avez une version plus recente du noyau que celle du serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)	
+							Else
 								DEBUG("[UPDATE] You have a more recent version of the kernel than that of the server.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						else
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Nous n'avons pas pu comparer la version du noyau avec celle du serveur." & CRLF & "Il est possible qu'il s'agisse d'une version Cpcdos non-officielle.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)	
+							Else
 								DEBUG("[UPDATE] We could not compare the kernel version with server." & CRLF & "It is possible that this is an unofficial Cpcdos version.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						End if
 					else
 						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Erreur impossible d'obtenir les informations de mise a jour.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Error, unable to check update info.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					End if
 					
@@ -18758,8 +21815,11 @@ _FIN_EXE_CCP_EXE:
 					URL_ZIP = Rtrim(Rtrim(Ltrim(Rtrim(Rtrim(Ltrim(URL_ZIP, CHR(09)), CR), LF)), CHR(09)))
 					
 					if len(URL_ZIP) < 6 then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Erreur impossible d'obtenir les informations du serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Error, unable to check server info.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					end if
 					
@@ -18772,8 +21832,11 @@ _FIN_EXE_CCP_EXE:
 						Dim PathZIP as String = Serveur_depot & "\" & Mid(URL_ZIP, Instr(URL_ZIP, Serveur_depot) + Len(Serveur_depot) + 1)
 						Dim DossierZIP as String = Mid(PathZIP, 1, InstrREV(PathZIP, "/") - 1)
 						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Telechargement en cours [" & URL_ZIP & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						else
 							DEBUG("[UPDATE] Downloading in progress [" & URL_ZIP & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						
 						CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 7", _CLE_, 2, 0, RetourVAR)
 						CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 0", _CLE_, 2, 0, RetourVAR)
@@ -18808,9 +21871,11 @@ _FIN_EXE_CCP_EXE:
 								CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("client/ /send:" & var_socket & " #STOP", _CLE_, 2, 0, RetourVAR)
 								
 								DEBUG("", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] Telechargement annule", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								else
 									DEBUG("[UPDATE] Downloading stopped", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End if
 								
 								' Attendre 10 ms
 								doevents(100000)
@@ -18860,42 +21925,61 @@ _FIN_EXE_CCP_EXE:
 							Dim Contenufichier as String = CPCDOS_INSTANCE.Lire_fichier_complet(TEMP_NET & "\" & DossierZIP)
 							
 							
-							if Instr(Contenufichier, "301") > 0 OR Instr(Contenufichier, "302") > 0 Then 	
+							if Instr(Contenufichier, "301") > 0 OR Instr(Contenufichier, "302") > 0 Then 							
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] ERREUR 301/302 : Redirection non supporte.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								else
 									DEBUG("[UPDATE] 301/302 ERROR : Redirection not supported.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End if
 								
 								exit _scope_CMD, _scope
 							End if
 							
-							if Instr(Contenufichier, "400") > 0 Then 			
+							if Instr(Contenufichier, "400") > 0 Then 							
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] ERREUR 400 : Syntaxe de la requette est erronee.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								else
 									DEBUG("[UPDATE] 400 ERROR : Wrong request syntax.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-								
+								End if
 								
 								exit _scope_CMD, _scope
 							End if
 							
-							if Instr(Contenufichier, "401") > 0 OR Instr(Contenufichier, "403") > 0 Then 	
+							if Instr(Contenufichier, "401") > 0 OR Instr(Contenufichier, "403") > 0 Then 							
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] ERREUR 403 : Acces refuse !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								else
 									DEBUG("[UPDATE] 403 ERROR : Access denied !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								End if
 								
 								exit _scope_CMD, _scope
 							End if
 							
-							if Instr(Contenufichier, "404") > 0 Then 	
+							if Instr(Contenufichier, "404") > 0 Then 							
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] ERREUR 404 : Fichier introuvable sur le serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								else
 									DEBUG("[UPDATE] 404 ERROR : File is missing.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-
+								End if
 								
 								exit _scope_CMD, _scope
 							End if
 							
-							if Instr(Contenufichier, "500") > 0 OR Instr(Contenufichier, "503") > 0 Then 		
+							if Instr(Contenufichier, "500") > 0 OR Instr(Contenufichier, "503") > 0 Then 							
+								IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+									DEBUG("[UPDATE] ERREUR 500/503 : Erreur serveur", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+								else
 									DEBUG("[UPDATE] 500/503 ERROR : Server error.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-
+								End if
 								
 								exit _scope_CMD, _scope
 							End if	
 							
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] ERREUR : Impossible de telecharger" & CRLF & Contenufichier, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							else
 								DEBUG("[UPDATE] ERROR : Unable to update " & CRLF & Contenufichier, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 
 							exit _scope_CMD, _scope
 							
@@ -18903,8 +21987,11 @@ _FIN_EXE_CCP_EXE:
 						
 						CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 15", _CLE_, 2, 0, RetourVAR)
 						CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 2", _CLE_, 2, 0, RetourVAR)
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Telechargement termine !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						else
 							DEBUG("[UPDATE] Downloading ok !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						
 						CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 7", _CLE_, 2, 0, RetourVAR)
 						CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 0", _CLE_, 2, 0, RetourVAR)
@@ -18913,8 +22000,11 @@ _FIN_EXE_CCP_EXE:
 
 					else
 						
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Erreur impossible d'obtenir les informations de mise a jour.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Error, unable to check update info.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					End if
 					
@@ -18922,8 +22012,11 @@ _FIN_EXE_CCP_EXE:
 				elseif Install_flag = false AND Versions_Identiques = false then
 					' Si la commande n'installe pas et que la recheche dit que la version est differente, proposer la commande pour l'installer
 					
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[UPDATE] Utilisez '/update-get' pour telecharger la mise a jour.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					else
 						DEBUG("[UPDATE] Please use '/update-get' to download update.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 				
@@ -18937,8 +22030,11 @@ _FIN_EXE_CCP_EXE:
 					URL_ZIP = Rtrim(Rtrim(Ltrim(Rtrim(Rtrim(Ltrim(URL_ZIP, CHR(09)), CR), LF)), CHR(09)))
 					
 					if len(URL_ZIP) < 6 then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[UPDATE] Erreur impossible d'obtenir les informations du serveur.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+						Else
 							DEBUG("[UPDATE] Error, unable to check server info.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+						End if
 						exit _scope_CMD, _scope
 					end if
 					
@@ -18956,8 +22052,11 @@ _FIN_EXE_CCP_EXE:
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 15", _CLE_, 2, 0, RetourVAR)
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 2", _CLE_, 2, 0, RetourVAR)
 							
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Extraction du package en cours [" & TEMP_NET & "\" & PathZIP & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							else
 								DEBUG("[UPDATE] Extracting package in progress [" & TEMP_NET & "\" & PathZIP & "]", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 7", _CLE_, 2, 0, RetourVAR)
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 0", _CLE_, 2, 0, RetourVAR)
@@ -18970,8 +22069,11 @@ _FIN_EXE_CCP_EXE:
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 15", _CLE_, 2, 0, RetourVAR)
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 2", _CLE_, 2, 0, RetourVAR)
 							
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Installation terminee !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							else
 								DEBUG("[UPDATE] Installation OK !", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-						
+							End if
 							
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorf/ 7", _CLE_, 2, 0, RetourVAR)
 							CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CpcdosCP_SHELL("colorb/ 0", _CLE_, 2, 0, RetourVAR)
@@ -18979,39 +22081,57 @@ _FIN_EXE_CCP_EXE:
 							' Remettre le Pseudo ID
 							CpcdosCP_SHELL("SYS/ /NETID " & CPCDOS_INSTANCE.SHELLCCP_INSTANCE.CCP_Lire_Variable("CPC_SYS.NET.ID", 5, _CLE_), _CLE_, 5, Param_1, Param_2)
 							
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Veuillez redemarrer votre PC", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							else
 								DEBUG("[UPDATE] Please to restart your PC", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 						Else
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[UPDATE] Erreur, package ZIP non trouve. Veuillez relancer le telechargement", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[UPDATE] Error, ZIP package not found Please re-launch downloading", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Erreur, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 							exit _scope_CMD, _scope
 						End if
 					End if
 				elseif Versions_Identiques = false then
+					IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+						DEBUG("[UPDATE] Utilisez /update-install pour installer la mise a jour.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+					else
 						DEBUG("[UPDATE] Please use /update-install to install update.", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Surbrille, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-					
+					End if
 					exit _scope_CMD, _scope
 				End if
 			End if
 			
-			IF Instr(UCASE(Param), "/SHUTDOWN") > 0 Then
+			IF Instr(UCASE(Param), "/ARRETER") > 0 OR Instr(UCASE(Param), "/SHUTDOWN") > 0 Then
 				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CPCDOSC+] Demande d'arret du systeme ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CPCDOSC+] Asking for shutdown system ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				cpinti.gestionnaire_tache._exit()
 				
 				CX_APM_MODE = CPCDOS_INSTANCE.SYSTEME_INSTANCE.InterfaceAPM.CX_Shutdown
 				CpcdosCP_SHELL("SYS/ /STOPK", _CLE_, 5, Param_1, Param_2)
-			ElseIF Instr(UCASE(Param), "/STANDBY") > 0 Then
+			ElseIF Instr(UCASE(Param), "/STANDBY") > 0 OR Instr(UCASE(Param), "/VEILLE") > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CPCDOSC+] Demande de mise en veille du systeme ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CPCDOSC+] Asking for standby mode the system ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				
 				CPCDOS_INSTANCE.SYSTEME_INSTANCE.InterfaceAPM.signal_systeme(CPCDOS_INSTANCE.SYSTEME_INSTANCE.InterfaceAPM.CX_StandbyMode)
-			ElseIF Instr(UCASE(Param), "/REBOOT") > 0 OR Instr(UCASE(Param), "/RESTART") > 0 Then
+			ElseIF Instr(UCASE(Param), "/REBOOT") > 0 OR Instr(UCASE(Param), "/RESTART") > 0 OR Instr(UCASE(Param), "/REDEMARRER") > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CPCDOSC+] Demande de redemarrage du systeme ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CPCDOSC+] Asking for restarting the system ...", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 				
 				cpinti.gestionnaire_tache._exit()
 				
@@ -19023,7 +22143,7 @@ _FIN_EXE_CCP_EXE:
 
 			' Creer un nouveau processus
 			
-			IF Instr(UCASE(Param), "/PROCESS") > 0 Then
+			IF Instr(UCASE(Param), "/PROCESS") > 0 OR Instr(UCASE(Param), "/PROCESSUS") > 0 Then
 				Dim NomProcessus as String
 				Dim NumeroPID as integer
 				
@@ -19082,7 +22202,10 @@ _FIN_EXE_CCP_EXE:
 
 				else
 
-					IF Instr(UCASE(Param), "/PROCESS") > 0 Then
+
+					IF Instr(UCASE(Param), "/PROCESSUS") > 0 Then
+						NomProcessus = Mid(Param, Instr(UCASE(Param), "/PROCESSUS") + 11)
+					ElseIF Instr(UCASE(Param), "/PROCESS") > 0 Then
 						NomProcessus = Mid(Param, Instr(UCASE(Param), "/PROCESS") + 9)
 					End if
 					
@@ -19090,8 +22213,11 @@ _FIN_EXE_CCP_EXE:
 					NomProcessus = Mid(CPCDOS_INSTANCE.SYSTEME_INSTANCE.check_NomAutorise(Rtrim(Rtrim(Ltrim(Rtrim(Rtrim(Ltrim(NomProcessus, CHR(09)), CR), LF)), CHR(09))), TRUE, TRUE, FALSE), 1, 16)
 
 					IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+						IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+							DEBUG("[CpcdosC+] Demande creation d'un nouveau processus '" & NomProcessus & "' (KernelID:" & Auth_Kernel & " OSID:" & Auth_OS & " UserID:" & Auth_Utilisateur & ") ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+						Else
 							DEBUG("[CpcdosC+] Asking creation new process  '" & NomProcessus & "' (KernelID:" & Auth_Kernel & " OSID:" & Auth_OS & " UserID:" & Auth_Utilisateur & ") ...", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_ACTION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-						
+						End if
 					END IF
 
 					' Verifier s'il existe deja
@@ -19099,8 +22225,11 @@ _FIN_EXE_CCP_EXE:
 
 					if test_existing_pid > 0 Then
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
 								DEBUG("[CpcdosC+] Le processus existe deja (" & test_existing_pid & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							Else
+								DEBUG("[CpcdosC+] Le processus existe deja (" & test_existing_pid & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							End if
 						END IF
 
 						NumeroPID = test_existing_pid
@@ -19123,8 +22252,11 @@ _FIN_EXE_CCP_EXE:
 
 						
 						IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Le nouveau processus '" & NomProcessus & "' est en execution avec 0 threads (KernelID:" & Auth_Kernel & " OSID:" & Auth_OS & " UserID:" & Auth_Utilisateur & " PID:" & NumeroPID & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] New process '" & NomProcessus & "' is in execution with 0 threads (KernelID:" & Auth_Kernel & " OSID:" & Auth_OS & " UserID:" & Auth_Utilisateur & " PID:" & NumeroPID & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_OK, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-							
+							End if
 						END IF
 
 					End if
@@ -19148,8 +22280,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour afficher du texte a l'ecran
 		' ===============================================================
-		CommLang(2) = "colorf/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "couleurc/"
+		CommLANG(2) = "colorf/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19159,19 +22292,58 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " couleurc/                  Changer la couleur des caracteres utf-8 ou accii"
+			Else
 				CommandesAide = CommandesAide & CRLF & " colorf/                    Change fonts colors utf-8 or ascii"
-			
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'CouleurCaracteres'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de changer la couleur des caracteres de la console LC2, LC3 et IUG"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple graphique :"
+					Mess_Aide = Mess_Aide & CRLF & "   CouleurC/ R:255 V:100 B:010"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Je suis de couleur Orange"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   Couleurc/ R:255 V:000 B:000"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Rouge/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurc/ V:255 R:000 B:000"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Vert/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   CouleurC/ B:255 R:000 V:000"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Bleu/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurC/ R:100"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Violet/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurC/ V:255"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Bleu clair/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   CouleurC/ B:255"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Blanc/#R"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple console EGA (4 bits) 11 par defaut :"
+					Mess_Aide = Mess_Aide & CRLF & "   CouleurC/ 10"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ Je suis de couleur Bleue clair"
+					Mess_Aide = Mess_Aide & CRLF & "   Couleurc/ 15"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Je suis de couleur blanche"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   0:Noir 1:Bleu 2:Vert 3:Cyan 4:Rouge 5:Magenta 6:Brun 7:Gris clair 8:Gris fonce"
+					Mess_Aide = Mess_Aide & CRLF & "   9:Bleu brillant 10:Vert brillant 11:Cyan brillant 12:Rouge brillant"
+					Mess_Aide = Mess_Aide & CRLF & "   13:Magenta brillant 14:Jaune 15:Blanc"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , couleurf/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'ColorFont'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -19206,6 +22378,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , colorb/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -19252,8 +22425,11 @@ _FIN_EXE_CCP_EXE:
 			End if
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Couleurs graphiques choisies " & CRLF & " - Rouge " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_R & CRLF & " - Vert " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_V & CRLF & " - Bleu " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_B & CRLF & " - EGA " & CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Selected graphic color " & CRLF & " - Red " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_R & CRLF & " - Green " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_V & CRLF & " - Blue " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_B & CRLF & " - EGA " & CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 			' Recuperer les Parametres
 			'DEBUG(Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
@@ -19270,8 +22446,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour changer la couleur texte du fond
 		' ===============================================================
-		CommLang(2) = "colorb/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "couleurf/"
+		CommLANG(2) = "colorb/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19281,18 +22458,59 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " couleurf/                  Changer la couleur arriere plan de la console"
+			Else
 				CommandesAide = CommandesAide & CRLF & " colorb/                    Change background color"
+
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'CouleurFond'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de changer la couleur de fond de la console LC"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple :"
+					Mess_Aide = Mess_Aide & CRLF & "   CouleurC/ R:255 V:100 B:010"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Je suis de couleur Orange"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ R:255 V:000 B:000"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Rouge/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ V:255 R:000 B:000"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Vert/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ B:255 R:000 V:000"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Bleu/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ R:100"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Violet/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ V:255"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Bleu clair/#R"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ B:255"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/  Blanc/#R"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple console EGA (4 bits) 0 par defaut :"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurF/ 10"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ Je suis de couleur Bleue clair"
+					Mess_Aide = Mess_Aide & CRLF & "   couleurf/ 4"
+					Mess_Aide = Mess_Aide & CRLF & "   txt/ Je suis de couleur route"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "   0:Noir 1:Bleu 2:Vert 3:Cyan 4:Rouge 5:Magenta 6:Brun 7:Gris clair 8:Gris fonce"
+					Mess_Aide = Mess_Aide & CRLF & "   9:Bleu brillant 10:Vert brillant 11:Cyan brillant 12:Rouge brillant"
+					Mess_Aide = Mess_Aide & CRLF & "   13:Magenta brillant 14:Jaune 15:Blanc"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , couleurc/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  'ColorBackground'"
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
@@ -19327,6 +22545,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , colorf/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -19373,8 +22592,11 @@ _FIN_EXE_CCP_EXE:
 			End if
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Couleurs fond console choisies " & CRLF & " - Rouge " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_R & CRLF & " - Vert " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_V & CRLF & " - Bleu " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_B, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] Selected console background color " & CRLF & " - Red " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_R & CRLF & " - Green " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_V & CRLF & " - Blue " & CPCDOS_INSTANCE.SCI_INSTANCE.UTF8_INSTANCE.utf8_CouleurP_B, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.AvecDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, RetourVAR)
-				
+				End if
 			END IF
 			' Recuperer les Parametres
 			'DEBUG(Param, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
@@ -19391,8 +22613,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour declarer une fonction CpcdosC+
 		' ===============================================================
-		CommLang(2) = "declare/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "declarer/"
+		CommLANG(2) = "declare/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19402,19 +22625,67 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " declarer/                  Declare une fonction CpcdosC+ a un niveau choisis"
+			Else
 				CommandesAide = CommandesAide & CRLF & " declare/                   Declare CpcdosC+ function with a level"
-
+			END IF
 		END IF
 
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 
 		IF CommTrouve > 0 Then
 			IF AfficherAide = 2 then
 				Mess_Aide = ""
-				
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  'DECLARER'"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet de declarer une fonction CpcdosC+ avec un niveau de"
+					Mess_Aide = Mess_Aide & CRLF & "    visibilite (publicite) personnalisable."
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 1 (Visible partout) :"
+					Mess_Aide = Mess_Aide & CRLF & "   declarer/ Un_Exemple() : niveau(5)"
+					Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Un_exemple()"
+					Mess_Aide = Mess_Aide & CRLF & "      retour/ Toto!"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ fonction"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ /F:Un_Exemple()"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Affiche : Toto!"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple 2(Visible que pour l'application) :"
+					Mess_Aide = Mess_Aide & CRLF & "   declarer/ Un_Exemple() : niveau(2)"
+					Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Un_exemple()"
+					Mess_Aide = Mess_Aide & CRLF & "      txt/ Je suis dans ma fonction!"
+					Mess_Aide = Mess_Aide & CRLF & "      retour/ Voila c'est finis!"
+					Mess_Aide = Mess_Aide & CRLF & "   Fin/ fonction"
+					Mess_Aide = Mess_Aide & CRLF & "   Txt/ /F:Un_Exemple()"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Affiche : Je suis dans ma fonction!"
+					Mess_Aide = Mess_Aide & CRLF & "            Voila c'est finis!"
+					Mess_Aide = Mess_Aide & CRLF
+					' Mess_Aide = Mess_Aide & CRLF & "  Exemple 3 (Declarer depuis l'exterieur)"
+					' Mess_Aide = Mess_Aide & CRLF & "   ccp/ /fix.niveau = 2"
+					' Mess_Aide = Mess_Aide & CRLF & "   declarer/ Un_Exemple():MonProgramme.cpc"
+					' Mess_Aide = Mess_Aide & CRLF & "   Txt/ /F:Un_Exemple()"
+					' Mess_Aide = Mess_Aide & CRLF
+					' Mess_Aide = Mess_Aide & CRLF & "  Exemple 4 (Avec 2 arguments)"
+					' Mess_Aide = Mess_Aide & CRLF & "   ccp/ /fix.niveau = 2"
+					' Mess_Aide = Mess_Aide & CRLF & "   declarer/ Additionner(Valeur1, Valeur2)"
+					' Mess_Aide = Mess_Aide & CRLF & "   Fonction/ Additionner(Valeur1, Valeur2)"
+					' Mess_Aide = Mess_Aide & CRLF & "      retour/ /C(Valeur1 + Valeur2)"
+					' Mess_Aide = Mess_Aide & CRLF & "   Fin/ fonction"
+					' Mess_Aide = Mess_Aide & CRLF & "   Txt/ Resultat /F:Additionner(5, 2)"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Affiche : Resultat 7"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : txt/ , ccp/"
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to declare CpcdosC+ function"
 					Mess_Aide = Mess_Aide & CRLF
@@ -19456,6 +22727,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : txt/ , ccp/"
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
@@ -19517,8 +22789,11 @@ _FIN_EXE_CCP_EXE:
 						if this.MEMOIRE_CCP.TAB_FONCTION_CCP_ARG(Boucle) = Boucle_ARGS Then
 							' ALORS C'EST LA MEME FONCTION, MAIS QU'ON REMPLACE !
 
+							IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+								DEBUG("[CpcdosC+] Redefinition de fonction pour " & NomFonction & "() avec " & Boucle_ARGS & " arguments.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+							Else
 								DEBUG("[CpcdosC+] Fonction redefinition for " & NomFonction & "() with " & Boucle_ARGS & " arguments.", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-							
+							End if
 							exit for
 						End if
 					End if
@@ -19572,13 +22847,19 @@ _FIN_EXE_CCP_EXE:
 			ELSEIF instr(Param, ":") < Instr(Ucase(Param), "NIVEAU(1)") OR instr(Param, ":") < Instr(Ucase(Param), "LEVEL(1)") Then ' Inutile!
 				this.MEMOIRE_CCP.TAB_FONCTION_CCP_NIV(Boucle) = 3
 				Message_erreur = ERRAVT("AVT_064", 0)
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] " & Message_erreur & ". Definition automatique sur niveau 3. Nom de la fonction : " & NomFonction & ".", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				Else
 					DEBUG("[CpcdosC+] " & Message_erreur & ". Automatic definition to level 3. Function name : " & NomFonction & ".", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_AVERTISSEMENT, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
-				
+				End if
 			End if
 			
 			IF CPCDOS_INSTANCE.SYSTEME_INSTANCE.get_DBG_DEBUG() > 0 Then
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 Then
+					DEBUG("[CpcdosC+] Inscription de la fonction '" & this.MEMOIRE_CCP.TAB_FONCTION_CCP_NOM(Boucle) & "()' en memoire. " & this.MEMOIRE_CCP.TAB_FONCTION_CCP_ARG(Boucle) & " argument(s). Niveau : " & this.MEMOIRE_CCP.TAB_FONCTION_CCP_NIV(Boucle) & ". Source d'importation : '" & this.MEMOIRE_CCP.TAB_FONCTION_CCP_SRC(Boucle) & "'. [OK]", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
+				Else
 					DEBUG("[CpcdosC+] Registration function '" & this.MEMOIRE_CCP.TAB_FONCTION_CCP_NOM(Boucle) & "()' in memory. " & this.MEMOIRE_CCP.TAB_FONCTION_CCP_ARG(Boucle) & " argument(s). Level : " & this.MEMOIRE_CCP.TAB_FONCTION_CCP_NIV(Boucle) & ". Importation source : '" & this.MEMOIRE_CCP.TAB_FONCTION_CCP_SRC(Boucle) & "'. [OK]", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
-				
+				End if
 				DEBUG("(" & Auth_Kernel & ", " & Auth_OS & ", " & Auth_Utilisateur & ", " & Auth_PID & ", " & Auth_TID & ")", CPCDOS_INSTANCE.DEBUG_INSTANCE.Ecran, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_VALIDATION, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_CPCDOS, "")
 			End if
 			
@@ -19594,8 +22875,9 @@ _FIN_EXE_CCP_EXE:
 		' ===============================================================
 		'  Commande pour executer une application DOS
 		' ===============================================================
-		CommLang(2) = "dos/"
-		CommLang(3) = "\\#//"
+		CommLANG(1) = "dos/"
+		CommLANG(2) = "dos/"
+		CommLANG(3) = "\\#//"
 		CommTrouve = 0 : NoCMD = 0
 		for boucle as integer = 1 to 2
 			IF OnCherche = CommLANG(boucle) Then
@@ -19605,16 +22887,33 @@ _FIN_EXE_CCP_EXE:
 				NoCMD = 1
 			End if
 		Next boucle
-		IF NoCMD = 1 then CommLang(2) = "[F.#).|" : CommLang(3) = "\\#//"
+		IF NoCMD = 1 then CommLANG(1) = "[F.#).|" : CommLANG(2) = "[F.#).|" : CommLANG(3) = "\\#//"
 
 		rem Afficher la liste des commandes avec anglais / francais
 		IF AfficherAide = 1 then
+			IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 then
+				CommandesAide = CommandesAide & CRLF & " dos/                       Lancer un fichier/une commande DOS"
+			Else
 				CommandesAide = CommandesAide & CRLF & " dos/                       Launch a DOS file/Command"
+			END IF
 		END IF
-		IF CommLang(2) = OnCherche Then CommTrouve = 2
+		IF CommLANG(1) = OnCherche Then CommTrouve = 1
+		IF CommLANG(2) = OnCherche Then CommTrouve = 2
 		IF CommTrouve > 0 Then
 		IF AfficherAide = 2 then
 				Mess_Aide = ""
+				IF CPCDOS_INSTANCE.Utilisateur_Langage = 0 THEN
+					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnalit�e :"
+					Mess_Aide = Mess_Aide & CRLF & "   Cette commande permet d'executer un fichier ou une commande DOS"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Exemple simple :"
+					Mess_Aide = Mess_Aide & CRLF & "   DOS/ EDIT.COM"
+					Mess_Aide = Mess_Aide & CRLF & "   DOS/ Echo Coucou"
+					Mess_Aide = Mess_Aide & CRLF & "   DOS/ MonProg.bat"
+					Mess_Aide = Mess_Aide & CRLF
+					Mess_Aide = Mess_Aide & CRLF & "  Voir aussi : "
+					Mess_Aide = Mess_Aide & CRLF
+				ELSEIF CPCDOS_INSTANCE.Utilisateur_Langage = 1 THEN
 					Mess_Aide = Mess_Aide & CRLF & "  Fonctionnality :"
 					Mess_Aide = Mess_Aide & CRLF & "   This command allow to launch a DOS command or file."
 					Mess_Aide = Mess_Aide & CRLF
@@ -19625,6 +22924,7 @@ _FIN_EXE_CCP_EXE:
 					Mess_Aide = Mess_Aide & CRLF
 					Mess_Aide = Mess_Aide & CRLF & "  See also : "
 					Mess_Aide = Mess_Aide & CRLF
+				END IF
 				DEBUG(Mess_Aide, Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_SURBRILLE, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
 				testCMD = 0
 				AfficherAide = 0
