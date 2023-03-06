@@ -20844,6 +20844,18 @@ _FIN_EXE_CCP_EXE:
 					exit _scope_CMD, _scope
 				End if
 				
+			
+			IF Instr(UCASE(Param), "/SB16") > 0 Then	
+			
+				IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=1") > 0 Then 
+					DEBUG("SB16 activated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				end if	
+				
+				IF Instr(UCASE(CPCDOS_INSTANCE.remplacer_Caractere(Param, " ", "")), "=0") > 0 Then 
+					DEBUG("SB16 deactivated", Affichage, CPCDOS_INSTANCE.DEBUG_INSTANCE.NonLog, CPCDOS_INSTANCE.DEBUG_INSTANCE.Couleur_Normal, 0, CPCDOS_INSTANCE.DEBUG_INSTANCE.CRLF, CPCDOS_INSTANCE.DEBUG_INSTANCE.SansDate, CPCDOS_INSTANCE.DEBUG_INSTANCE.SIGN_AFF, RetourVAR)
+				end if	
+				exit _scope_CMD, _scope
+			End if
 
 '---------------------------------------------- Test_ecran_console --------------------------------------
 				IF Instr(UCASE(Param), "/COM") > 0 Then
